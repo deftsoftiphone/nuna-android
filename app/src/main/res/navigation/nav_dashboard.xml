@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_dashboard"
+    app:startDestination="@id/DashboardSearchFragment">
+
+    <fragment
+        android:id="@+id/CreatePostFragment"
+        android:name="com.demo.create_post.CreatePostFragment"
+        tools:layout="@layout/fragment_create_post">
+        <action
+            android:id="@+id/action_CreatePostFragment_to_DashboardSearchFragment"
+            app:destination="@id/DashboardSearchFragment"
+            app:popUpTo="@id/DashboardSearchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DashboardSearchFragment"
+        android:name="com.demo.dashboard_search.DashboardFragment"
+        tools:layout="@layout/dashboard_fragment" />
+    <fragment
+        android:id="@+id/ChangePasswordFragment"
+        android:name="com.demo.changepassword.ChangePasswordFragment"
+        tools:layout="@layout/fragment_change_password" />
+
+    <fragment
+        android:id="@+id/EditProfileFragment"
+        android:name="com.demo.edit_profile.EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile">
+        <argument
+            android:id="@+id/type"
+            android:name="type"
+            app:argType="string" />
+        <action
+            android:id="@+id/value"
+            android:name="value"
+            app:argType="string" />
+        <action
+            android:id="@+id/userProfile"
+            android:name="userProfile"
+            app:argType="com.demo.model.response.baseResponse.UserProfile" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/EditProfileEntityFragment"
+        android:name="com.demo.edit_profile.EditProfileEntityfragment"
+        tools:layout="@layout/edit_profile_entity">
+
+    </fragment>
+    <fragment
+        android:id="@+id/UserCommentFragment"
+        android:name="com.demo.commentList.CommentsFragment"
+        tools:layout="@layout/fragment_comment_list" />
+    <fragment
+        android:id="@+id/FollwingTabFragment"
+        android:name="com.demo.hashtag_tab.HashTagTabFragment"
+        tools:layout="@layout/fragment_following" />
+    <fragment
+        android:id="@+id/PostDetailsFragment"
+        android:name="com.demo.post_details.PostDetailsFragment"
+        tools:layout="@layout/fragment_post_details" />
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.demo.profile.NewProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.demo.help.HelpFragment"
+        tools:layout="@layout/fragment_help_pages" />
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="com.demo.setting.SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/FollowingFollowersFragment"
+        android:name="com.demo.search.FollowingFollowersFragment"
+        tools:layout="@layout/following_followers_fragment" />
+    <fragment
+        android:id="@+id/UpdatedsFragment"
+        android:name="com.demo.notifications.AllNotificationsFragment"
+        tools:layout="@layout/fragment_all_notifications">
+        <action
+            android:id="@+id/navigate_with_anim"
+            app:destination="@id/ChangePasswordFragment"
+            app:enterAnim="@anim/pop_enter_anim"
+            app:exitAnim="@anim/pop_enter_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_enter_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/particularNotificationFragment"
+        android:name="com.demo.notifications.ParticularNotificationsFragment"
+        tools:layout="@layout/fragment_particular_notifications">
+        <argument
+            android:id="@+id/title"
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FollowPopularUsersFragment"
+        android:name="com.demo.followPopularUsers.FollowPopularUsersFragment"
+        tools:layout="@layout/fragment_follow_popular_users" />
+
+    <fragment
+        android:id="@+id/CategoryFragment"
+        android:name="com.demo.category_select.CategoryFragment"
+        tools:layout="@layout/fragment_category" />
+
+    <fragment
+        android:id="@+id/MyBoardsFragment"
+        android:name="com.demo.boardList.MyBoardsFragment"
+        tools:layout="@layout/fragment_my_boards" />
+
+    <fragment
+        android:id="@+id/SubFragment"
+        android:name="com.demo.create_post.multiple.SubFragment"
+        tools:layout="@layout/fragment_my_boards" />
+
+    <fragment
+        android:id="@+id/LanguageSelectFragment"
+        android:name="com.demo.language_select.LanguageSelectFragment"
+        tools:layout="@layout/fragment_lang_select" />
+
+    <fragment
+        android:id="@+id/OthersProfileFragment"
+        android:name="com.demo.view_others_profile.OthersProfileFragment"
+        tools:layout="@layout/fragment_others_profile" />
+
+    <fragment
+        android:id="@+id/EditPostFragment"
+        android:name="com.demo.create_post.EditPostFragment"
+        tools:layout="@layout/fragment_edit_post" />
+    <fragment
+        android:id="@+id/allHashTagPostsFragment"
+        android:name="com.demo.all_hashtags.AllHashTagPostsFragment"
+        android:label="all_hashtag_posts_fragment"
+        tools:layout="@layout/all_hashtag_posts_fragment" />
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="com.demo.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+
+</navigation>
+
+    <!--
+    <navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_root"
+    app:startDestination="@+id/titleFragment">
+    <fragment
+            android:id="@+id/titleFragment"
+            android:name="com.example.android.navigation.TitleFragment"
+            android:label="@string/android_trivia"
+            tools:layout="@layout/fragment_title">
+        <action
+                android:id="@+id/action_titleFragment_to_gameFragment"
+                app:destination="@id/gameFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+            android:id="@+id/gameFragment"
+            android:name="com.example.android.navigation.GameFragment"
+            android:label="@string/android_trivia"
+            tools:layout="@layout/fragment_game">
+        <action
+                android:id="@+id/action_gameFragment_to_gameOverFragment"
+                app:destination="@id/gameOverFragment"
+                app:enterAnim="@anim/fade_in"
+                app:exitAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:popUpTo="@+id/gameFragment"
+                app:popUpToInclusive="true" />
+        />
+        <action
+                android:id="@+id/action_gameFragment_to_gameWonFragment"
+                app:destination="@id/gameWonFragment"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_right"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_left"
+                app:popUpTo="@+id/gameFragment"
+                app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+            android:id="@+id/gameWonFragment"
+            android:name="com.example.android.navigation.GameWonFragment"
+            android:label="@string/android_trivia"
+            tools:layout="@layout/fragment_game_won">
+        <argument
+                android:name="numQuestions"
+                app:argType="integer" />
+        <argument
+                android:name="numCorrect"
+                app:argType="integer" />
+        <action
+                android:id="@+id/action_gameWonFragment_to_gameFragment"
+                app:destination="@id/gameFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:popUpTo="@+id/titleFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/gameOverFragment"
+            android:name="com.example.android.navigation.GameOverFragment"
+            android:label="@string/android_trivia"
+            tools:layout="@layout/fragment_game_over">
+        <action
+                android:id="@+id/action_gameOverFragment_to_gameFragment"
+                app:destination="@id/gameFragment"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_right"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:popUpTo="@+id/titleFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/rulesFragment"
+            android:name="com.example.android.navigation.RulesFragment"
+            android:label="@string/title_trivia_rules"
+            tools:layout="@layout/fragment_rules" />
+    <fragment
+            android:id="@+id/aboutFragment"
+            android:name="com.example.android.navigation.AboutFragment"
+            android:label="@string/title_about_trivia"
+            tools:layout="@layout/fragment_about" />
+    </navigation>
+    -->

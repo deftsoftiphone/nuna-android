@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.demo.notifications.NotificationsViewModel" />
+
+
+        <variable
+            name="clickHandler"
+            type="com.demo.notifications.AllNotificationsFragment.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.07">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.93">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineFifty"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.04">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+
+        <RelativeLayout
+            android:id="@+id/lin_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="@{() -> clickHandler.onClickLike()}"
+            app:layout_constraintEnd_toStartOf="@+id/lin_followers"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideLineHorizontal">
+
+            <FrameLayout
+                android:id="@+id/fLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_like"
+                    android:layout_width="@dimen/_41sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:src="@drawable/ic_circle_like" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_like" />
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/text_filter_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:layout_below="@id/fLike"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/gothampro_medium"
+                android:text="@string/like"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lin_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="@{() -> clickHandler.onClickFollowers()}"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/lin_comments"
+            app:layout_constraintStart_toEndOf="@+id/lin_like"
+            app:layout_constraintTop_toBottomOf="@id/guideLineHorizontal">
+
+
+            <FrameLayout
+                android:id="@+id/fFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_followers"
+                    android:layout_width="@dimen/_41sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_circle_followers" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_user_1">
+
+                </ImageView>
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/tFollowers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fFollow"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/gothampro_medium"
+                android:text="@string/followers"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lin_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="@{() -> clickHandler.onClickComments()}"
+            app:layout_constraintEnd_toStartOf="@id/lin_share"
+            app:layout_constraintStart_toEndOf="@+id/lin_followers"
+            app:layout_constraintTop_toBottomOf="@id/guideLineHorizontal">
+
+            <FrameLayout
+                android:id="@+id/fComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_comments"
+                    android:layout_width="@dimen/_41sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_circle_comments" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_comment">
+
+                </ImageView>
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/text_cooments"
+                android:layout_width="wrap_content"
+                android:paddingBottom="5dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fComments"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/gothampro_medium"
+                android:text="@string/comments"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lin_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="@{() -> clickHandler.onClickShare()}"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lin_comments"
+            app:layout_constraintTop_toBottomOf="@id/guideLineHorizontal">
+
+
+            <FrameLayout
+                android:id="@+id/fShares"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_share"
+                    android:layout_width="@dimen/_41sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_circle_share" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="29dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_share">
+
+                </ImageView>
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/text_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fShares"
+                android:paddingBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/gothampro_medium"
+                android:text="@string/share"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_line_copy"
+            app:layout_constraintEnd_toStartOf="@id/guideLineEnd"
+            app:layout_constraintStart_toStartOf="@id/guideLineStart"
+            app:layout_constraintTop_toBottomOf="@id/lin_like">
+
+        </ImageView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_50sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+            app:layout_constraintStart_toStartOf="@id/guideLineStart"
+            app:layout_constraintTop_toBottomOf="@id/line">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textAllActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothampro_medium"
+                    android:text="All Activity"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone">
+
+                </TextView>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lNoDataFound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvNoDataTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham_pro"
+                        android:gravity="center"
+                        android:text="@string/no_activity_yet"
+                        android:textAlignment="center"
+                        android:textColor="#878787"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvNoDataMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:fontFamily="@font/gotham_pro"
+                        android:gravity="center"
+                        android:text="@string/noActivityDescription"
+                        android:textAlignment="center"
+                        android:textColor="#80929292"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@id/tvNoDataTitle" />
+
+                    <ImageView
+                        android:id="@+id/ivNoDataImage"
+                        android:layout_width="@dimen/_75sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_error"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvNoDataMessage"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/allActivityRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:visibility="gone">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <ImageView
+                    android:id="@+id/lineAllActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_line_copy"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/guideLineEnd"
+                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
+                    app:layout_constraintTop_toBottomOf="@id/lin_like">
+
+                </ImageView>
+
+
+                <TextView
+                    android:id="@+id/textSuggested"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/gothampro_medium"
+                    android:text="Suggested for you"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone">
+
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/suggestedRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:visibility="gone">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

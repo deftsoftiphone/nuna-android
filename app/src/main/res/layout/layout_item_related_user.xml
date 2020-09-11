@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.demo.util.Constant" />
+
+        <variable
+            name="item"
+            type="com.demo.model.response.Document" />
+
+        <variable
+            name="clickHandler"
+            type="com.demo.following.FollowingAdapter.ViewHolder.ClickHandler" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentLeft="true"
+            tools:src="@drawable/profile_imag" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_pic">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Work Flow sample name" />
+
+            <TextView
+                android:id="@+id/tv_discrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                tools:text="Work Flow sample name" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_follow_unfollow"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_gradient_two"
+            android:gravity="center"
+            tools:text="Follow" />
+
+
+    </RelativeLayout>
+
+</layout>

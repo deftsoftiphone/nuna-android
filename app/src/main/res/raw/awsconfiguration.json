@@ -1,0 +1,27 @@
+{
+  "Version": "1.0",
+  "CredentialsProvider": {
+    "CognitoIdentity": {
+      "Default": {
+        "PoolId": "fashion-dev",
+        "Region": "ap-south-1"
+      }
+    }
+  },
+  "IdentityManager": {
+    "Default": {}
+  },
+
+  "S3TransferUtility": {
+    "Default": {
+      "Bucket":"hookup-post-images-uat",
+      "Region": "ap-south-1"
+    },
+    "Video": {
+      "Bucket":"hookup-post-videos-uat",
+      "Region": "ap-south-1"
+    }
+  }
+}
+
+

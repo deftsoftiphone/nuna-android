@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        app:chipSpacing="1dp"
+        app:chipSpacingHorizontal="3dp"
+        style="@style/Widget.MaterialComponents.Chip.Choice"
+        android:textSize="12sp"
+        app:chipSpacingVertical="-10dp"
+        android:textAppearance="@style/chipTextappearance_new"
+         />
+
+</layout>

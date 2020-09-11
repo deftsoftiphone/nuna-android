@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <data>
+
+        <variable
+            name="item"
+            type="com.demo.model.response.ResponseFollowingFollowerUsersList" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="90dp"
+        android:background="#FFFFFF"
+        android:layout_height="130dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="80dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            android:background="@drawable/bg_white_updates"
+            android:orientation="vertical">
+
+        <RelativeLayout
+            android:background="@drawable/bg_white_updates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_marginTop="1dp"
+                android:id="@+id/iv_pic"
+                imageUrlUpdate="@{item.profileImage}"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginEnd="@dimen/_13sdp"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:elegantTextHeight="true"
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_below="@+id/iv_pic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/gothampro_medium"
+                android:gravity="center_vertical"
+                android:text='@{item.userName}'
+                android:textColor="@color/black"
+                android:textSize="11dp"
+                tools:text="Work Flow " />
+
+            <TextView
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:elegantTextHeight="true"
+                android:id="@+id/tv_follower_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/gotham_pro"
+                android:text='@{item.followerCount.toString()+" "+@string/followers}'
+                android:textColor="#6b6b6b"
+                android:textSize="10sp"
+                android:theme="@style/pro"
+                tools:text="Work Flow " />
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+</layout>

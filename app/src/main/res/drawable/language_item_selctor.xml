@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:drawable="@drawable/card_click_pressedwhite"-->
+          <!--android:state_pressed="true"/>-->
+    <!--<item android:drawable="@drawable/card_click_nrmlwhite"/>-->
+
+    <item android:drawable="@drawable/card_click_pressed"
+          android:state_pressed="true"  />
+    <item android:drawable="@drawable/card_click_default_shape"/>
+
+
+
+    <!--<item android:drawable="@drawable/card_click_pressedwhite"-->
+          <!--android:state_pressed="true"/>-->
+    <!--<item android:drawable="@drawable/card_click_nrmlwhite"/>-->
+
+
+</selector>

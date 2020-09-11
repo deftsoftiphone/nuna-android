@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.demo.edit_profile.EditProfileViewModel" />
+
+        <variable
+            name="clickHandler"
+            type="com.demo.edit_profile.EditProfileEntityfragment.ClickHandler" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            app:contentInsetStart="0dp"
+            app:layout_constraintEnd_toStartOf="@id/guideline7"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:onClick="@{() -> clickHandler.onBackPressed()}"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_back_custom">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/gothampro_medium"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_15sdp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{() -> clickHandler.onClickDone()}"
+                    android:src="@drawable/ic_check_black">
+
+                </ImageView>
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <RelativeLayout
+            android:id="@+id/rEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="@id/guideline7"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_172sdp"
+                android:background="@drawable/profile_edit_text"
+                android:fontFamily="@font/gothampro_ltalic"
+                android:gravity="start"
+                android:hint="Add your bio"
+                android:inputType="text|textMultiLine"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:maxLength="150"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_44sdp"
+                android:background="@drawable/profile_edit_text"
+                android:fontFamily="@font/gothampro_ltalic"
+                android:gravity="start"
+                android:inputType="text"
+                android:hint="@string/full_name"
+
+                android:maxLength="25"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="@dimen/_12sdp">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editTextUsername"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_44sdp"
+                android:background="@drawable/profile_edit_text"
+                android:fontFamily="@font/gothampro_ltalic"
+                android:gravity="start"
+                android:inputType="text"
+                android:maxLength="25"
+                android:hint="@string/user_name"
+                android:visibility="gone"
+                android:digits="0123456789_.abcdefghijklmnopqrstuvwxyz"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingRight="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="@dimen/_12sdp">
+            </EditText>
+
+            <ImageView
+                android:id="@+id/iCross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:onClick="@{() -> clickHandler.onClickCross()}"
+                android:src="@drawable/ic_cross"
+                android:visibility="visible"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/iCrossBio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:onClick="@{() -> clickHandler.onClickCross()}"
+                android:src="@drawable/ic_cross"
+                android:visibility="gone">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/iCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:tint="@color/themePink1"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:src="@drawable/ic_check_black"
+                android:visibility="gone"
+                >
+
+            </ImageView>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/textCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:fontFamily="@font/gothampro_medium"
+            android:inputType="text"
+            android:text="17/25"
+            android:textColor="#929292"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toStartOf="@id/guideline7"
+            app:layout_constraintTop_toBottomOf="@id/rEditText">
+
+        </TextView>
+
+
+        <LinearLayout
+            android:id="@+id/lUserNameNotAvailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/guideline7"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/textCount">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_no_data" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:fontFamily="@font/gothampro_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:text="@string/username_not_available"
+                android:textColor="#f71d1d"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tUserNameInstructions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/gotham_pro"
+            android:text="@string/username_instructions"
+            android:textAlignment="center"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/guideline7"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/lUserNameNotAvailable">
+
+        </TextView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.055" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

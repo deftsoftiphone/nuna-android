@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.demo.post_details.PostDetailViewModel" />
+
+        <variable
+            name="clickHandler"
+            type="com.demo.post_details.PostDetailsFragment.ClickHandler" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="responseLogin"
+            type="com.demo.model.response.ResponseLogin" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/white"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <include
+                layout="@layout/layout_post_detail_header"
+                bind:clickHandler="@{clickHandler}"
+                bind:viewModel="@{viewModel}" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toTopOf="@id/recordingView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+
+                android:visibility="@{viewModel.responseGetPostDetails.data == null ? View.GONE : View.VISIBLE}">
+
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_400sdp"
+
+                    android:background="@color/white"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.afollestad.viewpagerdots.DotsIndicator
+                    android:id="@+id/tab_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:background="@color/transparent"
+
+                    app:layout_constraintBottom_toBottomOf="@id/viewPager"
+                    app:layout_constraintEnd_toEndOf="@id/viewPager"
+                    app:layout_constraintStart_toStartOf="@id/viewPager"
+                    app:layout_constraintVertical_bias="1"
+                    />
+
+                <RelativeLayout
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/rel_like_c_w"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@id/viewPager"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewPager"
+                    >
+                    <RelativeLayout
+                        android:visibility="@{viewModel.isMyPost() ? View.VISIBLE : View.VISIBLE}"
+
+                        android:onClick="@{() -> clickHandler.onClickLikePost()}"
+                        android:id="@+id/rel_like"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@{viewModel.isPostLiked ? @drawable/like_big_pink : @drawable/ic_heart}"
+                            android:id="@+id/like_icon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+                    <TextView
+                        android:elegantTextHeight="true"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/gothampro_medium"
+                        android:textSize="@dimen/_11sdp"
+                        android:layout_below="@+id/like_icon"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#000"
+                        android:text='@{viewModel.likeCount + ""}'
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_comment"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rel_like"
+                        android:onClick="@{() -> clickHandler.onClickCommentRequest()}">
+
+                        <ImageView
+                            android:id="@+id/comment_icon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/comments_pink_on_updates"
+                            android:tint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/comment_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/comment_icon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="1dp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/gothampro_medium"
+                            android:text="0"
+                            android:textColor="#000"
+                            android:textSize="@dimen/_11sdp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_what"
+                        android:onClick="@{() -> clickHandler.onClickShare()}"
+                        android:layout_toRightOf="@+id/rel_comment"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:padding="3dp"
+                            android:id="@+id/whats_icon"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/share"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+                        <TextView
+                            android:elegantTextHeight="true"
+                            android:layout_marginTop="1dp"
+                            android:layout_below="@+id/whats_icon"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#000"
+
+                            android:text='@{viewModel.responseGetPostDetails.data.post.shareCount + ""}'
+
+                            android:fontFamily="@font/gothampro_medium"
+                            android:textSize="@dimen/_11sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+
+
+                        android:onClick="@{() -> clickHandler.onClickViewPost()}"
+                        android:visibility="@{viewModel.isMyPost() ? View.VISIBLE : View.GONE}"
+                        android:layout_toRightOf="@+id/rel_what"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/view_icon"
+                            android:layout_centerHorizontal="true"
+
+                            android:src="@drawable/ic_eye"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+                        <TextView
+                            android:elegantTextHeight="true"
+                            android:text='@{viewModel.responseGetPostDetails.data.post.viewCount + ""}'
+                            android:layout_marginTop="1dp"
+                            android:layout_below="@+id/view_icon"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#000"
+                            android:fontFamily="@font/gothampro_medium"
+                            android:textSize="@dimen/_11sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:visibility="@{viewModel.isMyPost() ? View.GONE : View.VISIBLE}"
+                        android:textSize="12sp"
+                        android:elegantTextHeight="true"
+                        android:id="@+id/btn_add_to_board"
+                        android:layout_width="130dp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:layout_height="30dp"
+
+                        android:background="@drawable/follow_button"
+                        android:fontFamily="@font/gothampro_medium"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="1.2"
+                        android:onClick="@{() -> clickHandler.onClickAddToBoard()}"
+                        android:text="@string/add_to_board"
+                        android:textColor="@color/white"
+                        android:layout_alignParentRight="true"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothampro_medium"
+                    android:lineSpacingExtra="5dp"
+                    android:elegantTextHeight="true"
+                    android:text="@{viewModel.responseGetPostDetails.data.post.title}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rel_like_c_w"
+                    tools:text="ಪ್ರೀತಿಯ ಚಂದ್ರನ ಮೇಲೆ" />
+                <TextView
+                    android:autoLink="web"
+                    android:linksClickable="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:elegantTextHeight="true"
+                    android:id="@+id/tv_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="7sp"
+                    htmlText="@{viewModel.responseGetPostDetails.data.post.description.trim()}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    android:theme="@style/pro"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                    tools:text="Make-up and cosmetics are used all over the world by all kinds of different people. Cosmetic products are defined as,or glycerine and add moisture to the top layer of skin while occlusive moisturizers form a waterproof layer." />
+
+<RelativeLayout
+    android:layout_marginBottom="14dp"
+    android:layout_marginTop="14dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:id="@+id/rel_date_report"
+    app:layout_constraintEnd_toStartOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_desc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+android:layout_alignParentLeft="true"
+        android:layout_marginEnd="10dp"
+        android:elegantTextHeight="true"
+        android:id="@+id/tv_date"
+        dateFormatedOnly="@{viewModel.responseGetPostDetails.data.post.createdDate}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gothampro_medium"
+        android:textSize="@dimen/_8sdp"
+        tools:text="20 Apr 2020" />
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:elegantTextHeight="true"
+        android:id="@+id/tv_report"
+        android:visibility="@{viewModel.isMyPost() ? View.INVISIBLE : View.VISIBLE}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/gothampro_medium"
+        android:onClick="@{() -> clickHandler.onClickReport()}"
+        android:text="@string/report"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+       />
+
+
+
+</RelativeLayout>
+                <fragment
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/chip_group"
+                    class="com.demo.chips.ChipsFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rel_date_report" />
+
+
+                <View
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/separator1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+
+                    android:background="@color/grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/chip_group" />
+
+
+                <androidx.constraintlayout.widget.Group
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{viewModel.responseGetPostDetails.data.totalComments == 0 ? View.GONE : View.VISIBLE}" />
+
+                <TextView
+                    android:textAllCaps="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/tv_comment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/gothampro_medium"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/separator1"
+                    tools:text="@string/no_comment" />
+
+                <fragment
+
+                    android:id="@+id/fragment_comments"
+                    class="com.demo.commentList.CommentsFragment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_comment_count" />
+
+                <TextView
+                    android:elegantTextHeight="true"
+                    android:id="@+id/tv_more_comments"
+                    fontPath="fonts/GothamPro-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:onClick="@{clickHandler::toggleCommentsSection}"
+                    android:text="@{viewModel.showAllComments ? @string/see_less :viewModel.getSeeMoreCommentText(viewModel.responseGetPostDetails.data.commentList)}"
+                    android:textColor="@color/see_more"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_comments"
+                    tools:text="SEE MORE COMMENTS (28)" />
+
+                <View
+                    android:id="@+id/separator2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_more_comments" />
+
+                <TextView
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/tv_related_posts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/gothampro_medium"
+                    android:text="@string/related_posts"
+                    android:textColor="@color/black"
+
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/separator2"
+                    tools:text="RELATED POSTS" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/recycler_related_posts"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_related_posts"
+                    tools:listitem="@layout/layout_dashboard_post_item" />
+
+                <ProgressBar
+                    android:id="@+id/related_posts_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{viewModel.responseRelatedPosts.data==null ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_related_posts" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/rel_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/shadow_gey_down"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scroll_view" />
+
+
+
+        <com.demo.util.AudioRecordView
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scroll_view"
+            android:id="@+id/recordingView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
