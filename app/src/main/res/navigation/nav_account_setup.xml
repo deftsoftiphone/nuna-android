@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_account_setup"
+    app:startDestination="@id/CategoryFragment">
+
+    <fragment
+        android:id="@+id/LanguageSelectFragment"
+        android:name="com.demo.language_select.LanguageSelectFragment"
+        tools:layout="@layout/fragment_lang_select" />
+
+    <fragment
+        android:id="@+id/CategoryFragment"
+        android:name="com.demo.category_select.CategoryFragment"
+        tools:layout="@layout/fragment_category" />
+
+
+
+    <fragment
+        android:id="@+id/FollowPopularUsersFragment"
+        android:name="com.demo.followPopularUsers.FollowPopularUsersFragment"
+        tools:layout="@layout/fragment_follow_popular_users" />
+
+    <fragment
+        android:id="@+id/ChipsFragment"
+        android:name="com.demo.chips.ChipsFragment"
+        tools:layout="@layout/fragment_chips" />
+
+    <fragment
+        android:id="@+id/CategoryFilterFragment"
+        android:name="com.demo.dashboard_search.CategoryFilterFragmentByChip"
+        tools:layout="@layout/fragment_category" />
+
+    <fragment
+        android:id="@+id/PostDetailsFragment"
+        android:name="com.demo.post_details.PostDetailsFragment"
+        tools:layout="@layout/fragment_post_details" />
+
+
+</navigation>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    <color name="colorPrimary">#8093ec</color>-->
+    <color name="colorPrimary">@color/themePink1</color>
+    <color name="colorPrimaryDark">#ef8f90</color>
+    <color name="colorAccent">@color/themePink1</color>
+    <color name="colorAccentTranslucent">#FFFFFF</color>
+
+    <color name="grey">#8f8f8f</color>
+    <color name="transparent_white">#80ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="bg_alert_dialog">#F2ffffff</color>
+    <color name="off_white">#f5f5f5</color>
+
+    <color name="orange_on_boarding">#E7978D</color>
+
+
+    //app color real
+
+    <color name="pale_salmon">#f3b49f</color>
+    <color name="rose_pink">#ef8f90</color>
+    <color name="perrywinkle">#8093ec</color>
+    <color name="cornflower">#727be5</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#222222</color>
+    <color name="brown_grey">#979797</color>
+    <color name="black_color">#222222</color>
+    <color name="gray_view_color">#f8f8f8</color>
+    <color name="prity_winkle_color">#8093ec</color>
+    <color name="corner_flower">#8093ec</color>
+    <color name="edit_text_Shape">#f8f8f8</color>
+    <color name="line_selected">#f3b49f</color>
+    <color name="line_colors">#004BDF40</color>
+    <color name="blush">#edac97</color>
+    <color name="pig_pink">#e8787a</color>
+    <color name="background_color">#f8f8f8</color>
+<!--    <color name="see_more">#7581e6</color>-->
+
+
+    <color name="blue_color_picker">#0066FF</color>
+    <color name="brown_color_picker">#AF593E</color>
+    <color name="green_color_picker">#01A368</color>
+    <color name="orange_color_picker">#FF861F</color>
+    <color name="red_color_picker">#ED0A3F</color>
+    <color name="red_orange_color_picker">#FF3F34</color>
+    <color name="sky_blue_color_picker">#76D7EA</color>
+    <color name="violet_color_picker">#8359A3</color>
+    <color name="yellow_color_picker">#FBE870</color>
+    <color name="yellow_green_color_picker">#C5E17A</color>
+    <color name="tool_bg">#151414</color>
+
+
+    <color name="blackFF">#FF000000</color>
+    <color name="grey1">#a6a6a6</color>
+
+    <color name="smallMic">#c2185b</color>
+    <color name="slideText">#6e6e6e</color>
+    <color name="color_lang_bg">#F2F2F2</color>
+    <color name="light_grey">#DCDCDC</color>
+
+    <color name="text_header">#5f5f5f</color>
+    <color name="line_color">#7a7a7a</color>
+    <color name="colorDivider">#aaaaaa</color>
+    <color name="text_grey">#949495</color>
+
+    <color name="blue">#00e1e7</color>
+    <color name="light_blue">#b9b4ff</color>
+    <color name="shadow_color">#FF000000</color>
+    <color name="line_button">#565758</color>
+    <color name="background_video_color">#2f3031</color>
+
+    <color name="themePink1">#ff0186</color>
+    <color name="themePink1Dark">#CF006D</color>
+    <color name="themePink1Transparent">#23FF0186</color>
+    <color name="themePink2">#ff0150</color>
+    <color name="themePink2Dark">#CD0040</color>
+    <color name="theme_pink_accent">#ff017f</color>
+    <color name="hint_grey">#6b6b6b</color>
+    <color name="hint_dots">#4D767676</color>
+    <color name="status_bar_color">#05424242</color>
+    <color name="stroke_grey">#66EAEAEA</color>
+    <color name="stroke_grey_dark">#66BDBDBD</color>
+    <color name="footer_gradient_color_1">#99000000</color>
+    <color name="footer_gradient_color_2">@android:color/transparent</color>
+    <color name="see_more">#ff0168</color>
+    <color name="hashtag_post_gradient_color_1">#80E9E9E9</color>
+    <color name="hashtag_post_gradient_color_2">#80EAEAEA</color>
+
+
+    <!--    <color name="stroke_grey">#66EAEAEA</color>-->
+    <!--    <color name="stroke_grey_dark">#66BDBDBD</color>-->
+    <color name="underline_grey">#1A979797</color>
+    <!--    <color name="stroke_grey">#eaeaea</color>-->
+    <!--    <color name="stroke_grey_dark">#BDBDBD</color>-->
+
+    <color name="greytext">#6b6b6b</color>
+    <color name="colortheme">#ff0186</color>
+    <color name="tabdisabled">#b5b5b5</color>
+    <color name="down_arrow">#b2b2b2</color>
+    <color name="category_chip_selected">#de0555</color>
+    <color name="category_chip_selected_false">#878787</color>
+    <color name="category_chip_selected_false_stroke">#bebebe</color>
+    <color name="no_of_post_hashtag">#959595</color>
+    <color name="image_slider_not_seleted">#6a6664</color>
+    <color name="shimmer_background">#dddddd</color>
+    <color name="cross">#989898</color>
+</resources>

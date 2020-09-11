@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.demo.followPopularUsers.FollowPopularUsersViewModel" />
+
+        <variable
+            name="clickHandler"
+            type="com.demo.followPopularUsers.FollowPopularUsersFragment.ClickHandler" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F8F8F8">
+
+        <include
+            android:id="@+id/toolbarLayout"
+            layout="@layout/layout_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dot_1" />
+
+        <View
+            android:id="@+id/dot_1"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@drawable/oval_3"
+            app:layout_constraintBottom_toTopOf="@id/toolbarLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="@dimen/_6sdp"
+            android:layout_height="@dimen/_6sdp"
+            android:background="@drawable/oval_3"
+            app:layout_constraintBottom_toTopOf="@id/toolbarLayout"
+            app:layout_constraintEnd_toEndOf="@id/toolbarLayout"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="@id/toolbarLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <View
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:background="@drawable/oval_3"
+            app:layout_constraintBottom_toBottomOf="@id/toolbarLayout"
+            app:layout_constraintEnd_toStartOf="@id/toolbarLayout"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbarLayout"
+            app:layout_constraintVertical_bias="0.7" />
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:layout_marginTop="15dp"
+            android:id="@+id/recycler_users"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/fl_bottum"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarLayout"
+            tools:itemCount="10"
+            tools:listitem="@layout/layout_popular_user" />
+
+        <FrameLayout
+            android:id="@+id/fl_bottum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:elegantTextHeight="true"
+                android:id="@+id/category_conti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16sdp"
+                android:background="@drawable/round_corner_bg"
+                android:fontFamily="@font/gothampro_medium"
+                android:gravity="center"
+                android:onClick="@{() -> clickHandler.onClickContinue()}"
+                android:padding="16sp"
+                android:text="@string/get_started"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="@{viewModel.responseGetPopularUsers_NEW.data == null ? View.GONE : View.VISIBLE}" />
+
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

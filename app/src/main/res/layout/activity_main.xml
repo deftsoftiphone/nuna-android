@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickHandler"
+            type="com.demo.activity.DashboardActivity.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dashBoardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        tools:context=".MainActivity">
+
+        <fragment
+            android:id="@+id/main_dash_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/nav_dashboard" />
+
+
+        <RelativeLayout
+            android:id="@+id/parentLayoutBotom"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/gradientLayoutBottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/footer_gradient_black"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vBottomShadow"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_above="@id/bottomNav"
+                android:background="@drawable/bottom_nav_shadow"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/bottomNav"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:paddingHorizontal="25dp">
+
+                <ImageView
+                    android:id="@+id/bDashboard"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="@{()-> clickHandler.onClickDashboard()}"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_home_white">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/bHashtag"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="@{()-> clickHandler.onClickHashtag()}"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_hashtag">
+
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:src="@drawable/menu_add_button_bg"
+                    android:visibility="invisible">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/bNotifications"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="@{()-> clickHandler.onClickNotifications()}"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_bell">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/bProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="@{()-> clickHandler.onClickProfile()}"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_user">
+
+                </ImageView>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            style="@style/TransparentBottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/footer_gradient_black"
+            android:clipChildren="false"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:visibility="gone"
+            app:itemBackground="@color/transparent"
+            app:itemIconSize="@dimen/_16sdp"
+            app:itemIconTint="@drawable/tab_color"
+            app:labelVisibilityMode="unlabeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
+
+        <RelativeLayout
+            android:id="@+id/rel_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/nav_view"
+            app:layout_constraintEnd_toEndOf="@+id/nav_view"
+            app:layout_constraintStart_toStartOf="@+id/nav_view" />
+
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_7sdp"
+            android:onClick="@{() -> clickHandler.onClickAdd()}"
+            android:scaleType="center"
+            android:src="@drawable/menu_add_button_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/nav_view"
+            app:layout_constraintEnd_toEndOf="@+id/nav_view"
+            app:layout_constraintStart_toStartOf="@+id/nav_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.990">
+
+        </ImageView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <fragment
+            android:id="@+id/main_dash_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/nav_view"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            app:navGraph="@navigation/nav_dashboard" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="#FFFFFF"
+            android:clipChildren="false"
+            android:elevation="2dp"
+            android:theme="@style/Widget.BottomNavigationView"
+            app:itemIconTint="@drawable/tab_color"
+            app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+            app:itemTextAppearanceInactive="@style/BottomNavigationView"
+            app:itemTextColor="@drawable/tab_color"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/bottom_nav_menu">
+
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_above="@id/nav_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-30dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/fab_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:fabSize="normal"
+                android:src="@drawable/ic_add"
+                app:elevation="8dp" />
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rel_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+
+    </RelativeLayout>-->
+</layout>

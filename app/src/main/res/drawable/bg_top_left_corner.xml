@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shadow_for_n_13"></item>
+    <item android:top="@dimen/_15sdp">
+        <shape
+            android:dither="true"
+            android:shape="rectangle">
+            <corners android:topLeftRadius="@dimen/_50sdp" />
+            <solid android:color="@color/white" />
+
+        </shape>
+    </item>
+</layer-list>

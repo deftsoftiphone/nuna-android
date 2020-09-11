@@ -1,0 +1,350 @@
+<resources>
+    <string name ="app_name">नुना</string>
+    <string name ="title_setting">सेटिंग्ज</string>
+    <string name ="title_filter">फिल्टर</string>
+    <string name ="title_message">संदेश</string>
+
+    <!--Validation : Login-->
+    <string name ="err_password_missing">आपला पासवर्ड टाका</string>
+    <string name ="err_password_length_invalid">पासवर्ड लांबी ८ ते २० वर्ण लांब असावा</string>
+    <string name ="confirm_new_password">नवीन पासवर्ड ची पुष्टी करा</string>
+    <string name ="err_otp_missing">ओटीपी टाका</string>
+
+    <!--Post Creation-->
+    <string name ="err_title_missing">पोस्ट चे टायटल टाका</string>
+    <string name ="err_discription_missing">पोस्ट ची माहिती लिहा</string>
+
+    <!--Change Password-->
+    <string name ="change_password">पासवर्ड बदला</string>
+    <string name ="err_old_password_missing">कृपया जुना पासवर्ड टाका</string>
+    <string name ="err_new_password_missing">कृपया नवीन पासवर्ड टाका</string>
+    <string name ="err_new_password_min_length">Password must be 8 characters long</string>
+    <string name ="err_new_password_max_length">Password length must not be greater than 16</string>
+    <string name ="err_confirm_password_missing">कृपया पासवर्ड ची पुष्टी करा</string>
+    <string name ="err_passwords_not_same">पासवर्ड चुकीचा आहे</string>
+    <string name ="err_new_password_matches_new_password">नवीन पासवर्ड आणि जुना पासवर्ड सारखाच आहे</string>
+    <string name ="old_password">जुना पासवर्ड</string>
+    <string name ="new_password">नवीन पासवर्ड</string>
+
+    <!--Other-->
+    <string name ="no_network_connected">कोणत्याही नेटवर्क ला जोडलेले नाही</string>
+    <string name ="msg_app_close">Are you sure you want to close the app?</string>
+    <string name ="yes">होय</string>
+    <string name ="no">नाही</string>
+    <string name ="email_address">ईमेल आयडी</string>
+    <string name ="password">पासवर्ड</string>
+    <string name ="forgot_your_password_q"><u>पासवर्ड विसरलात?</u></string>
+    <string name ="hello">Hello</string>
+    <string name ="sign_into_your_account">आपल्या अकाऊंट ला साईन इन करा</string>
+    <string name ="login">लॉगीन</string>
+    <string name ="remember_me">मला लक्षात ठेवा</string>
+    <string name ="forgot_your_password">Forgot your password</string>
+    <string name ="bad_response">Bad Response</string>
+    <string name ="something_went_wrong">अरेरे, काहीतरी चूक आहे</string>
+    <string name ="logout">लॉगआउट</string>
+    <string name ="msg_app_logout_confirmation">आपल्याला लॉगआउट करायचे का?</string>
+    <string name ="forgot_password">पासवर्ड विसरला आहे</string>
+    <string name ="submit">सबमिट करा</string>
+    <string name ="forgot_password_subtitle">आपला ईमेल प्रविष्ट करा. आम्ही पासवर्ड रिसेट करण्याची लिंक पाठवितो.</string>
+    <string name ="home">होम</string>
+    <string name ="profile">प्रोफाईल</string>
+    <string name ="notification">नोटीफिकेशन</string>
+    <string name ="change_your_password">Change Your Password</string>
+    <string name ="client_workflow">Client workflow</string>
+    <string name ="client_workflow_desc">Client Workflow description</string>
+    <string name ="camera">कॅमेरा</string>
+    <string name ="gallery">गॅलरी</string>
+    <string name ="pick_an_image">छायाचित्र निवडा</string>
+    <string name ="capture_image">फोटो काढा</string>
+    <string name ="pick_a_file">फाईल निवडा</string>
+    <string name ="next">पुढे</string>
+    <string name ="delete">काढून टाका</string>
+    <string name ="select_an_option">पर्याय निवडा</string>
+    <string name ="title">शीर्षक</string>
+    <string name ="value">Value</string>
+    <string name ="details">तपशील</string>
+    <string name ="confirm">खात्री करा</string>
+    <string name ="choose_language">आपली भाषा निवडा</string>
+    <string name ="continue_str">चालू ठेवा</string>
+    <string name ="verification">पडताळणी</string>
+    <string name ="resend_the_code"><u>कोड परत पाठवा</u></string>
+    <string name ="phone_number">दुरध्वनी क्रमांक</string>
+    <string name ="label_brush">ब्रश</string>
+    <string name ="label_emoji">ईमोजी</string>
+    <string name ="label_sticker">स्टीकर</string>
+    <string name ="label_eraser">इरेजर</string>
+    <string name ="label_text">शब्द</string>
+    <string name ="label_filter">फिल्टर</string>
+    <string name ="label_adjust">समायोजित करा</string>
+    <string name ="label_more">अधिक</string>
+    <string name ="label_crop">क्रॉप</string>
+    <string name ="label_free">मुक्त</string>
+    <string name ="label_original">मूळ</string>
+    <string name ="label_square">स्क्वेअर</string>
+    <string name ="label_rotate">रोटेट</string>
+    <string name ="label_brightness">ब्राईटनेस</string>
+    <string name ="label_saturation">सॅच्युरेशन</string>
+    <string name ="label_beauty">ब्युटी</string>
+    <string name ="label_smoothness">स्मूथनेस</string>
+    <string name ="label_skintone">स्कीन टोन</string>
+    <string name ="label_apply">अॅप्लाय</string>
+    <string name ="label_done">झाले</string>
+    <string name ="slide_to_cancel">रद्द करण्यासाठी स्लाईड करा</string>
+    <string name ="one">एक</string>
+    <string name ="two">दोन</string>
+    <string name ="three">तीन</string>
+    <string name ="language">भाषा</string>
+    <string name ="invalid_lat_long_used">Invalid lat long</string>
+    <string name ="no_address_found">No address found</string>
+    <string name ="address_found">Address found</string>
+    <string name ="Cancel">रद्द करा</string>
+    <string name ="discover">शोधा</string>
+    <string name ="updates">अपडेट्स</string>
+    <string name ="signup">साईन अप</string>
+    <string name ="choose_areas_you_interested">आपली रुची असणारे क्षेत्र निवडा</string>
+    <string name ="cat_saved_successfully">आपल्या श्रेणी यशस्वीरीत्या सुरक्षित केली आहे</string>
+    <string name ="follow_popular_users">लोकप्रिय वापरकर्त्यांचे अनुसरण करा</string>
+    <string name ="unfollow">अनफॉलो</string>
+    <string name ="follow">फॉलो</string>
+    <string name ="get_started">सुरुवात करा</string>
+    <string name ="following">फॉलोइंग</string>
+    <string name ="search">शोधा</string>
+    <string name ="add_to_board">बोर्डवर वर जोडा</string>
+    <string name ="report"><u>रिपोर्ट</u></string>
+    <string name ="dot_date"> &#032;&#032; \u2022 %1$s</string>
+    <string name ="see_more_comments">अधिक कमेंटस पहा (%1$d)</string>
+    <string name ="x_comments">%1$d कमेंटस</string>
+    <string name ="see_less">कमी पहा</string>
+    <string name ="choose_option">पर्याय निवडा</string>
+    <string name ="related_posts">संबधित पोस्ट</string>
+    <string name ="near_by">जवळपास असलेले</string>
+    <string name ="edit_profile">प्रोफाईल संपादित करा</string>
+    <string name ="account_settings">अकाउंट सेटिंग्ज</string>
+    <string name ="notifications">Notifications</string>
+    <string name ="terms_amp_conditions"><![CDATA[नियम व अटी]]></string>
+    <string name ="privacy_policy">गोपनीयता धोरण</string>
+    <string name ="security">सुरक्षा</string>
+    <string name ="about_app">अॅप बद्दल</string>
+    <string name ="faq">वारंवार विचारले जाणारे प्रश्न</string>
+    <string name ="profile_name">प्रोफाईल चे नाव</string>
+    <string name ="date_of_birth">जन्मतारीख</string>
+    <string name ="profile_tagline">प्रोफाईल वाक्य</string>
+    <string name ="gender">लिंग</string>
+    <string name ="interests">रुची</string>
+    <string name ="description">तपशील</string>
+    <string name ="tag">टॅग</string>
+    <string name ="location">स्थान</string>
+    <string name ="post">पोस्ट</string>
+    <string name ="video">व्हिडीओ</string>
+    <string name ="image">इमेज</string>
+    <string name ="video_editing">व्हिडीओ संपादन करा</string>
+    <string name ="save">सेव्ह</string>
+    <string name ="processing_video">व्हिडीओ प्रोसेसिंग करत आहे</string>
+    <string name ="video_1">व्हिडीओ १</string>
+    <string name ="video_2">व्हिडीओ २</string>
+    <string name ="select_music">संगीत निवडा</string>
+    <string name ="label">लेबल</string>
+    <string name ="error_filter">Select the video which you want to add filter animation</string>
+    <string name ="error_crop">Select the video which you want to add crop</string>
+    <string name ="error_music">Select the video which you want to merge the audio</string>
+    <string name ="error_speed">Select the video which you want to add speed animation</string>
+    <string name ="error_text">Select the video which you want to add text inside video</string>
+    <string name ="error_sticker">Select the video which you want to add sticker inside video</string>
+    <string name ="error_merge">Select 2 videos which you want to merge</string>
+    <string name ="error_transition">Select the video which you want to perform transition</string>
+    <string name ="error_select_sticker">Select the sticker which you want to show inside the video</string>
+    <string name ="error_select_sticker_pos">Select the position where you want to show the sticker</string>
+    <string name ="error_add_text">Add the text which you want to show inside the video</string>
+    <string name ="error_add_text_pos">Select the position where you want to show the text</string>
+    <string name ="error_select_speed">Select the playback speed which you want to apply to the video</string>
+    <string name ="error_select_filter">Select the filter which you want to apply to the video</string>
+    <string name ="error_select_smaller_video">Select the video smaller than 4 minutes</string>
+    <string name ="play_time">वाजण्याचा कालावधी</string>
+    <string name ="enter_text_here">येथे शब्द प्रविष्ट करा</string>
+    <string name ="save_video">संपादित केलेला व्हिडीओ आपल्याला सुरक्षित करायचा आहे का?</string>
+    <string name ="Continue">Continue</string>
+    <string name ="successfully_saved">आपला व्हिडीओ यशस्वीरीत्या सुरक्षित केला आहे</string>
+    <string name ="not_supported_video">व्हिडीओ फॉर्मॅट ला सपोर्ट नाही. आपल्याला एव्हीआय ते एमपी४ फॉर्मॅट मध्ये बदल करायचा आहे का?</string>
+    <string name ="short_seconds">सेकंद</string>
+    <string name ="megabyte">MB</string>
+    <string name ="kilobyte">KB</string>
+    <string name ="trimming_progress">आपला व्हिडीओ व्यवस्थित करत आहोत…</string>
+    <string name ="cancel">Cancel</string>
+    <string name ="select_a_video">व्हिडीओ निवडा</string>
+    <string name ="select_action">कार्यवाही निवडा</string>
+    <string name ="select_video_from_gallery">गॅलरीमधून व्हिडीओ निवडा</string>
+    <string name ="record_video_from_camera">कॅमेऱ्यातून व्हिडीओ सुरक्षित करा</string>
+    <string name ="type_your_comment">आपली प्रतिक्रिया प्रविष्ट करा…</string>
+    <string name ="bio">टॅगलाईन</string>
+    <string name ="name_placeholder" translatable ="false">%1$s %2$s</string>
+    <string name ="likes_placeholder" translatable ="false"><b>%1$d</b><![CDATA[<b><font
+color=#a6a6a6><br/>लाईक्स</font></b>]]></string>
+    <string name ="views_placeholder" translatable ="false"><b>%1$d</b><![CDATA[<b><font
+color=#a6a6a6><br/>दृष्टीकोन</font></b>]]></string>
+    <string name ="followers_placeholder" translatable ="false"><b>%1$d</b><![CDATA[<b><font
+color=#a6a6a6><br/>फॉलोअर्स</font></b>]]></string>
+    <string name ="comments_placeholder" translatable ="false"><b>%1$d</b><![CDATA[<b><font
+color=#a6a6a6><br/>कमेंटस</font></b>]]></string>
+    <string name ="male">पुरुष</string>
+    <string name ="female">स्त्री</string>
+    <string name ="my_profile">माझे प्रोफाईल</string>
+    <string name ="first_name">प्रथम नाव</string>
+    <string name ="last_name">आडनाव</string>
+    <string name ="user_name">युजरनेम</string>
+
+
+    <!-- TO DO: Remove or change this placeholder text -->
+    <string name ="my_posts">माझ्या पोस्ट</string>
+    <string name ="my_boards">माझे बोर्ड</string>
+    <string name ="settings">सेटिंग्ज</string>
+    <string name ="no_boards_found">बोर्ड सापडले नाही</string>
+    <string name ="no_item_found">कोणतीही माहिती नाही</string>
+    <string name ="no_post_found">कोणतीही पोस्ट नाही</string>
+    <string name ="msg_pinboards_not_available">अद्याप बोर्ड बनविले नाही</string>
+    <string name ="pinboard_name">बोर्डचे नाव</string>
+    <string name ="err_board_name_missing">बोर्ड चे नाव प्रविष्ट करा</string>
+    <string name ="img_upload_failed">इमेज अपलोड करण्यात त्रुटी</string>
+    <string name ="channel_name">Nuna</string>
+    <string name ="err_mobile_missing">दहा आकडी मोबाईल क्रमांक टाका</string>
+    <string name ="filter_by">आधारावर फिल्टर</string>
+    <string name ="edit">संपादन करा</string>
+    <string name ="msg_delete_board">आपल्याला \"%1$s\" बोर्ड काढण्यासाठी खात्री आहे?</string>
+    <string name ="msg_delete_post_from_board">बोर्ड वरून ही पोस्ट काढण्यासाठी खात्री आहे का?</string>
+    <string name ="reported_successfully">यशस्वीपणे रिपोर्ट केले</string>
+    <string name ="upr_one">अलीकडचे व्हिडीओ शोधा</string>
+    <string name ="upr_two"><![CDATA[उत्पादने, युक्ती, प्रतिसाद आणि वापरायची रीत शोधा]]></string>
+    <string name ="upr_three">रोख रक्कम मिळवा</string>
+    <string name ="below_three">छान कंटेंट निर्माण करा</string>
+    <string name ="upr_four">छान कंटेंट निर्माण करा</string>
+    <string name ="below_four">सहज सोप्या संपादनातून</string>
+    <string name ="upr_five">अद्ययावत विक्री</string>
+    <string name ="below_five">उत्पादनांचे अद्ययावत डेमो चालू काळात</string>
+    <string name ="preferences">संदर्भ</string>
+    <string name ="about">अॅप बद्दल</string>
+    <string name ="followers">फॉलोअर्स</string>
+    <string name ="comments">कमेंटस</string>
+    <string name ="like">लाईक्स</string>
+    <string name ="message_elipses">सांगण्यासाठी काही छान शब्द बोला</string>
+    <string name ="category">कॅटेगरी</string>
+
+    <!--Other2 : These are from translated files from December 2019. Use only If needed-->
+    <string name ="location_map">स्थान नकाशा</string>
+    <string name ="enter_email_ID">आपला ईमेल आयडी प्रविष्ट करा</string>
+    <string name ="enter_valid_email_ID">आपला वैध ईमेल आयडी टाका</string>
+    <string name ="business_details">व्यवसाय तपशील</string>
+    <string name ="sure_to_submit">आपल्याला माहिती दस्तावेज सबमिट करण्याची खात्री आहे का?</string>
+    <string name ="approved">मंजूर केले</string>
+    <string name ="rejected">नामंजूर केले</string>
+    <string name ="location_settings">स्थान सेटिंग्ज उघडा</string>
+    <string name ="gps_not_enabled">जीपीएस लोकेशन चालू नाही</string>
+    <string name ="service_not_enabled">सेवा उपलब्ध नाही</string>
+    <string name ="add_filter">फिल्टर लावा</string>
+    <string name ="add_audio_track">ऑडीओ ट्रॅक जोडा</string>
+    <string name ="adjust_speed">वेग समायोजित करा</string>
+    <string name ="add_sticker">स्टीकर जोडा</string>
+    <string name ="two_videos_merge">व्हिडीओ एकत्र करण्यासाठी एकत्र करा</string>
+    <string name ="perform_transition">बदल करा</string>
+    <string name ="choose_sticker">स्टीकर निवडा</string>
+    <string name ="adjust_sticker">स्टीकर ची जागा निवडा आणि समायोजित करा</string>
+    <string name ="add_text">शब्द जोडा</string>
+    <string name ="adjust_text">शब्दासाठी जागा निवडा आणि समायोजित करा</string>
+    <string name ="playback_speed">पार्श्वगीताचा वेग निवडा</string>
+    <string name ="select_filter">फिल्टर निवडा</string>
+    <string name ="less_than_4_min">व्हिडीओ ची लांबी ४ मिनिटांपेक्षा कमी असावी</string>
+    <string name ="fashion">फॅशन</string>
+    <string name ="makeup">साजशृंगार</string>
+    <string name ="food">अन्न</string>
+    <string name ="fitness">तंदुरस्ती</string>
+    <string name ="home_decor">घरसजावट</string>
+    <string name ="travel">भ्रमंती</string>
+    <string name ="architecture">वास्तुकला</string>
+    <string name ="interiors">अंतरसजावट</string>
+    <string name ="add">जोडा</string>
+    <string name ="views">दृष्टीकोन</string>
+    <string name ="my_board">माझे बोर्ड</string>
+
+    //###########################################################################
+
+    <string name ="liked_post">ला आपली पोस्ट आवडली</string>
+    <string name ="started_follwg">आपल्याला फॉलो करतात</string>
+    <string name ="comment_on_post">ने आपल्या पोस्ट वर कमेंट केली</string>
+    <string name ="board_empty">हे बोर्ड सध्या रिक्त आहे</string>
+    <string name ="delete_post">ही पोस्ट काढण्यासाठी खात्री आहे का?</string>
+    <string name ="no_boards_yet">आपण अद्याप बोर्ड बनविले नाही</string>
+    <string name ="no_posts_yet">आतापर्यंत आपण कोणतीही पोस्ट केली नाही</string>
+    <string name ="replies">उत्तर देतात</string>
+    <string name ="all_notif">सर्व अधिसूचना</string>
+    <string name ="otp_no_match">ओटीपी चुकीचा आहे</string>
+    <string name ="select_category">काही कॅटेगरी निवडा</string>
+    <string name ="nothing_selected">इमेज निवडा</string>
+    <string name ="type">टाईप</string>
+    <string name ="brush">ब्रश</string>
+    <string name ="opacity">ओपॅसिटी</string>
+    <string name ="size">साईज</string>
+    <string name ="txt_add_images">इमेज जोडा</string>
+    <string name ="prefer_not_to_say">सांगायचे नाही</string>
+    <string name ="select_image_for_edit">इमेज संपादित करण्यासाठी निवडा</string>
+    <string name ="hashtag">हॅशटॅग</string>
+    <string name ="add_description">माहिती जोडा</string>
+    <string name ="all">सर्व</string>
+    <string name ="save_without_exit">इमेज सेव्ह न करता बाहेर पडायचे आहे का?</string>
+    <string name ="first_last_name">प्रथम आणि शेवटचे नाव</string>
+    <string name ="no_comment">कमेंट नाही</string>
+    <string name ="otp_sent_to">या नंबरवर ओटीपी पाठविला</string>
+    <string name ="cont_polcy">कॉन्टेन्ट धोरण</string>
+
+//new///
+    <string name ="redeem_likes">कॅशसाठी लाईक रिडीम करा</string>
+    <string name ="chngs_saved">आपले चेंजेस सेव्ह केले</string>
+    <string name ="create_usrname">युजरनेम तयार करा</string>
+    <string name ="usrname_exists">हे युजरनेम आधीपासून आहे, इतर युजरनेम निवडा</string>
+    <string name ="select_board">बोर्ड निवडा</string>
+    <string name ="added_to_board">बोर्ड मध्ये जोडा</string>
+    <string name ="cancelled">रद्द केले</string>
+    <string name ="second_ago">सेंकदाआधी</string>
+    <string name ="minute_ago">मिनिटांआधी</string>
+    <string name ="hour_ago">तासाआधी</string>
+    <string name ="day_ago">दिवसांपूर्वी</string>
+    <string name ="week_ago">आठवड्यांपूर्वी</string>
+
+    <string name ="usrnam_updated">युजरनेम अपडेट केले</string>
+
+
+    //In Process of new Design
+    <string name="verification_title">Verification</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="t_n_c_and_privacy_policy">If you agree to Terms &amp; Conditions and the Privacy Policy, Click on the continue button.</string>
+    <string name="value_your_privacy">We value your privacy. Your number will not be shared with anyone else.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toolbarTitle">toolbarTitle</string>
+    <string name="fileURL">fileURL</string>
+    <string name="verify_phone_number">Verify Phone Number</string>
+    <string name="otp_sent">OTP has been sent to [number]</string>
+    <string name="_00_00">00:00</string>
+    <string name="hashtags">#Hashtags</string>
+    <string name="select_a_category">Select a Category</string>
+    <string name="_1_5k_posts">1.5k Posts</string>
+    <string name="close">Close</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="language_type">" मराठी"</string>
+    <string name="hashtag_already_exist">Hashtag already exist in the description.</string>
+
+    //API RECEIVED API ERROR MESSAGE
+    <string name="emptyOTPMsg">Please pass countryCode, mobileNo,languageId and otpCode in the body</string>
+    <string name="invalidOTPMsg">wrong otp code entered or re-entering used otp</string>
+
+    //API ERROR Messages
+    <string name="connectErr">Failed to connect to server. Please check your internet connection.</string>
+    <string name="timeoutErr">Failed to connect to server. Please try after sometime.</string>
+    <string name="emptyMobileNoErr">Please enter phone number.</string>
+    <string name="invalidOtpErr">Please enter valid OTP.</string>
+    <string name="userDeactivatedErr">Sorry, You account has been Deactivated.</string>
+    <string name="no_categories_available">Currently there are no categories available.</string>
+    <string name="no_hashtags_available">Currently no Hashtags are available.</string>
+
+
+    //API SUCCESS MESSAGES
+    <string name="loginSuccess">You have been registered successfully.</string>
+    <string name="postCreatedSuccess">Post has been created successfully.</string>
+
+</resources>

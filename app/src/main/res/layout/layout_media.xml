@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickHandler"
+            type="com.demo.activity.DashboardActivity.ClickHandler" />
+
+        <variable
+            name="dialog"
+            type="com.google.android.material.bottomsheet.BottomSheetDialog" />
+
+        <import type="com.demo.util.Media" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:elegantTextHeight="true"
+            android:gravity="center_vertical"
+            android:onClick="@{() -> clickHandler.onSelectMedia(Media.IMAGE, dialog)}"
+            android:text="@string/image"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            app:drawableLeftCompat="@drawable/ic_image_black_24dp" />
+
+        <TextView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:drawableStart="@drawable/ic_videocam_black_24dp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:onClick="@{() -> clickHandler.onSelectMedia(Media.VIDEO, dialog)}"
+            android:elegantTextHeight="true"
+            android:gravity="center_vertical"
+            android:text="@string/video"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</layout>

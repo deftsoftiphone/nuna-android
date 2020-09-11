@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.demo.create_post.CreatePostViewModel" />
+
+        <variable
+            name="clickHandler"
+            type="com.demo.create_post.EditPostFragment.ClickHandler" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="#f8f8f8"
+        >
+
+
+        <include
+            android:id="@+id/toolbarLayout"
+            layout="@layout/layout_toolbar" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_top_left_corner"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/toolbarLayout"
+            >
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:fillViewport="true">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:paddingLeft="@dimen/_20sdp"
+                                android:paddingRight="@dimen/_20sdp"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/et_title"
+                                    style="@style/CreatePostEdt"
+                                    android:layout_marginTop="4dp"
+                                    android:background="@drawable/edit_text_bg"
+                                    android:drawableLeft="@drawable/title"
+                                    android:drawablePadding="@dimen/_16sdp"
+                                    android:hint="@string/title"
+                                    android:imeOptions="actionNext"
+                                    android:maxLength="50"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:theme="@style/pro" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:background="@drawable/edit_text_bg">
+
+                                    <ImageView
+                                        android:id="@+id/img"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_16sdp"
+                                        android:src="@drawable/description" />
+
+                                    <EditText
+                                        android:id="@+id/et_description"
+                                        style="@style/CreatePostEdt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_100sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_toRightOf="@+id/img"
+                                        android:background="@android:color/transparent"
+                                        android:gravity="left|top"
+                                        android:hint="@string/description"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textMultiLine"
+                                        android:lineSpacingMultiplier="1.2"
+                                        android:maxLength="2000"
+                                        android:overScrollMode="always"
+                                        android:scrollbarStyle="insideInset"
+                                        android:scrollbars="vertical"
+                                        android:singleLine="false"
+                                        android:textColor="@color/black"
+                                        android:theme="@style/pro" />
+                                </RelativeLayout>
+
+<!--                                android:text="@={viewModel.requestSavePost.description}"-->
+
+                                <RelativeLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="@dimen/_15sdp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:gravity="center_vertical"
+                                        android:text="@string/category"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:theme="@style/pro" />
+                                </RelativeLayout>
+
+                                <com.google.android.material.chip.ChipGroup
+                                    android:id="@+id/chip_group"
+                                    style="@style/Widget.MaterialComponents.Chip.Action"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#FFF"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:theme="@style/medium"
+                                    app:selectionRequired="true"
+                                    app:singleSelection="true" />
+
+                                <EditText
+                                    android:id="@+id/et_tag"
+                                    style="@style/CreatePostEdt"
+                                    fontPath="fonts/GothamPro-Italic.ttf"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:background="@drawable/edit_text_bg"
+                                    android:drawableLeft="@drawable/tag"
+                                    android:drawablePadding="@dimen/_16sdp"
+                                    android:hint="@string/hashtag"
+                                    android:imeOptions="actionDone"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:theme="@style/pro" />
+
+                                <EditText
+                                    android:id="@+id/et_location"
+                                    style="@style/CreatePostEdt"
+                                    fontPath="fonts/GothamPro-Italic.ttf"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:background="@drawable/edit_text_bg"
+                                    android:drawableLeft="@drawable/location"
+                                    android:drawablePadding="@dimen/_16sdp"
+                                    android:hint="@string/location"
+                                    android:imeOptions="actionNext"
+                                    android:maxLength="25"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:theme="@style/pro"
+                                    android:visibility="gone" />
+
+                                <FrameLayout
+                                    android:id="@+id/fl_bottum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_20sdp"
+                                    android:layout_marginBottom="@dimen/_200sdp"
+                                    android:background="#FFF">
+
+                                    <TextView
+                                        android:id="@+id/post"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:background="@drawable/round_corner_bg"
+                                        android:gravity="center"
+                                        android:onClick="@{() -> clickHandler.onClickSave()}"
+                                        android:padding="16sp"
+                                        android:text="@string/post"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:theme="@style/medium" />
+
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

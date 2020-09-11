@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="hashTag"
+            type="com.demo.model.response.baseResponse.HashTag" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="12dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/clTag"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/userImage"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:background="@drawable/circle"
+                android:scaleType="center"
+                android:src="@drawable/ic_hashtag_list_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/gothampro_medium"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="3sp"
+                android:singleLine="true"
+                android:text="@{hashTag.tagName}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@+id/tvPosts"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/userImage"
+                app:layout_constraintTop_toTopOf="@+id/userImage"
+                app:layout_constraintVertical_chainStyle="packed">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvPosts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/gotham_pro"
+                android:gravity="center_vertical"
+                android:text="@{hashTag.postsBased == 1 ? hashTag.postsBased.toString().concat(` `).concat(@string/view_text) :  hashTag.postsBased.toString().concat(` `).concat(@string/views_text)}"
+                android:textColor="#6b6b6b"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintBottom_toBottomOf="@id/userImage"
+                app:layout_constraintStart_toStartOf="@id/fullName"
+                app:layout_constraintTop_toBottomOf="@id/fullName" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:id="@+id/btn_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/suggestion_selecter"
+            android:fontFamily="@font/gothampro_medium"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Follow"
+            android:textAllCaps="false"
+            android:textColor="@color/button_dark_text"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/clTag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/clTag">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
