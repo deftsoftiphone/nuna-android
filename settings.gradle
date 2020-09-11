@@ -1,0 +1,5 @@
+include ':app', ':photoview', ':mediaplayer', ':photoeditor', ':videocompressor', ':ananas'
+
+//':ananas'
+
+//':record-view',

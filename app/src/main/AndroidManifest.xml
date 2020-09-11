@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.demo">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+<!--    android:allowBackup="false"-->
+<!--    tools:replace="android:allowBackup"-->
+
+    <application
+        android:name="com.demo.base.MainApplication"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name2"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppParentTheme"
+        tools:replace="theme,label"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="q">
+
+        <activity
+            android:name=".splash.SplashActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".photoeditor.EditImageActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!--
+                    android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+        -->
+        <activity
+            android:name="com.demo.activity.DashboardActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified">
+            <!-- <intent-filter>
+                 <action android:name="android.intent.action.SEND" />
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <data android:mimeType="image/*" />
+             </intent-filter>
+             <intent-filter>
+                 <action android:name="android.intent.action.SEND" />
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <data android:mimeType="text/plain" />
+             </intent-filter>
+             <intent-filter>
+                 <action android:name="android.intent.action.SEND_MULTIPLE" />
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <data android:mimeType="image/*" />
+                 android:windowSoftInputMode="stateHidden|adjustResize"
+             </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name="com.demo.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.demo.activity.AccountHandlerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <activity
+            android:name=".activity.AccountSetupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".photoeditor.base.BaseActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.PhotoViewActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+
+<!--        <receiver android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferNetworkLossHandler">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"></action>-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <activity
+            android:name=".marveleditor.VIdeoEditerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+        <!--OptiTrimmerActivity-->
+        <activity
+            android:name=".marveleditor.OptiTrimmerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name="com.akexorcist.localizationactivity.ui.LocalizationActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--FileProvider-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+        </provider>
+        <service android:name=".fcm.FcmService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <receiver
+            android:name=".receivers.SMSListener"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVE" />
+            </intent-filter>
+        </receiver>
+        <!-- <meta-data
+             android:name="com.facebook.sdk.ApplicationId"
+             android:value="731238050974936"/>
+
+         <provider android:authorities="com.facebook.app.FacebookContentProvider{731238050974936}"
+             android:name="com.facebook.FacebookContentProvider"
+             android:exported="true"/>-->
+
+        <meta-data
+            android:name="com.sec.android.support.multiwindow"
+            android:value="false" />
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.multiinstance.enable"
+            android:value="false" />
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.penwindow.enable"
+            android:value="false" />
+
+    </application>
+
+</manifest>

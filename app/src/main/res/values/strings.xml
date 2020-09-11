@@ -1,0 +1,558 @@
+<resources>
+    <!--    <string name="app_name">Nuna</string>-->
+    <string name="app_name">Nuna Deftsoft</string>
+    <string name="app_name2">Nuna Deftsoft</string>
+    <string name="title_setting">Settings</string>
+    <string name="title_filter">Filter</string>
+    <string name="title_message">Messages</string>
+    <string name="no_name">No name</string>
+    <string name="no_username">No username</string>
+    <string name="followersText"> followers</string>
+    <string name="followerText"> follower</string>
+    <string name="postsText"> posts</string>
+    <string name="place_holder_full_name">Add your name</string>
+    <string name="place_holder_bio">Add a bio to your profile</string>
+    <string name="change_language">Change Language</string>
+
+    <!--Validation : Login-->
+    <string name="err_password_missing">Please enter password</string>
+    <string name="err_password_length_invalid">Password length should be 8 to 20 characters</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="err_otp_missing">Please enter OTP</string>
+
+    <!--Post Creation-->
+    <string name="err_title_missing">Please enter title of post</string>
+    <string name="err_discription_missing">Please enter description of post</string>
+
+    <!--Change Password-->
+    <string name="change_password">Change Password</string>
+    <string name="err_old_password_missing">Please enter old password</string>
+    <string name="err_new_password_missing">Please enter new password</string>
+    <string name="err_new_password_min_length">Password must be 8 characters long</string>
+    <string name="err_new_password_max_length">Password length must not be greater than 16</string>
+    <string name="err_confirm_password_missing">Please confirm password</string>
+    <string name="err_passwords_not_same">Passwords do not match</string>
+    <string name="err_new_password_matches_new_password">New password is the same as old
+password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+
+    <!--Other-->
+    <string name="no_network_connected">No Network Connection</string>
+    <string name="msg_app_close">Are you sure you want to close the app?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="email_address">Email Address</string>
+    <string name="forgot_your_password_q"><u>Forgot password?</u></string>
+    <string name="hello">Hello</string>
+    <string name="sign_into_your_account">Sign in to your account</string>
+    <string name="login">Login</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_your_password">Forgot your password</string>
+    <string name="bad_response">Bad Response</string>
+    <string name="something_went_wrong">Oops, something went wrong</string>
+    <string name="logout">Logout</string>
+    <string name="msg_app_logout_confirmation">Are you sure you want to logout?</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="submit">Submit</string>
+    <string name="forgot_password_subtitle">Please enter your email. We\'ll send you a reset password link.</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="notification">Notifications</string>
+    <string name="change_your_password">Change Your Password</string>
+    <string name="client_workflow">Client workflow</string>
+    <string name="client_workflow_desc">Client Workflow description</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="pick_an_image">Pick an image</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="pick_a_file">Pick a file</string>
+    <string name="next">Next</string>
+
+    <string name="delete">Delete</string>
+    <string name="select_an_option">Select an option</string>
+    <string name="title">Title</string>
+    <string name="value">Value</string>
+    <string name="details">Details</string>
+    <string name="confirm">Confirm</string>
+    <string name="choose_language">Choose Language</string>
+    <string name="continue_str">Continue</string>
+    <string name="password">Password</string>
+    <string name="verification">Verification OTP code sent to</string>
+    <string name="resend_the_code"><u>Resend the Code</u></string>
+    <string name="phone_number">Phone Number</string>
+    <string name="label_brush">Brush</string>
+    <string name="label_emoji">Emojis</string>
+    <string name="label_sticker">Stickers</string>
+    <string name="label_eraser">Eraser</string>
+    <string name="label_text">Text</string>
+    <string name="label_filter">Filter</string>
+    <string name="label_adjust">Adjust</string>
+    <string name="label_more">More</string>
+    <string name="label_crop">Crop</string>
+    <string name="label_free">Free</string>
+    <string name="label_original">Original</string>
+    <string name="label_square">Square</string>
+    <string name="label_rotate">Rotate</string>
+    <string name="label_brightness">Brightness</string>
+    <string name="label_saturation">Saturation</string>
+    <string name="label_beauty">Beauty</string>
+    <string name="label_smoothness">Smoothness</string>
+    <string name="label_skintone">Skin Tone</string>
+    <string name="label_apply">Apply</string>
+    <string name="label_done">Done</string>
+    <string name="slide_to_cancel">Slide to cancel</string>
+    <string name="one">One</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+    <string name="language">Language</string>
+    <string name="invalid_lat_long_used">Invalid lat long</string>
+    <string name="no_address_found">No address found</string>
+    <string name="address_found">Address found</string>
+    <string name="Cancel">Cancel</string>
+    <string name="discover">Discover</string>
+    <string name="updates">Updates</string>
+    <string name="signup">Sign Up</string>
+    <string name="choose_areas_you_interested">Choose areas of interest</string>
+    <string name="cat_saved_successfully">Your categories are saved</string>
+    <string name="follow_popular_users">Follow popular users</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="follow">Follow</string>
+    <string name="get_started">Get Started</string>
+    <string name="following">Following</string>
+    <string name="following_small">followings</string>
+    <string name="followers_small">followers</string>
+    <string name="search">Search</string>
+    <string name="add_to_board">Add to Board</string>
+    <string name="report"><u>REPORT</u></string>
+    <string name="dot_date"> &#032;&#032; \u2022 %1$s</string>
+    <string name="see_more_comments">SEE MORE COMMENTS (%1$d)</string>
+    <string name="x_comments">%1$d COMMENTS</string>
+    <string name="see_less">See less</string>
+    <string name="choose_option">Choose an Option</string>
+    <string name="related_posts">RELATED POSTS</string>
+    <string name="near_by">Nearby</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="terms_amp_conditions">Terms &amp; Conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="security">Security</string>
+    <string name="about_app">About App</string>
+    <string name="faq">FAQ</string>
+    <string name="profile_name">Profile Name</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="profile_tagline">Profile Tagline</string>
+    <string name="gender">Gender</string>
+    <string name="interests">Interests</string>
+    <string name="description">Description</string>
+    <string name="tag">Tag</string>
+    <string name="location">Location</string>
+    <string name="post">Post</string>
+    <string name="video">Video</string>
+    <string name="image">Image</string>
+    <string name="video_editing"> Edit Video</string>
+    <string name="save">Save</string>
+    <string name="processing_video">Processing Video</string>
+    <string name="video_1">Video 1</string>
+    <string name="video_2">Video 2</string>
+    <string name="select_music">Select music</string>
+    <string name="label">Label</string>
+    <string name="error_filter">Select the video which you want to add filter animation</string>
+    <string name="error_crop">Select the video which you want to add crop</string>
+    <string name="error_music">Select the video which you want to merge the audio</string>
+    <string name="error_speed">Select the video which you want to add speed animation</string>
+    <string name="error_text">Select the video which you want to add text inside video</string>
+    <string name="error_sticker">Select the video which you want to add sticker inside video</string>
+    <string name="error_merge">Select 2 videos which you want to merge</string>
+    <string name="error_transition">Select the video which you want to perform transition</string>
+    <string name="error_select_sticker">Select the sticker which you want to show inside the video</string>
+    <string name="error_select_sticker_pos">Select the position where you want to show the sticker</string>
+    <string name="error_add_text">Add the text which you want to show inside the video</string>
+    <string name="error_add_text_pos">Select the position where you want to show the text</string>
+    <string name="error_select_speed">Select the playback speed which you want to apply to the video</string>
+    <string name="error_select_filter">Select the filter which you want to apply to the video</string>
+    <string name="error_select_smaller_video">Select the video smaller than 4 minutes</string>
+    <string name="play_time">Play Time</string>
+    <string name="enter_text_here">Enter text here</string>
+    <string name="save_video">Would you like to save your edited video?</string>
+    <string name="Continue">Continue</string>
+    <string name="successfully_saved">Your video was successfully saved</string>
+    <string name="not_supported_video">Video format is not supported. Would you like to convert avi to mp4 format?</string>
+    <string name="short_seconds">sec</string>
+    <string name="megabyte">MB</string>
+    <string name="kilobyte">KB</string>
+    <string name="trimming_progress">Trimming your video…</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_a_video">Select a Video</string>
+    <string name="select_action">Select Action</string>
+    <string name="select_video_from_gallery">Select video from gallery</string>
+    <string name="record_video_from_camera">Record video from camera</string>
+    <string name="type_your_comment">Type your comment…</string>
+    <string name="bio">Bio</string>
+    <string name="name_placeholder" translatable="false">%1$s %2$s</string>
+    <string name="likes_placeholder" translatable="false"><b>%1$d</b><![CDATA[<b><font
+color=#a6a6a6><br/>Likes</font></b>]]></string>
+    <string name="views_placeholder" translatable="false"><b>%1$d</b><![CDATA[<b><font
+color=#a6a6a6><br/>Views</font></b>]]></string>
+    <string name="followers_placeholder" translatable="false"><b>%1$d</b><![CDATA[<b><font
+color=#a6a6a6><br/>Followers</font></b>]]></string>
+    <string name="comments_placeholder" translatable="false"><b>%1$d</b><![CDATA[<b><font
+color=#a6a6a6><br/>Comments</font></b>]]></string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="my_profile">My Profile</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="user_name">Username</string>
+
+
+    <!-- TO DO: Remove or change this placeholder text -->
+    <string name="my_posts">My Posts</string>
+    <string name="my_boards">My Boards</string>
+    <string name="settings">Settings</string>
+    <string name="no_boards_found">No boards found</string>
+    <string name="no_item_found">No item found</string>
+    <string name="no_post_found">No post found</string>
+    <string name="msg_pinboards_not_available">No boards created yet</string>
+    <string name="pinboard_name">Board Name</string>
+    <string name="err_board_name_missing">Please enter a board name</string>
+    <string name="img_upload_failed">Failed to upload image</string>
+    <string name="channel_name">Nuna</string>
+    <string name="err_mobile_missing">Please enter a 10-digit phone number</string>
+    <string name="filter_by">Filter by</string>
+    <string name="edit">Edit</string>
+    <string name="msg_delete_board">Are you sure you want to delete \"%1$s\" board?</string>
+    <string name="msg_delete_post_from_board">Are you sure you want to remove this post from board?</string>
+    <string name="reported_successfully">Reported successfully</string>
+    <string name="upr_one">Discover Latest Trends</string>
+    <string name="upr_two"><![CDATA[Find Product Reviews, Tips & Tricks, How-To’s]]></string>
+    <string name="upr_three">Earn Cash</string>
+    <string name="below_three">By Creating Great Content</string>
+    <string name="upr_four">Create Great Content</string>
+    <string name="below_four">With Easy-to-Use Editor</string>
+    <string name="upr_five">Live Selling</string>
+    <string name="below_five">Watch Product Demos in Real Time</string>
+    <string name="preferences">Preferences</string>
+    <string name="about">About App</string>
+    <string name="followers">Followers</string>
+    <string name="comments">Comments</string>
+    <string name="like">Like</string>
+    <string name="liked">Liked</string>
+    <string name="likes">Likes</string>
+    <string name="message_elipses">Say something nice</string>
+    <string name="category">Category</string>
+
+    <!--Other2 : These are from translated files from December 2019. Use only If needed-->
+    <string name="location_map">Location Map</string>
+    <string name="enter_email_ID">Please enter your email ID</string>
+    <string name="enter_valid_email_ID">Please enter a valid email ID</string>
+    <string name="business_details">Business Details</string>
+    <string name="sure_to_submit">Are you sure you want to submit document?</string>
+    <string name="approved">Approved</string>
+    <string name="rejected">Rejected</string>
+    <string name="location_settings">Open Location Settings</string>
+    <string name="gps_not_enabled">GPS location not enabled</string>
+    <string name="service_not_enabled">Service Not Available</string>
+    <string name="add_filter">Add filter</string>
+    <string name="add_audio_track">Add audio track</string>
+    <string name="adjust_speed">Adjust speed</string>
+
+    <string name="add_sticker">Add sticker</string>
+    <string name="two_videos_merge">Select any 2 videos to merge</string>
+    <string name="perform_transition">Perform transition</string>
+    <string name="choose_sticker">Choose sticker</string>
+    <string name="adjust_sticker">Select &amp; adjust position of sticker</string>
+    <string name="adjust_text">Select &amp; adjust position of text</string>
+    <string name="playback_speed">Select playback speed</string>
+    <string name="select_filter">Select filter</string>
+    <string name="less_than_4_min">Video length should be less than 4 minutes</string>
+    <string name="fashion">Fashion</string>
+    <string name="makeup">Makeup</string>
+    <string name="food">Food</string>
+    <string name="fitness">Fitness</string>
+    <string name="home_decor">Home Decor</string>
+    <string name="travel">Travel</string>
+    <string name="architecture">Architecture</string>
+    <string name="interiors">Interiors</string>
+    <string name="add">Add</string>
+    <string name="views">Views</string>
+    <string name="views_text">views</string>
+    <string name="view_text">view</string>
+    <string name="my_board">My Board</string>
+
+    // ###########################################################################
+
+    <string name="liked_post">liked your post</string>
+    <string name="started_follwg">started following you</string>
+    <string name="comment_on_post">Commented on your post</string>
+    <string name="board_empty">This board is currently empty</string>
+    <string name="delete_post">Are you sure you want to delete this post?</string>
+    <string name="no_boards_yet">You have not created any boards yet</string>
+    <string name="no_posts_yet">You have not created any posts yet</string>
+    <string name="all_notif">All notifications</string>
+    <string name="otp_no_match">The OTP does not match</string>
+    <string name="select_category">Please select a Category</string>
+    <string name="nothing_selected">Please select an image</string>
+    <string name="type">Type</string>
+    <string name="brush">Brush</string>
+    <string name="opacity">Opacity</string>
+    <string name="size">Size</string>
+    <string name="txt_add_images">Add Images</string>
+    <string name="prefer_not_to_say">Prefer not to say</string>
+    <string name="select_image_for_edit">Select an image to edit</string>
+    <string name="hashtag">Hashtag</string>
+    <string name="add_description">Add a Description</string>
+    <string name="all">All</string>
+    <string name="save_without_exit">Are you sure you want to exit without saving the image?</string>
+    <string name="first_last_name">First &amp; last name</string>
+    <string name="no_comment">NO COMMENTS</string>
+
+
+    // removed
+    <string name="channel_description">Nuna Notification</string>
+    <string name="channel_id">1</string>
+    <string name="open_location_settings">Open Location Settings</string>
+    <string name="gps_network_not_enabled">GPS location not enabled</string>
+    <string name="service_not_available">Service Not Available</string>
+    <string name="are_you_save">Are you want to exit without saving image ?</string>
+
+    <string name="msg_delete_post">Are you sure you want to remove this post?</string>
+
+    <string name="tagline">Tagline</string>
+
+    //fonts
+    <string name="gotham_pro">gotham_pro.ttf</string>
+
+    <string name="gothampro_bold">gothampro_bold.ttf</string>
+    <string name="gothampro_medium">gothampro_medium.ttf</string>
+    <string name="hindi">hindi.ttf</string>
+
+    <string name="replies">replies</string>
+
+    <string name="otp_sent_to">Verification OTP code sent to</string>
+    <string name="cont_polcy">Content Policy</string>
+
+    //new///
+    <string name="redeem_likes">Redeem Likes for Cash</string>
+    <string name="chngs_saved">Your changes have been saved</string>
+    <string name="create_usrname">Create a Username</string>
+    <string name="usrname_exists">This username already exists. Please use a different username.</string>
+    <string name="select_board">Select a board</string>
+    <string name="added_to_board">Added to board</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="second_ago">s ago</string>
+    <string name="minute_ago">m ago</string>
+    <string name="hour_ago">h ago</string>
+    <string name="day_ago">d ago</string>
+    <string name="week_ago">w ago</string>
+
+    <string name="usrnam_updated">Username has been updated</string>
+    <string name="edit_post">Edit Post</string>
+    <string name="not_have_follower">Not have any follower</string>
+
+
+    //In Process of new Design
+    <string name="verification_title">Verification</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="user_about">I got a 20-week scan and the other day</string>
+
+    //Query Params for GET APIs
+    <string name="query_param_offset">offset</string>
+    <string name="query_param_limit">limit</string>
+    <string name="query_param_search">search</string>
+    <string name="query_param_languageId">languageId</string>
+    <string name="query_param_categoryId">categoryId</string>
+    <integer name="query_param_limit_value">10</integer>
+
+    <string name="t_n_c_and_privacy_policy">If you agree to Terms &amp; Conditions and the Privacy Policy, Click on the continue button.</string>
+    <string name="value_your_privacy">We value your privacy. Your number will not be shared with anyone else.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toolbarTitle">toolbarTitle</string>
+    <string name="fileURL">fileURL</string>
+    <string name="verify_phone_number">Verify Phone Number</string>
+    <string name="otp_sent">OTP has been sent to [number]</string>
+    <string name="_00_00">00:00</string>
+    <string name="_00_01">00:01</string>
+    <string name="hashtags">#Hashtags</string>
+    <string name="hashtags_without_hash">Hashtags</string>
+    <string name="select_a_category">Select a Category</string>
+    <string name="_1_5k_posts">1.5k Posts</string>
+    <string name="close">Close</string>
+    <string name="language_type">English</string>
+    <string name="hashtag_already_exist">Hashtag already exist in the description.</string>
+    <string name="all_categories">All</string>
+    <integer name="default_offset">0</integer>
+    <integer name="default_hashtag_post_offset">5</integer>
+    <integer name="REQ_USER_CONSENT">200</integer>
+    <string name="invalid_mobile">Please enter a valid phone number</string>
+
+
+    //API RECEIVED API ERROR MESSAGE
+    <string name="emptyOTPMsg">Please pass countryCode, mobileNo,languageId and otpCode in the body</string>
+    <string name="invalidOTPMsg">wrong otp code entered or re-entering used otp</string>
+    <string name="noHashtagMsg">No hashTag found</string>
+
+    //API ERROR Messages
+    <string name="connectErr">Failed to connect to server. Please check your internet connection.</string>
+    <string name="timeoutErr">Failed to connect to server. Please try after sometime.</string>
+    <string name="emptyMobileNoErr">Please enter phone number.</string>
+    <string name="invalidOtpErr">Please enter valid OTP.</string>
+    <string name="userDeactivatedErr">Sorry, You account has been Deactivated.</string>
+    <string name="no_categories_available">Currently there are no categories available.</string>
+    <string name="no_hashtags_available">Currently no Hashtags are available.</string>
+
+
+    //API SUCCESS MESSAGES
+    <string name="loginSuccess">You have been registered successfully.</string>
+    <string name="postCreatedSuccess">Post has been created successfully.</string>
+    <string name="otpResendSuccess">Verification OTP code has been sent to your number.</string>
+    <string name="post_created_successfully">Post has been created successfully.</string>
+    <string name="empty_mobile_no">Please enter phone number.</string>
+    <string name="invalid_otp">Please enter a valid OTP.</string>
+    <string name="username_instructions">Usernames can contain only letters, numbers, underscores, and periods.</string>
+    <string name="username_not_available">This username is not available.\nPlease try a different one.</string>
+    <string name="tap_to_see">Tap to see</string>
+    <string name="more">More</string>
+    <string name="no_more_hashtags">No more hashtags</string>
+    <string name="noActivityDescription">Publish your videos and interact with everyone</string>
+    <string name="alert">Alert</string>
+    <string name="cancel_post">Are you sure you want to go back? (All the entered data will be lost)</string>
+    <string name="max_character_reached">Maximum 200 Characters.</string>
+    <string name="language_updated_success">Language updated successfully.</string>
+    <string name="bio_placeholder">Follow me on Nuna</string>
+    <string name="share">Shares</string>
+    <string name="commented">commented</string>
+    <string name="followed">followed</string>
+    <string name="shared">shared</string>
+    <string name="no_internet">No Internet Connection Available!!</string>
+    <string name="like_post">Liked your post</string>
+    <string name="follow_you">Followed you</string>
+    <string name="share_post">Shared your post</string>
+    <string name="posts">posts</string>
+    <string name="name">Name</string>
+    <string name="full_name">Full name</string>
+    <string name="add_your_bio">Add your bio</string>
+    <string name="enter_full_name">Please enter full name</string>
+    <string name="enter_user_name">Please enter user name</string>
+    <string name="popular">Popular</string>
+    <string name="user">User</string>
+    <string name="bio_placeholder_own">Add a bio to your profile</string>
+    <string name="base_url">http://1.6.98.142:3000</string>
+    <integer name="transparent_bottom_nav_height">280</integer>
+    <string name="success">Success</string>
+    <string name="post_text"> post</string>
+    <string name="fail">Fail</string>
+
+    <!--Socket Message Keys START-->
+    <string name="socket_user_login">user-logs-in</string>
+    <string name="socket_listen_user_login">login-success</string>
+    <string name="socket_user_logout">user-logs-out</string>
+    <string name="socket_listen_user_logout">logout-success</string>
+    <!--Socket Message Keys END-->
+
+    <string name="search_query_users">user</string>
+    <string name="search_query_videos">videos</string>
+    <string name="search_query_hashtag">hashtag</string>
+    <string name="suggested">Suggested</string>
+    <string name="suggested_small">suggested</string>
+    <string name="users">Users</string>
+    <string name="videos">Videos</string>
+    <string name="no_hashtag_found">No hashTag found</string>
+    <string name="no_results_found">No results found</string>
+    <string name="post_file_video">video</string>
+    <string name="post_file_image">image</string>
+    <string name="no_activity_yet">No activity yet</string>
+    <string name="sample_video">sample_vid.mp4</string>
+</resources>

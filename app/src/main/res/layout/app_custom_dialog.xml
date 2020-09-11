@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="specs"
+            type="com.demo.base.AlertDialogSpecs" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+
+        android:paddingTop="@dimen/_8sdp">
+
+        <TextView
+            android:elegantTextHeight="true"
+            android:id="@+id/tvAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{specs.title}"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:visibility="@{specs.title.isEmpty() ? View.GONE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="AUTOM8" />
+
+
+        <TextView
+            android:elegantTextHeight="true"
+            android:id="@+id/tvContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@{specs.message}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAppTitle" />
+
+        <View
+            android:id="@+id/seaprator_horizontol"
+            android:layout_width="match_parent"
+            android:background="#33000000"
+            android:layout_height="0.4dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvContent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnYes"
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_weight="1"
+            android:background="@{specs.btnNeg.isEmpty() ? @drawable/bg_bottom_corner_rounded :@drawable/bg_bottom_left_cornered }"
+            android:layout_height="wrap_content"
+            android:text="@{specs.btnPos}"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toStartOf="@id/btnNo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seaprator_horizontol"
+            tools:text="Yes"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_weight="1"
+            android:background="@null"
+            android:text="@{specs.btnNeg}"
+            android:textColor="@color/colorAccent"
+            android:visibility="@{specs.btnNeg.isEmpty() ? View.GONE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnYes"
+            app:layout_constraintTop_toBottomOf="@id/seaprator_horizontol"
+            tools:text="No"
+            />
+
+        <View
+            android:id="@+id/seaprator_vertical"
+            android:layout_width="0.4dp"
+            android:background="#33000000"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/btnYes"
+            app:layout_constraintTop_toBottomOf="@id/seaprator_horizontol"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

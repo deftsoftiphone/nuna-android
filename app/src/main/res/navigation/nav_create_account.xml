@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/LanguageSelectFragment">
+
+
+    <fragment
+        android:id="@+id/LanguageSelectFragment"
+        android:name="com.demo.language_select.LanguageSelectFragment"
+        tools:layout="@layout/fragment_lang_select" />
+
+    <fragment
+        android:id="@+id/OnBoardingFragment"
+        android:name="com.demo.on_boarding.OnBoardingFragment"
+        tools:layout="@layout/on_boarding_layout" />
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.demo.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_LoginFragment_to_infoFragment"
+            app:destination="@id/infoFragment"
+            app:popUpTo="@id/LoginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OtpFragment"
+        android:name="com.demo.otp.OtpFragment"
+        tools:layout="@layout/fragment_otp" />
+
+    <fragment
+        android:id="@+id/UsernameSetProfileFragment"
+        android:name="com.demo.username_set.UsernameSetProfileFragment"
+        tools:layout="@layout/fragment_username_set" />
+
+    <fragment
+        android:id="@+id/ForgotPasswordFragment"
+        android:name="com.demo.forgot_password.ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/CategoryFragment"
+        android:name="com.demo.category_select.CategoryFragment"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/EditProfileFragment"
+        android:name="com.demo.edit_profile.EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.demo.help.InfoFragment"
+        android:label="InfoFragment"
+        tools:layout="@layout/fragment_info">
+        <argument
+            android:name="@string/toolbarTitle"
+            app:argType="java.lang.String"
+            app:nullable="false"/>
+        <argument
+            android:name="@string/fileURL"
+            app:argType="java.lang.String"
+            app:nullable="false"/>
+    </fragment>
+</navigation>

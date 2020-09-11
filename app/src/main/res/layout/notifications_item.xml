@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <variable
+            name="activity"
+            type="com.demo.model.response.baseResponse.Activity" />
+
+        <variable
+            name="userDetails"
+            type="com.demo.model.response.baseResponse.User" />
+        <variable
+            name="clickHandler"
+            type="com.demo.notifications.AllNotificationsFragment.ClickHandler" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/_12sdp"
+    android:layout_height="wrap_content"
+    >
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImage"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@drawable/bitmap_one"
+        bind:imageUrl1="@{activity.profilePicture.mediaurl}"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/gothampro_medium"
+        android:text="@{userDetails.fullName!=null ?userDetails.fullName : userDetails.userName }"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/userImage"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/notificationMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:fontFamily="@font/gotham_pro"
+        android:text="Liked your post"
+        android:textColor="#6b6b6b"
+        android:layout_marginTop="2dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/userImage"
+        app:layout_constraintTop_toBottomOf="@id/userName">
+
+    </TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/lineVertical"
+        app:layout_constraintStart_toEndOf="@id/notificationMessage"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        android:src="@drawable/ic_line_vertical"
+        android:layout_marginLeft="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:scaleType="centerCrop"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/lineVertical"
+        android:layout_marginLeft="5sp"
+        android:text="@{activity.timeAgo}"
+        android:textSize="10sp"
+        android:fontFamily="@font/gotham_pro"
+        android:textColor="#6b6b6b"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:id="@+id/textDaysAgo"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

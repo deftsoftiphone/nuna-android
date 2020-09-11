@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.demo.dashboard_search.DashboardSearchViewModel" />
+
+        <variable
+            name="clickHandler"
+            type="com.demo.dashboard_search.DashboardSearchFragment.ClickHandler" />
+
+        <import type="android.view.View" />
+    </data>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/mAppBarContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <ProgressBar
+                        android:id="@+id/pager_progress"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_8sdp"
+                        android:indeterminate="true"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/nested_scroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:fillViewport="true"
+                        app:layout_constraintTop_toBottomOf="@id/pager_progress">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:focusableInTouchMode="true">
+
+                            <EditText
+                                android:id="@+id/edt_search"
+                                android:layout_width="0dp"
+                                android:layout_height="45dp"
+                                android:layout_marginEnd="@dimen/_11sdp"
+                                android:background="@drawable/bg_search_edittext"
+                                android:drawableStart="@drawable/search"
+                                android:drawablePadding="@dimen/_13sdp"
+                                android:gravity="center_vertical|left"
+                                android:hint="@string/search"
+                                android:imeOptions="actionSearch"
+                                android:paddingStart="@dimen/_22sdp"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:theme="@style/pro"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:padding="@dimen/_7sdp"
+                                android:src="@drawable/close"
+                                app:layout_constraintBottom_toBottomOf="@id/edt_search"
+                                app:layout_constraintEnd_toEndOf="@id/edt_search"
+                                app:layout_constraintTop_toTopOf="@id/edt_search" />
+
+                            <fragment
+                                android:id="@+id/category_frag"
+                                class="com.demo.dashboard_search.categoryFilter.CategoryFilterFragment"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/edt_search" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.core.widget.NestedScrollView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_posts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:itemCount="10" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

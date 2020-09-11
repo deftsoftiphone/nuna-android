@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="post"
+            type="com.demo.model.response.baseResponse.Post" />
+
+        <variable
+            name="subPost"
+            type="com.demo.model.response.baseResponse.Media" />
+
+        <variable
+            name="createdBy"
+            type="com.demo.model.response.baseResponse.CreatedBy" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="0.75dp">
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dummy_post_item"
+            app:layout_constraintDimensionRatio="3:4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:loadImage="@{subPost.mediaUrl}">
+
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/bitmap_one"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="1dp"
+                bind:imageUrl1="@{createdBy.profilePicture.mediaurl}">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_toLeftOf="@id/userLikesImage"
+                android:layout_toRightOf="@id/userImage"
+                android:ellipsize="end"
+                android:fontFamily="@font/gothampro_medium"
+                android:singleLine="true"
+                android:text="@{createdBy.fullName !=null ? createdBy.fullName : createdBy.userName}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8sdp">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/userLikesImage"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/userLikesCount"
+                android:paddingTop="@dimen/_4sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_invalid_name">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/userLikesCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/gothampro_medium"
+                android:maxLength="3"
+                android:singleLine="true"
+                android:text="@{String.valueOf(post.noOfLikes)}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8sdp">
+
+            </TextView>
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
+
+
+
