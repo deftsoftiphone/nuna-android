@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="viewModel"
+            type="com.demo.create_post.CreatePostViewModel" />
+
+        <variable
+            name="clickHandler"
+            type="com.demo.create_post.CreatePostActivity.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/transparent_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/clDescription"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elegantTextHeight="true"
+                android:fontFamily="@font/gothampro_medium"
+                android:gravity="center"
+                android:text="@string/post"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@null"
+                android:onClick="@{() -> clickHandler.crossPress()}"
+                android:paddingStart="@dimen/_10sdp"
+                android:src="@drawable/ic_close_post"
+                android:tint="@color/black" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="25dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.94" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.88" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@+id/vHR"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.3" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="-10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivThumbNail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/white"
+                    android:scaleType="centerCrop" />
+
+                <!--<FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <VideoView
+                        android:id="@+id/vvVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.potyvideo.library.AndExoPlayerView
+                        android:id="@+id/epVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:andexo_play_when_ready="true"
+                        app:andexo_resize_mode="Zoom"
+                        app:andexo_show_controller="false" />
+
+                </FrameLayout>-->
+            </androidx.cardview.widget.CardView>
+
+
+            <!--            android:lineSpacingMultiplier="1.195"-->
+
+            <com.demo.util.link.LinkableEditText
+                android:id="@+id/etDescription"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_7sdp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/gotham_pro"
+                android:gravity="top"
+                android:hint="@string/add_description"
+                android:inputType="textMultiLine"
+                android:lineSpacingMultiplier="1.199"
+                android:maxLength="200"
+                android:maxLines="5"
+                android:singleLine="true"
+                android:text="@={viewModel.addPostRequest.description}"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/themePink1Transparent"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/llHashTags"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--                app:markTags="@{viewModel.description}"-->
+
+            <LinearLayout
+                android:id="@+id/llHashTags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grey_stroke_bg"
+                android:clickable="true"
+                android:padding="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etDescription">
+
+                <TextView
+                    android:id="@+id/tvHashTags"
+                    fontAccordingToLanguage="@{@string/key_bold_font}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hashtags"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9sdp" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/vHR"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/underline_grey"
+            app:layout_constraintBottom_toTopOf="@id/clCategory"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/clDescription" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:onClick="@{() -> clickHandler.showCategories()}"
+            android:paddingVertical="@dimen/_5sdp"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@+id/vHR">
+
+            <TextView
+                android:id="@+id/tvCategoryTitle"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:text="@string/category"
+                android:textColor="@color/black"
+                app:drawableStartCompat="@drawable/ic_category"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvCategoryValue"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvCategoryValue"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_8sdp"
+                android:ellipsize="end"
+                android:gravity="center_vertical|end"
+                android:hint="@string/select_a_category"
+                android:maxWidth="@dimen/_150sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/greytext"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCategoryTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvCategoryTitle"
+                app:layout_constraintTop_toTopOf="@+id/tvCategoryTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvData"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/clCategory" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHashtags"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/clCategory" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSearchHashtags"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/clCategory" />
+
+
+        <ImageView
+            android:id="@+id/ivFooterGradient"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/footer_gradient_white"
+            android:elevation="@dimen/_7sdp"
+            android:scaleType="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1" />
+
+        <FrameLayout
+            android:id="@+id/llButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/btnCreatePost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:elevation="0dp"
+                    android:fontFamily="@font/gothampro_medium"
+                    android:gravity="center"
+                    android:onClick="@{() -> clickHandler.onClickSave()}"
+                    android:text="@string/post"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <include layout="@layout/button_under_glow" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

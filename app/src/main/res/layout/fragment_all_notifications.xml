@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.demo.notifications.NotificationsViewModel" />
+
+
+        <variable
+            name="clickHandler"
+            type="com.demo.notifications.AllNotificationsFragment.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.055">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.93">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineFifty"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.04">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+
+        <RelativeLayout
+            android:id="@+id/lin_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="@{() -> clickHandler.onClickLike()}"
+            app:layout_constraintEnd_toStartOf="@+id/lin_followers"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideLineHorizontal">
+
+            <FrameLayout
+                android:id="@+id/fLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_like"
+                    android:layout_width="@dimen/_41sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:src="@drawable/ic_circle_like" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_like" />
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/text_filter_like"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                padding="@{7}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fLike"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="5dp"
+                android:text="@string/likes"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lin_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="@{() -> clickHandler.onClickFollowers()}"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/lin_comments"
+            app:layout_constraintStart_toEndOf="@+id/lin_like"
+            app:layout_constraintTop_toBottomOf="@id/guideLineHorizontal">
+
+
+            <FrameLayout
+                android:id="@+id/fFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_followers"
+                    android:layout_width="@dimen/_41sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_circle_followers" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_user_1">
+
+                </ImageView>
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/tFollowers"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                padding="@{8}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fFollow"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="5dp"
+                android:text="@string/followers"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lin_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="@{() -> clickHandler.onClickComments()}"
+            app:layout_constraintEnd_toStartOf="@id/lin_share"
+            app:layout_constraintStart_toEndOf="@+id/lin_followers"
+            app:layout_constraintTop_toBottomOf="@id/guideLineHorizontal">
+
+            <FrameLayout
+                android:id="@+id/fComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_comments"
+                    android:layout_width="@dimen/_41sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_circle_comments" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_comment">
+
+                </ImageView>
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/text_cooments"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                padding="@{8}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fComments"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="5dp"
+                android:text="@string/commentes"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lin_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="@{() -> clickHandler.onClickShare()}"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lin_comments"
+            app:layout_constraintTop_toBottomOf="@id/guideLineHorizontal">
+
+
+            <FrameLayout
+                android:id="@+id/fShares"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_share"
+                    android:layout_width="@dimen/_41sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_circle_share" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="29dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_share">
+
+                </ImageView>
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/text_share"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                padding="@{7}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fShares"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="5dp"
+                android:text="@string/share"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_line_copy"
+            app:layout_constraintEnd_toStartOf="@id/guideLineEnd"
+            app:layout_constraintStart_toStartOf="@id/guideLineStart"
+            app:layout_constraintTop_toBottomOf="@id/lin_like" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srlActivities"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+            app:layout_constraintStart_toStartOf="@id/guideLineStart"
+            app:layout_constraintTop_toBottomOf="@id/line">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nsvActivities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:fillViewport="false"
+                android:visibility="gone"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textAllActivity"
+                        fontAccordingToLanguage="@{@string/key_bold_font}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:paddingBottom="6dp"
+                        android:text="@string/all_activity"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/lNoDataFoundActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@id/guideRecyclerSplitter"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvNoDataTitle"
+                            fontAccordingToLanguage="@{@string/key_normal_font}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/no_activity_yet"
+                            android:textAlignment="center"
+                            android:textColor="#878787"
+                            android:textSize="@dimen/_12sdp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvNoDataMessage"
+                            fontAccordingToLanguage="@{@string/key_normal_font}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:gravity="center"
+                            android:text="@string/noActivityDescription"
+                            android:textAlignment="center"
+                            android:textColor="#80929292"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintTop_toBottomOf="@id/tvNoDataTitle" />
+
+                        <ImageView
+                            android:id="@+id/ivNoDataImage"
+                            android:layout_width="@dimen/_75sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_error"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvNoDataMessage" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvActivities"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:paddingTop="@dimen/_10sdp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toTopOf="@+id/lineAllActivity"
+                        app:layout_constraintTop_toBottomOf="@+id/textAllActivity"
+                        app:layout_constraintVertical_bias="0"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/tvShowMore"
+                        fontAccordingToLanguage="@{@string/key_bold_font}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:text="@string/show_more"
+                        android:visibility="gone"
+                        app:drawableBottomCompat="@drawable/ic_arrow_down" />
+
+                    <ImageView
+                        android:id="@+id/lineAllActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_line_copy"
+                        app:layout_constraintBottom_toTopOf="@id/guideRecyclerSplitter"
+                        app:layout_constraintTop_toBottomOf="@id/rvActivities" />
+
+                    <TextView
+                        android:id="@+id/textSuggested"
+                        fontAccordingToLanguage="@{@string/key_bold_font}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:paddingBottom="6dp"
+                        android:text="@string/suggested_for_you"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/guideRecyclerSplitter" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/lNoDataFoundSuggestion"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginVertical="@dimen/_20sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textSuggested">
+
+                        <TextView
+                            android:id="@+id/tvNoDataTitle1"
+                            fontAccordingToLanguage="@{@string/key_normal_font}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/no_suggestions_yet"
+                            android:textAlignment="center"
+                            android:textColor="#878787"
+                            android:textSize="@dimen/_12sdp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvNoDataMessage1"
+                            fontAccordingToLanguage="@{@string/key_normal_font}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:gravity="center"
+                            android:text="@string/noActivityDescription"
+                            android:textAlignment="center"
+                            android:textColor="#80929292"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@id/tvNoDataTitle1" />
+
+                        <ImageView
+                            android:id="@+id/ivNoDataImage1"
+                            android:layout_width="@dimen/_75sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_error"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvNoDataMessage1" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSuggested"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:clipToPadding="false"
+                        android:paddingBottom="@dimen/_49sdp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textSuggested"
+                        app:layout_constraintVertical_bias="0" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideRecyclerSplitter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.45" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

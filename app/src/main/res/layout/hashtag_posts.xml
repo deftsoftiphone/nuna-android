@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <!--        <import type="com.demo.util.Constant" />-->
+
+        <variable
+            name="hashTag"
+            type="com.demo.model.response.baseResponse.HashTag" />
+
+        <variable
+            name="responseLogin"
+            type="com.demo.model.response.ResponseLogin" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.7" />
+
+            <ImageView
+                android:id="@+id/hImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:src="@drawable/ic_hashtag_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/hName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--            "-->
+
+            <TextView
+                android:id="@+id/hName"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ellipsize="end"
+                android:gravity="start|center_vertical"
+                android:includeFontPadding="true"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="@{hashTag.tagName.toLowerCase()}"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toEndOf="@+id/hImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--            app:toTitleCase="@{hashTag.tagName}"-->
+            <TextView
+                android:id="@+id/hPostsCount"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:ellipsize="end"
+                android:gravity="end|center_vertical"
+                android:singleLine="true"
+                android:text="@{hashTag.noOfPosts == 1 ? hashTag.noOfPosts +` `+ @string/postText : hashTag.noOfPosts +` `+ @string/posts}"
+                android:textColor="#959595"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/hName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/hName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hashtagPosts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@id/clHeader">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <View
+            android:id="@+id/vHR"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:background="@color/underline_grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hashtagPosts" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

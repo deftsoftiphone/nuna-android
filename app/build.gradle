@@ -1,0 +1,214 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+// Apply the Crashlytics Gradle plugin
+apply plugin: 'com.google.firebase.crashlytics'
+//remove unused files from Banuba side
+//apply from: "$projectDir/scripts/assetsMerger.gradle"
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.nuna"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 64
+        versionName "3.9.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+//        vectorDrawables.useSupportLibrary = true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig
+            debuggable = false
+
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "6g" //specify the heap size for the dex process
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+//        density {
+//            // This property is set to true by default.
+//            enableSplit = false
+//        }
+    }
+}
+
+dependencies {
+    implementation (project(':videoeditor')){
+        exclude group: 'com.google.guava', module:'guava'
+    }
+
+//    implementation project(path: ':photoview')
+//    implementation project(path: ':photoeditor')
+//    implementation project(path: ':mediaplayer')
+//    implementation project(path: ':videocompressor')
+//    implementation project(path: ':ananas')
+//    implementation project(path: ':motiontoast')
+    implementation project(path: ':likebutton')
+//    implementation project(path: ':hxaudio')
+
+    //leakcanary
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.5'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //Api Calling
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+    implementation 'androidx.fragment:fragment-ktx:1.2.5'
+    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"
+    implementation "android.arch.navigation:navigation-ui-ktx:1.0.0"
+    implementation 'com.google.android.material:material:1.3.0-alpha03'
+    implementation 'com.chaos.view:pinview:1.4.3'
+    implementation 'com.afollestad:viewpagerdots:1.0.0'
+    implementation 'com.github.dhaval2404:imagepicker-support:1.5'
+    implementation 'com.akexorcist:localizationactivity:1.2.2'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //seekbar
+    implementation "com.github.guilhe:seekbar-ranged-view:${seekbar}"
+
+    //textSize
+    implementation "com.intuit.sdp:sdp-android:${sdpSize}"
+    implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'joda-time:joda-time:2.9.1'
+    implementation 'com.github.jaiselrahman:FilePicker:1.3.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.9.1'
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
+    implementation 'com.google.firebase:firebase-dynamic-links-ktx:19.1.1'
+
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.0.0'
+    implementation 'com.github.greenfrvr:hashtag-view:1.3.1'
+
+    //Kodein
+    implementation "org.kodein.di:kodein-di-generic-jvm:6.5.5"
+    implementation "org.kodein.di:kodein-di-framework-android-x:6.5.5"
+
+    //LifeCycle
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-common:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+
+    implementation "androidx.work:work-runtime-ktx:2.4.0"
+
+    //Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+    kapt "com.android.databinding:compiler:3.1.4"
+    implementation 'com.github.smarteist:autoimageslider:1.3.8'
+    implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC2'
+    //Socket
+    implementation 'com.github.nkzawa:socket.io-client:0.6.0'
+    implementation 'com.opensooq.android:pluto:1.6'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+    //Dependencies from Crew
+    implementation "com.microsoft.appcenter:appcenter-analytics:3.3.0"
+    implementation "com.microsoft.appcenter:appcenter-crashes:3.3.0"
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+    implementation ('com.google.android.exoplayer:exoplayer:2.11.1'){
+        exclude group: 'com.google.guava', module:'guava'
+    }
+    implementation ('com.google.android.exoplayer:exoplayer-ui:2.11.1'){
+        exclude group: 'com.google.guava', module:'guava'
+    }
+    implementation "org.koin:koin-android:${koinVersion}"
+    implementation "org.koin:koin-android-scope:${koinVersion}"
+    implementation "org.koin:koin-android-viewmodel:${koinVersion}"
+
+    implementation 'com.github.quickpermissions:quickpermissions-kotlin:0.4.0'
+    implementation 'com.matthew-tamlin:sound-sword:1.0.1'
+
+    //banuba need
+    implementation "com.banuba.sdk:ar-cloud-sdk:1.0.14"
+    implementation 'androidx.exifinterface:exifinterface:1.3.1'
+
+    // AWS
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.19.3'
+    implementation 'com.amazonaws:aws-android-sdk-cognito:2.2.0'
+    implementation 'com.amazonaws:aws-android-sdk-lambda:2.2.0'
+    implementation('com.amazonaws:aws-android-sdk-mobile-client:2.19.3@aar') { transitive = true }
+
+    //AWS Amplify
+//    implementation 'com.amplifyframework:aws-storage-s3:1.6.4'
+//    implementation 'com.amplifyframework:aws-auth-cognito:1.6.4'
+
+    //Google Play Auth
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.1.0'
+    implementation 'com.iceteck.silicompressorr:silicompressor:2.2.4'
+    //Compressor
+    implementation 'id.zelory:compressor:3.0.0'
+
+    //android networking
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+
+}
+
+

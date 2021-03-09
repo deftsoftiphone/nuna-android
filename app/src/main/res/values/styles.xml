@@ -1,0 +1,416 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">-->
+    <style name="AppParentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!--        <item name="android:statusBarColor">@color/status_bar_color</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:spotShadowAlpha">.1</item>
+        <item name="android:windowDisablePreview">true</item>
+<!--        <item name="android:windowIsTranslucent">true</item>-->
+
+        <!--<item name="colorError">@color/error_color</item>
+        <item name="android:windowBackground">@drawable/bg</item>-->
+    </style>
+
+    <style name="transparent_toolbar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Support library compatibility -->
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="CropperTheme" parent="Base.Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Progress Dialog -->
+
+    <style name="DialogTheme" parent="@style/ThemeOverlay.AppCompat.Dialog">
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
+
+    <style name="Pluto_Magnifier_Black">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="shape">oval</item>
+        <item name="padding_left">6dp</item>
+        <item name="padding_right">6dp</item>
+        <item name="padding_top">10dp</item>
+        <item name="padding_bottom">10dp</item>
+
+        <item name="selected_color">#FFF</item>
+        <item name="unselected_color">#74000000</item>
+        <item name="selected_width">5dp</item>
+        <item name="selected_height">5dp</item>
+        <item name="unselected_width">5dp</item>
+        <item name="unselected_height">5dp</item>
+    </style>
+
+    <style name="MyProgressDialog" parent="android:Theme.Holo.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomProgressDialogStyle</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CustomProgressDialogStyle">
+        <item name="android:bottomBright">@android:color/transparent</item>
+        <item name="android:bottomDark">@android:color/transparent</item>
+        <item name="android:bottomMedium">@android:color/transparent</item>
+        <item name="android:centerBright">@android:color/transparent</item>
+        <item name="android:centerDark">@android:color/transparent</item>
+        <item name="android:centerMedium">@android:color/transparent</item>
+        <item name="android:fullBright">@android:color/transparent</item>
+        <item name="android:fullDark">@android:color/transparent</item>
+        <item name="android:topBright">@android:color/transparent</item>
+        <item name="android:topDark">@android:color/transparent</item>
+    </style>
+    <!-- Progress Dialog -->
+
+    <style name="AppTitle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="AppSubTitle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+    <style name="AppComonText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/_45sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <!--Sign Up-->
+    <style name="TilSignUp" parent="Base.Widget.MaterialComponents.TextInputLayout">
+        <item name="colorAccent">@color/grey</item>
+        <!--<item name="android:layout_marginTop">@dimen/_6sdp</item>
+
+        <item name="android:textColorHint">@android:color/holo_blue_dark</item>
+        <item name="colorControlNormal">@android:color/holo_purple</item>
+        <item name="colorControlActivated">@android:color/holo_green_dark</item>
+        <item name="colorControlHighlight">@android:color/holo_orange_dark</item>-->
+    </style>
+
+    <style name="EdtSignUp">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
+    </style>
+
+    <style name="passwordEdtInputLayout">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:maxLength">20</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="AppMaterialButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_20sdp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="BusinessDetailTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">@dimen/_6sdp</item>
+        <item name="android:layout_marginStart">@dimen/_6sdp</item>
+        <item name="android:drawablePadding">@dimen/_5sdp</item>
+    </style>
+
+    <style name="PersonalDetailTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">@dimen/_6sdp</item>
+        <item name="android:layout_marginStart">@dimen/_6sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_6sdp</item>
+        <item name="android:drawablePadding">@dimen/_5sdp</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAlignment">viewEnd</item>
+        <item name="fontPath">fonts/GothamPro-Medium.ttf</item>
+    </style>
+
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="android:background">#00ffffff</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAlignment">viewEnd</item>
+        <item name="fontPath">fonts/GothamPro-Medium.ttf</item>
+    </style>
+
+
+    <style name="PhotoViewTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="TilDocDetail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+    </style>
+
+    <style name="EdtDocDetail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:maxLength">100</item>
+    </style>
+
+
+    //Real App
+
+    <style name="TextStylelang">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">2.8sp</item>
+        <item name="android:lineSpacingMultiplier">1.55</item>
+        <item name="android:textColor">#7581e6</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:singleLine">true</item>
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">#FFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CommonButton">
+        <item name="android:background">@drawable/round_corner_bg</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="share_dialog1" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- <style name="ChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+         <item name="chipBackgroundColor">@color/chip_background_color_state_list</item>
+         <item name="android:textAppearance">@style/ChipTextAppearance</item>
+         <item name="android:textColor">@color/secondary_dark_blue</item>
+     </style>-->
+
+    <style name="EditProfileEdt">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:paddingTop">@dimen/_4sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_4sdp</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_15sdp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:drawablePadding">@dimen/_10sdp</item>
+    </style>
+
+
+    <style name="CreatePostEdt">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:paddingTop">@dimen/_4sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_4sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:drawablePadding">@dimen/_10sdp</item>
+    </style>
+
+    <style name="ProfileViewInfoTab">
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/_5sdp</item>
+        <item name="android:drawablePadding">@dimen/_5sdp</item>
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingEnd">@dimen/_5sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:background">@drawable/bg_like_white_alpha_cornered_2</item>
+    </style>
+
+    <style name="CardViewTheme" parent="CardView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardBackgroundColor">@android:color/white</item>
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="contentPadding">0dp</item>
+    </style>
+
+    <style name="TextAppearance.FontPath" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/GothamPro-Medium.ttf</item>
+    </style>
+
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/gothampro_medium</item>
+        <item name="android:textSize">10sp</item>pin_otp
+    </style>
+
+
+    <style name="medium">
+        <item name="fontFamily">@font/gothampro_medium</item>
+    </style>
+
+    <style name="ltalic">
+        <item name="fontFamily">@font/gotham_pro</item>
+    </style>
+
+    <style name="bold">
+        <item name="fontFamily">@font/gothampro_bold</item>
+    </style>
+
+    <style name="pro">
+        <item name="fontFamily">@font/gotham_pro</item>
+    </style>
+
+    <style name="chipTextAppearance" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:fontFamily">@font/gothampro_medium</item>
+
+    </style>
+
+    <style name="chipTextappearance_new" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/gothampro_medium</item>
+    </style>
+
+    <style name="chipTextappearance" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/gothampro_medium</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="chipFiter" parent="Base.Widget.MaterialComponents.Chip">
+        <item name="android:checkable">true</item>
+
+        <item name="chipIconVisible">false</item>
+        <item name="closeIconVisible">false</item>
+
+        <item name="checkedIcon">@drawable/ic_check_circle_white_24dp</item>
+    </style>
+
+    <style name="countryCodePicker">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/gothampro_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#6b6b6b</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="search_tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/gothampro_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#806B6B6B</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+
+    <style name="ChipTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@android:color/transparent</item>
+        <item name="tabBackground">@drawable/selector_tab</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">#bebebe</item>
+    </style>
+
+    <style name="custom_ET" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+    <style name="TransparentBottomNav" parent="Widget.BottomNavigationView">
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
+    <style name="hastagStyle">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>
