@@ -1,0 +1,25 @@
+{
+  "name": "BikerBandanaMale",
+  "frx": {
+    "type": "3d_anim",
+    "3d_anim": {
+      "type": "vfx"
+    }
+    },
+  "final": {
+    "type": "FILTER",
+    "filter": {
+      "fragmentCode": "finalColorFilter.fsh",
+      "textures": [{
+        "file": "pinkvine.png",
+        "sampler": "lookupTexture",
+        "magFilter": "LINEAR",
+        "minFilter": "LINEAR"
+      }]
+    }
+  },
+  "sounds" : [
+                  { "trackName" : "music_L.ogg" }
+                  ],
+  "recordDuration": 15
+}

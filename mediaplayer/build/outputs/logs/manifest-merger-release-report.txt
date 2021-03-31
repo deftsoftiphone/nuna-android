@@ -1,0 +1,41 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:1:1-6:12
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:1:1-6:12
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:1:1-6:12
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:1:1-6:12
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:1:1-6:12
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:1:1-6:12
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:1:1-6:12
+	package
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:2:5-36
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:1:1-6:12
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:1:1-6:12
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml:4:22-64
+uses-sdk
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/mediaplayer/src/main/AndroidManifest.xml

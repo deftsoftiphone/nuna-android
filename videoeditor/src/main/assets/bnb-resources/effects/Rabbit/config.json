@@ -1,0 +1,46 @@
+{
+  "name": "2_5D_Rabbit2",
+  "frx": {
+    "type" : "3d_anim",
+    "3d_anim" : {
+      "type" : "vfx"
+    },
+    "media": {
+      "type": "VIDEO",
+      "file": "EarRabbit_F.mp4"
+    }
+  },
+  "backgroundSeparation": {
+    "type": "MEDIA",
+    "media": {
+      "type": "VIDEO",
+      "file": "BG_F.mp4",
+      "videoSpeed": 1.0,
+      "blend": "NORMAL",
+      "mode": "RGBA"
+    }
+  },
+  "final": {
+    "type": "FILTER",
+    "filter": {
+      "fragmentCode": "finalColorFilter.fsh",
+      "textures": [{
+        "file": "heart.png",
+        "sampler": "lookupTexture",
+        "magFilter": "LINEAR",
+        "minFilter": "LINEAR"
+      }]
+    }
+  },
+  "voiceChanger": {
+    "audioFilters": [{
+      "pitch": {
+        "pitchShift": 600
+      }
+    }]
+  },
+  "sounds" : [
+    { "trackName" : "Rabbit_sndfnt.ogg" }
+  ],
+  "recordDuration" : 10
+}

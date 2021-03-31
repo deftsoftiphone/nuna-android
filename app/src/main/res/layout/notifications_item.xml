@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.demo.model.response.baseResponse.Activity" />
+
+        <variable
+            name="userDetails"
+            type="com.demo.model.response.baseResponse.User" />
+
+        <variable
+            name="clickHandler"
+            type="com.demo.notifications.AllNotificationsFragment.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImage"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:civ_circle_background_color="@color/status_bar_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:loadUserImage="@{activity.user.profilePicture.mediaurl}" />
+
+        <TextView
+            android:id="@+id/userName"
+            fontAccordingToLanguage="@{@string/key_bold_font}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:includeFontPadding="true"
+            android:paddingVertical="@dimen/_2sdp"
+            android:singleLine="true"
+            android:text="@{userDetails.fullName!=null ?userDetails.fullName : userDetails.userName != null?  userDetails.userName : @string/key_user_admin }"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/notificationMessage"
+            app:layout_constraintEnd_toEndOf="@id/guideEnd"
+            app:layout_constraintStart_toEndOf="@id/userImage"
+            app:layout_constraintTop_toTopOf="@id/userImage"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/notificationMessage"
+            fontAccordingToLanguage="@{@string/key_normal_font}"
+            padding="@{0}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:lineSpacingMultiplier="1.3"
+            android:maxWidth="@dimen/_160sdp"
+            android:textColor="@color/greytext"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/userImage"
+            app:layout_constraintTop_toBottomOf="@id/userName">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/lineVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_line_vertical"
+            app:layout_constraintBottom_toBottomOf="@id/notificationMessage"
+            app:layout_constraintStart_toEndOf="@id/notificationMessage"
+            app:layout_constraintTop_toTopOf="@id/notificationMessage">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/textDaysAgo"
+            fontAccordingToLanguage="@{@string/key_normal_font}"
+            padding="@{0}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:text="@{activity.timeAgo}"
+            android:textColor="@color/greytext_light"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/notificationMessage"
+            app:layout_constraintStart_toEndOf="@id/lineVertical"
+            app:layout_constraintTop_toTopOf="@id/notificationMessage" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <ImageView
+            android:id="@+id/ivNotificationIndicator"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_notification_indicator"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideEnd"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

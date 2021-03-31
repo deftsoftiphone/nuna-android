@@ -1,0 +1,20 @@
+package com.demo.viewPost.home.playermf
+
+import com.google.android.exoplayer2.Player
+
+/**
+ * Created by Maroof Ahmed Siddique
+ * Mindcrew Technologies Pvt Ltd
+ */
+interface PlayerStateCallback {
+    /**
+     * Callback to when the [PlayerView] has fetched the duration of video
+     **/
+    fun onVideoDurationRetrieved(duration: Long, player: Player)
+
+    fun onVideoBuffering(player: Player)
+
+    fun onStartedPlaying(player: Player)
+
+    fun onFinishedPlaying(player: Player)
+}

@@ -1,0 +1,19 @@
+{
+    "name": "2_5D_Rabbit2",
+    "effectVersionInfo": {
+        "commit": "259ed0055cf4f3af3b254f51b23f3a3969e6b0e4",
+        "date": "2019-02-08",
+        "time": "13:41:38",
+        "author": "v.makarevich"
+    },
+    "buildToolsVersionInfo": {
+        "commit": "6c4f87b75f214de1559d54e5d957aef08adb08ac",
+        "date": "2020-03-12",
+        "time": "18:06:58",
+        "author": "Aleksey Cherkes"
+    },
+    "capabilities": {
+        "effectPlayerMajorVersion": 5,
+        "effectPlayerMinorVersion": 1
+    }
+}

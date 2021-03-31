@@ -1,0 +1,32 @@
+{
+  "name": "FaceNightClub",
+  "recordDuration": 15,
+    "sounds": [
+    {
+      "trackName": "music.ogg",
+      "volume": 1.0,
+      "type": "background"
+    }
+  ],
+  "frx": {
+    "type": "3d_anim",
+    "3d_anim": {
+      "type": "vfx"
+    },
+       "media": {
+      "type": "VIDEO",
+      "file": "geometry.mp4"
+  }
+},
+
+  "foreground": {
+     "type": "MEDIA",
+     "media": {
+       "type": "VIDEO",
+       "file": "foreground.mp4",
+       "opacity": 0.7,
+       "blend": "NORMAL",
+       "mode": "RGBA"
+     }
+   }
+}

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="editor_alert_reset_all_positive">@string/others_reset</string>
+    <string name="editor_alert_reset_all_negative">@string/others_cancel</string>
+    <string name="editor_alert_reset_effects_positive">@string/others_reset</string>
+    <string name="editor_alert_reset_effects_negative">@string/others_cancel</string>
+    <string name="editor_alert_delete_voice_record_positive">@string/others_delete</string>
+    <string name="editor_alert_delete_voice_record_negative">@string/others_cancel</string>
+    <string name="alert_delete_video_positive">@string/others_delete</string>
+    <string name="alert_delete_video_negative">@string/others_cancel</string>
+    <string name="alert_save_video_positive">@string/others_save</string>
+    <string name="alert_save_video_negative">@string/others_discard</string>
+    <string name="alert_return_to_editor_positive">@string/camera_alert_positive</string>
+    <string name="alert_return_to_editor_negative">@string/camera_alert_negative</string>
+    <string name="alert_return_to_trimmer_positive">@string/camera_alert_positive</string>
+    <string name="alert_return_to_trimmer_negative">@string/others_cancel</string>
+    <string name="alert_reset_all_positive">@string/others_reset</string>
+    <string name="alert_reset_all_negative">@string/others_cancel</string>
+
+
+    <string name="camera_next">આગળ</string>
+    <string name="camera_back">પાછું</string>
+    <string name="camera_done">પૂર્ણ</string>
+
+    <string name="message_record_first_video">ઓછામાં ઓછા %1$s સેકંડ રેકોર્ડ કરો</string>
+    <string name="message_record_video_duration">{0,પસંદગી,0#{0} સેકન્ડ|1#{0} સેકન્ડ|2#{0} સેકન્ડ|3#{0} સેકન્ડ|4#{0} સેકન્ડ|4&lt;{0} સેકન્ડ}</string>
+
+    <string name="notification_beautifier_on">ફેસ ટચ અપ</string>
+    <string name="notification_flash_on">ફ્લેશ ચાલુ</string>
+
+    <string name="notification_timer_on">3 સેકન્ડ ટાઈમર ચાલુ છે</string>
+    <string name="notification_timer_off">ટાઈમર બંધ છે</string>
+
+    <string name="alert_delete_video_message">શું તમે ખરેખર પહેલાની ક્લિપને ડીલીટ કરવા માંગો છો?</string>
+    <string name="alert_save_video_chunk_message">શું તમે વિડિઓ ક્લિપ સેવ કરવા માંગો છો?</string>
+    <string name="alert_return_to_addition_effects">શું પાછલી વિડિઓના એડીટીંગ પર પાછા જવું છે?</string>
+    <string name="alert_return_to_making_video">શું તમે ખરેખર વિડિઓ ક્રીએશન પર પાછા જવા માંગો છો?</string>
+    <string name="alert_reset_all_message">તમારી વિડિઓ કાઢી નખાશે. તો પણ ચાલુ રાખીએ?</string>
+    <string name="alert_return_to_editor">સંપાદન અસરો પર પાછા?</string>
+
+    <string name="camera_alert_positive">હા</string>
+    <string name="camera_alert_negative">ના</string>
+
+    <string name="err_no_space_left_recording">ડિસ્કમાં જગ્યા નથી. રેકોર્ડિંગ રદ થયેલ છે.</string>
+
+
+    <string name="permission_screen_message">કૃપા કરીને પરવાનગી આપો</string>
+    <string name="permission_denied_message">%1$s ની પરવાનગી આપવામાં આવી ન હતી</string>
+
+    <string name="video_recording_mode_normal">શૂટ</string>
+    <string name="video_recording_mode_slideshow">સ્લાઇડશો</string>
+
+    <string name="editor_next">આગળ</string>
+    <string name="editor_back">પાછું</string>
+    <string name="editor_done">પૂર્ણ</string>
+    <string name="editor_close">બંધ</string>
+    <string name="editor_cancel">કેંસલ</string>
+
+    <!-- Music Mixer -->
+    <string name="music_muxer_add">ઉમેરો</string>
+    <string name="music_muxer_delete">ડીલીટ</string>
+    <string name="music_muxer_sound">અવાજ</string>
+    <string name="music_muxer_voice">સ્વર</string>
+    <string name="music_muxer_music">સંગીત</string>
+
+    <!-- Gallery -->
+    <string name="gallery">ગેલેરી</string>
+    <string name="gallery_album_untitled">શીર્ષક વિનાનું</string>
+    <string name="gallery_album_all_media">બધા મીડિયા</string>
+    <string name="gallery_album_all_photos">બધા ફોટો</string>
+    <string name="gallery_album_all_video">બધા વિડીઓ</string>
+    <string name="gallery_select_media">મીડિયા પસંદ કરો</string>
+    <string name="gallery_select_photo">ફોટો પસંદ કરો</string>
+    <string name="gallery_select_video">વીડિઓ પસંદ કરો</string>
+    <string name="gallery_empty_image_list">છબી ગેલેરી ખાલી છે</string>
+    <string name="gallery_empty_video_list">વીડિઓ ગેલેરી ખાલી છે</string>
+    <string name="gallery_empty_media_list">ગેલેરી ખાલી છે</string>
+    <plurals name="gallery_choose_at_least">
+        <item quantity="zero">ઓછામાં ઓછી %1$d ફાઇલો પસંદ કરો</item>
+        <item quantity="one">ઓછામાં ઓછી %1$d ફાઇલ પસંદ કરો</item>
+        <item quantity="two">ઓછામાં ઓછી %1$d ફાઇલો પસંદ કરો</item>
+        <item quantity="few">ઓછામાં ઓછી %1$d ફાઇલો પસંદ કરો</item>
+        <item quantity="many">ઓછામાં ઓછી %1$d ફાઇલો પસંદ કરો</item>
+        <item quantity="other">ઓછામાં ઓછી %1$d ફાઇલો પસંદ કરો</item>
+    </plurals>
+
+
+    <!-- Trimmer -->
+    <string name="trimmer_hint">300 સેકંડ પસંદ કરો</string>
+    <string name="trimmer_drag_hint">ડીલીટ કરવા માટે ડ્રેગ કરો</string>
+    <string name="trimmer_duration_format">%1$s સેકેંડ</string>
+
+    <!-- Effects -->
+    <string name="editor_effect_hint">દબાવી ને રાખો</string>
+    <string name="editor_effect_undo">રીસેટ</string>
+    <string name="stickers_empty_list">કોઈ સ્ટીકરો મળ્યાં નથી</string>
+    <string name="stickers_search_hint">giphy.com ઉપર સર્ચ કરો</string>
+    <string name="stickers_search_cancel">કેંસલ</string>
+
+    <!-- Cover image -->
+    <string name="cover_image_text">કવર પસંદ કરો</string>
+
+    <!-- Alerts -->
+    <string name="editor_alert_reset_all">શું તમે ખરેખર બધા ફેરફારો રીસેટ કરવા માંગો છો?</string>
+    <string name="editor_alert_reset_effects">શું તમે ખરેખર બધા પ્રભાવોને રીસેટ કરવા માંગો છો?</string>
+    <string name="alert_positive">હા</string>
+    <string name="alert_negative">ના</string>
+    <string name="alert_delete_voice_record_message"> શું તમે ખરેખર સ્વરની રેકોર્ડિંગને ડીલીટ કરવા માંગો છો?</string>
+    <string name="alert_video_creation">લોડ કરી રહ્યું છે</string>
+
+    <!-- Errors -->
+    <string name="err_file_not_supported">ફાઇલ સપોર્ટેડ નથી</string>
+    <string name="err_network_connection_failure">જોડાણ નિષ્ફળ થયું</string>
+    <string name="err_no_space_left">ડિસ્કમાં પૂરતી જગ્યા નથી</string>
+    <string name="err_media_validation">ફાઇલના પ્રકાર ઓળખી શકાયો નથી</string>
+    <string name="err_player_initializer">ત્યાં એરર હતી. વિડિઓ એડિટર શરૂ કરી શકાયું નહીં.</string>
+
+    <string name="err_trimmer_invalid_duration">વિડિઓ અવધિ %1$d અને %2$d સેકંડની વચ્ચે હોવી જોઈએ</string>
+    <string name="err_trimmer_internal">વિડિઓ બનાવતી વખતે એરર આવી</string>
+
+    <string name="connection_view_title">જોડાણ નિષ્ફળ</string>
+    <string name="connection_view_message">કૃપા કરીને કનેક્શન તપાસો અને ફરીથી પ્રયાસ કરો</string>
+    <string name="connection_view_retry">ફરી પ્રયાસ કરો</string>
+
+    <string name="font_regular_title">રેગુલર</string>
+    <string name="font_bold_title">બોલ્ડ</string>
+    <string name="font_italic_title">ઇટાલિક</string>
+
+    <!-- Music -->
+    <string name="action_add_music_track">ટ્રેક્સ</string>
+    <string name="action_add_music_effect">પ્રભાવો</string>
+    <string name="action_add_voice_recording">રેકોર્ડિંગ</string>
+    <string name="edit_track_volume_title">વોલ્યુમ</string>
+    <string name="edit_track_volume_percent">%1$d%%</string>
+    <string name="edit_track_audio_duration">ઓડિઓની અવધિ</string>
+    <string name="edit_track_audio_duration_init_value">0:00.0</string>
+    <string name="edit_track_duration_error">ઓડિઓ %1$.1f સેકંડથી લાંબો હોવો જોઈએ</string>
+
+    <!-- Effects -->
+    <string name="action_add_text_effect">ટેક્સ્ટ</string>
+    <string name="action_add_sticker_effect">સ્ટીકર</string>
+
+    <!-- Common -->
+    <string name="action_edit">એડિટ</string>
+    <string name="action_delete">ડીલીટ</string>
+
+    <!-- Errors-->
+    <string name="error_voice_recording_start">સ્વર રેકોર્ડિંગ શરૂ કરવામાં એરર આવી હતી</string>
+    <string name="error_voice_recording_stop">સ્વર રેકોર્ડિંગ સમાપ્ત કરવામાં એરર આવી હતી</string>
+    <string name="error_invalid_duration_voice_recording">ન્યૂનતમ સ્વર રેકોર્ડિંગ અવધિ %1$.1f સેકંડ છે</string>
+    <string name="error_invalid_duration_music_track">ન્યૂનતમ સંગીત ટ્રેક અવધિ %1$.1f સેકંડ છે</string>
+    <string name="error_voice_recording_delete_file">સ્વર રેકોર્ડિંગ ડીલીટ કરવામાં ભૂલ આવી હતી</string>
+    <string name="error_track_limit">ટ્રેકની મહત્તમ સંખ્યા %1$d માન્ય છે</string>
+    <string name="error_no_space">તમારા ફોનમાં જગ્યા ખાલી નથી. કૃપા કરી થોડી જગ્યા ખાલી કરો.</string>
+
+    <!-- Others-->
+    <string name="others_cancel">કેંસલ</string>
+    <string name="others_discard">કાઢી નાખો</string>
+    <string name="others_delete">ડીલીટ</string>
+    <string name="others_save">સેવ</string>
+    <string name="others_yes">હા</string>
+    <string name="others_no">ના</string>
+    <string name="others_reset">રીસેટ</string>
+    <string name="others_continue">ચાલુ રાખો</string>
+</resources>

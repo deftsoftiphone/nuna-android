@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+
+        android:id="@+id/DashboardSearchFragment"
+        android:icon="@drawable/ic_home"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/FollwingTabFragment"
+        android:icon="@drawable/ic_hashtag"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/navigation_filter"
+        android:title="" />
+
+    <item
+        android:id="@+id/UpdatedsFragment"
+        android:icon="@drawable/ic_bell"
+        tools:ignore="MenuTitle" />
+    <item
+        android:id="@+id/ProfileFragment"
+        android:icon="@drawable/ic_user"
+        tools:ignore="MenuTitle" />
+
+</menu>

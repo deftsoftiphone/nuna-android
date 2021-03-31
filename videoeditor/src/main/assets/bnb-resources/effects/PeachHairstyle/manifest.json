@@ -1,0 +1,19 @@
+{
+    "name": "PeachHairstyle",
+    "effectVersionInfo": {
+        "commit": "7b21d325589727e81d991a45fd2aaff9af78a0e6",
+        "date": "2019-12-10",
+        "time": "13:21:44",
+        "author": "v.makarevich"
+    },
+    "buildToolsVersionInfo": {
+        "commit": "6c4f87b75f214de1559d54e5d957aef08adb08ac",
+        "date": "2020-03-12",
+        "time": "18:06:58",
+        "author": "Aleksey Cherkes"
+    },
+    "capabilities": {
+        "effectPlayerMajorVersion": 5,
+        "effectPlayerMinorVersion": 1
+    }
+}

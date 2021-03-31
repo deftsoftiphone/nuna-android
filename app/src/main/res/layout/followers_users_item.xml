@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="user"
+            type="com.demo.model.response.baseResponse.Activity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImage"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                app:civ_border_color="@color/status_bar_color"
+                app:civ_circle_background_color="@color/status_bar_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                bind:loadUserImage="@{user.profilePicture.mediaurl}" />
+
+            <TextView
+                android:id="@+id/fullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:includeFontPadding="true"
+                android:paddingVertical="2dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/gothampro_medium"
+                android:gravity="start|center_vertical"
+                android:singleLine="true"
+                android:text="@{TextUtils.isEmpty(user.fullName) ? user.userName : user.fullName}"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@id/userName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/userImage"
+                app:layout_constraintTop_toTopOf="@+id/userImage">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/gotham_pro"
+                android:text="@{`@`+user.userName}"
+                android:textColor="#6b6b6b"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toTopOf="@id/followers"
+                app:layout_constraintStart_toEndOf="@id/userImage"
+                app:layout_constraintTop_toBottomOf="@id/fullName">
+
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/followers"
+                fontAccordingToLanguage="@{@string/key_normal_font}"
+                padding="@{1}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:maxWidth="100dp"
+                android:singleLine="true"
+                android:textColor="#6b6b6b"
+                android:textSize="10sp"
+                android:text="@{user.noOfFollowers == 1 ? user.noOfFollowers.toString().concat(` `).concat(@string/followerText) : user.noOfFollowers.toString().concat(` `).concat(@string/followersText)}"
+                app:layout_constraintBottom_toBottomOf="@id/userImage"
+                app:layout_constraintStart_toEndOf="@id/userImage"
+                app:layout_constraintTop_toBottomOf="@id/userName">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/lineVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_line_vertical"
+                app:layout_constraintBottom_toBottomOf="@id/followers"
+                app:layout_constraintStart_toEndOf="@id/followers"
+                app:layout_constraintTop_toTopOf="@id/followers">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/postsCount"
+                fontAccordingToLanguage="@{@string/key_normal_font}"
+                padding="@{1}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#6b6b6b"
+                android:textSize="10sp"
+                android:text="@{user.noOfPostsCreated == 1 ? user.noOfPostsCreated.toString().concat(` `).concat(@string/post_text) : user.noOfPostsCreated.toString().concat(` `).concat(@string/posts)}"
+                app:layout_constraintBottom_toBottomOf="@id/followers"
+                app:layout_constraintStart_toEndOf="@id/lineVertical"
+                app:layout_constraintTop_toTopOf="@id/followers"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:id="@+id/btn_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/suggestion_selecter"
+            android:fontFamily="@font/gothampro_medium"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Follow"
+            android:textAllCaps="false"
+            android:textColor="@color/button_dark_text"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/clUser"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/clUser">
+
+        </Button>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,152 @@
+warp_mesh = "PH_morth.bsm2"
+warp_hair = { inner = 10, outer = 200, mid = 0.1, strength = 0.3 }
+msaa = 1
+shadowmap_size = 512
+adjust_znear = 150
+draw_order = ['retouch', '!glfx_WARP_IMAGE', 'PH_morth', 'HairBase', 'Hair1_3', 'Hair1_2', 'Hair1_1', 'Hair2', 'Hair4', 'glasses']
+
+# Retouch
+[materials.retouch]
+vs = "retouch.vert"
+fs = "retouch.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+onface = true
+mouth = true
+[materials.retouch.samplers]
+selection_tex="RT_redmask_new_3.png"
+lookupTexTeeth="TEETH_medium.png"
+lookupTexEyes="EYES_medium.png"
+tex_softLight="soft_dark_eyes_256.png"
+tex_normalMakeup="freakface.png"
+tex_highlight="FLARE_41_768.png"
+
+# Cut
+[materials.PH_morth]
+vs = "ph_morth.vert"
+fs = "ph_morth.frag"
+blend = "off"
+backfaces = false
+colorwrite = false
+zwrite = true
+shadow = false
+samplers = {}
+
+# PBR
+[materials.glasses]
+vs = "phys.vert"
+fs = "glasses.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.glasses.samplers]
+tex_diffuse="glasses_Base_Color.ktx"
+tex_normal="glasses_Normal.ktx"
+tex_mrao="glasses_MRAO.ktx"
+
+# PBR
+[materials.HairBase]
+vs = "phys.vert"
+fs = "hairbase.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.HairBase.samplers]
+tex_diffuse="hair_redish_Base_Color.ktx"
+tex_normal="hair_redish_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hair_redish_MRAO.ktx"
+
+# PBR
+[materials.Hair1_3]
+vs = "phys.vert"
+fs = "hair1_3.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.Hair1_3.samplers]
+tex_diffuse="hair_redish_Base_Color.ktx"
+tex_normal="hair_redish_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hair_redish_MRAO.ktx"
+
+# PBR
+[materials.Hair1_2]
+vs = "phys.vert"
+fs = "hair1_2.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.Hair1_2.samplers]
+tex_diffuse="hair_redish_Base_Color.ktx"
+tex_normal="glasses_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hair_redish_MRAO.ktx"
+
+# PBR
+[materials.Hair1_1]
+vs = "phys.vert"
+fs = "hair1_1.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.Hair1_1.samplers]
+tex_diffuse="hair_redish_Base_Color.ktx"
+tex_normal="hair_redish_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hair_redish_MRAO.ktx"
+
+# PBR
+[materials.Hair2]
+vs = "phys.vert"
+fs = "hair2.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = true
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.Hair2.samplers]
+tex_diffuse="hair_redish_Base_Color.ktx"
+tex_normal="hair_redish_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hair_redish_MRAO.ktx"
+
+# PBR
+[materials.Hair4]
+vs = "phys.vert"
+fs = "hair4.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = true
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.Hair4.samplers]
+tex_diffuse="hair_redish_Base_Color.ktx"
+tex_normal="hair_redish_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hair_redish_MRAO.ktx"

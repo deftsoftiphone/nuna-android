@@ -1,0 +1,105 @@
+warp_mesh = "morph.bsm2"
+msaa = 1
+shadowmap_size = 512
+adjust_znear = 300
+draw_order = ['retouch', 'face_shadow', '!glfx_WARP_IMAGE', '!glfx_UPDATE_BG', 'TriMat', 'mat_morph', 'Butt_blue', 'Butt_yellow', 'Butt_orange']
+
+# Retouch
+[materials.retouch]
+vs = "retouch.vert"
+fs = "retouch.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+onface = true
+mouth = true
+[materials.retouch.samplers]
+lookupTexTeeth="lut3d_teeth_middle.png"
+lookupTexEyes="lut3d_eyes_middle.png"
+tex_softLight="soft_low.png"
+tex_normalMakeup="unisex_minimal_512.png"
+
+[materials.TriMat]
+vs = "fstri.vert"
+fs = "lut.frag"
+blend = "off"
+backfaces = true
+shadow = false
+zwrite = false
+samplers = {luttex="nash.png"}
+
+[materials.face_shadow]
+vs = "shadow.vert"
+fs = "shadow.frag"
+blend = "alpha"
+backfaces = false
+colorwrite = true
+zwrite = false
+shadow = false
+onface = true
+mouth = true
+samplers = {}
+
+# Cut
+[materials.mat_morph]
+vs = "mat_morph.vert"
+fs = "mat_morph.frag"
+blend = "off"
+backfaces = false
+colorwrite = false
+zwrite = true
+shadow = false
+samplers = {}
+
+# PBR
+[materials.Butt_blue]
+vs = "butt_blue.vert"
+fs = "butt_blue.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = true
+[materials.Butt_blue.samplers]
+tex_diffuse="Butt_blue_Base_Color.ktx"
+tex_normal="Butt_blue_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="Butt_blue_MRAO.ktx"
+
+# PBR
+[materials.Butt_yellow]
+vs = "butt_yellow.vert"
+fs = "butt_yellow.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = true
+[materials.Butt_yellow.samplers]
+tex_diffuse="Butt_yellow_Base_Color.ktx"
+tex_normal="Butt_yellow_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="Butt_yellow_MRAO.ktx"
+
+# PBR
+[materials.Butt_orange]
+vs = "butt_orange.vert"
+fs = "butt_orange.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = true
+[materials.Butt_orange.samplers]
+tex_diffuse="Butt_orange_Base_Color.ktx"
+tex_normal="Butt_orange_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="Butt_orange_MRAO.ktx"

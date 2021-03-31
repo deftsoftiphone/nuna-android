@@ -1,0 +1,28 @@
+{
+  "name": "butterfly",
+  "recordDuration": 15,
+  "sounds": [
+    {
+      "trackName": "music.ogg",
+      "volume": 1.0,
+      "type": "background"
+    }
+  ],  
+  "frx": {
+    "type": "3d_anim",
+    "3d_anim": {
+      "type": "vfx"
+    }
+  },
+  "foreground": {
+    "type": "MEDIA",
+    "media": {
+      "type": "VIDEO",
+      "file": "but_bokeh.mp4",
+      "opacity": 1.0,
+      "videoSpeed": 1.0,
+      "blend": "ADD",
+      "mode": "RGB"
+    }
+  }
+}

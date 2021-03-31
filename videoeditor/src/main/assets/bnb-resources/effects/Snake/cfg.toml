@@ -1,0 +1,43 @@
+shadowmap_size = 384
+
+draw_order = ["retouch","!glfx_FACE_Z","hide_mouthMat","Head","default","!glfx_FACE_SHADOW"]
+
+[materials.retouch]
+vs = "retouch.vert"
+fs = "retouch.frag"
+blend = "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+onface = true
+mouth = true
+samplers = { selection_tex="redmask_v3.png", lookupTexTeeth="teeth_highlighter5.png", lookupTexEyes="lut_80_percent.png"}
+
+[materials.hide_mouthMat]
+vs = "hide_mouth.vert"
+fs = "zfill.frag"
+shadow = false
+colorwrite = false
+samplers = {}
+
+[materials.Head]
+vs="zfill.vert"
+fs="zfill.frag"
+shadow=false
+colorwrite=false
+backfaces=true
+samplers={}
+
+[materials.default]
+vs="default.vert"
+fs="default.frag"
+samplers={s_d="diffuse_spec.ktx",s_n="normals.ktx"}
+
+# mesh = "SnakeAnimation03.bsm2"
+# start = { anim = "Start", on_end = "attack" }
+# attack = { anim = "attack", on_end = "Idle" }
+# Idle = { anim = "Idle", on_end = "Idle2" }
+
+# mesh = "Head.bsm2"
+# zhead_s = { anim = "Take 001", on_end = "zhead_s" }

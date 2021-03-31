@@ -1,0 +1,109 @@
+warp_mesh = "face.bsm2"
+msaa = 1
+shadowmap_size = 512
+adjust_znear = 150
+draw_order = ['retouch', '!glfx_WARP_IMAGE', 'hat', 'face', 'fur', 'hair', 'fur01']
+
+# Retouch
+[materials.retouch]
+vs = "retouch.vert"
+fs = "retouch.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+onface = true
+mouth = true
+[materials.retouch.samplers]
+selection_tex="REDMASK_v3_256.png"
+lookupTexTeeth="TEETH_medium.png"
+lookupTexEyes="EYES_medium.png"
+tex_softLight="SOFT_princess_256.png"
+tex_normalMakeup="face_BaseColor.png"
+tex_highlight="FLARE_38_512.png"
+
+# PBR
+[materials.hat]
+vs = "automorph.vert"
+fs = "hat.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.hat.samplers]
+tex_diffuse="hat_Base_Color.ktx"
+tex_normal="hat_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hat_MRAO.ktx"
+
+# PBR
+[materials.face]
+vs = "face.vert"
+fs = "face.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = false
+zwrite = true
+shadow = false
+[materials.face.samplers]
+tex_diffuse="no_BaseColor.ktx"
+tex_normal="no_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="no_MRAO.ktx"
+
+# PBR
+[materials.fur]
+vs = "fur.vert"
+fs = "fur.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.fur.samplers]
+tex_diffuse="hat_Base_Color.ktx"
+tex_normal="hat_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hat_MRAO.ktx"
+
+# PBR
+[materials.hair]
+vs = "hair.vert"
+fs = "hair.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.hair.samplers]
+tex_diffuse="hat_Base_Color.ktx"
+tex_normal="hat_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hat_MRAO.ktx"
+
+# PBR
+[materials.fur01]
+vs = "fur01.vert"
+fs = "fur01.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.fur01.samplers]
+tex_diffuse="hat_Base_Color.ktx"
+tex_normal="hat_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hat_MRAO.ktx"

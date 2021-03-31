@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.demo.post_details.PostDetailViewModel" />
+        <import type="android.view.View"/>
+
+        <variable
+            name="clickHandler"
+            type="com.demo.post_details.PostDetailsFragment.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_29sdp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:padding="3dp"
+            android:onClick="@{() -> clickHandler.onClickBack()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user"
+            imageUrlUpdate="@{viewModel.responseGetPostDetails.data.post.user.profileImage}"
+            android:onClick="@{() -> clickHandler.onClickProfilePic()}"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_user_name"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_back"
+            app:layout_constraintTop_toTopOf="parent" />
+<!--        tools:src="@drawable/cate_bitmap"-->
+
+
+        <TextView
+            android:elegantTextHeight="true"
+            android:id="@+id/tv_user_name"
+            android:theme="@style/pro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="Prem"
+            android:onClick="@{() -> clickHandler.onClickProfilePic()}"
+            android:text='@{viewModel.responseGetPostDetails.data.post.user.userName}'
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_follow"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_user"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <TextView
+            android:visibility="@{viewModel.isMyPost ? View.GONE : View.VISIBLE}"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/gothampro_medium"
+            android:textSize="12sp"
+            android:id="@+id/btn_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/follow_button"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="@{viewModel.isUserBeingFollowed ? @string/unfollow : @string/follow}"
+            android:onClick="@{(v) -> clickHandler.onClickFollowUnfollow(v)}"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_user_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:color="@color/white" android:state_pressed="true" />-->
+    <!--<item android:color="@color/white" android:state_selected="true" />-->
+    <!--<item andorid:color="@color/graytest" />-->
+
+    <item android:color="#000"
+        android:state_pressed="true" />
+    <!-- pressed -->
+    <item android:color="#fefefe"
+        android:state_selected="false" />
+    <!-- selected -->
+    <item android:color="#000" />
+    <!-- default -->
+</selector>

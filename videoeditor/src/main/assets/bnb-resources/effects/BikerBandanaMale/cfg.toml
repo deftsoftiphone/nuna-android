@@ -1,0 +1,104 @@
+warp_mesh = "BeautyFaceSP.bsm2"
+msaa = 1
+shadowmap_size = 512
+adjust_znear = 300
+adjust_zfar = 1000
+draw_order = ['retouch', '!glfx_WARP_IMAGE', 'cut', 'Texture1', 'Texture_Alpha1', 'glasses_bandana', 'bike_mat']
+
+# Retouch
+[materials.retouch]
+vs = "retouch.vert"
+fs = "retouch.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+onface = true
+mouth = true
+[materials.retouch.samplers]
+selection_tex="redmask_new_3.png"
+lookupTexTeeth="teeth_high.png"
+lookupTexEyes="eyes_high.png"
+tex_softLight="soft_princess_256.png"
+tex_normalMakeup="normal_Base_Color.ktx"
+tex_highlight="FLARE_41_512.png"
+
+# Cut
+[materials.cut]
+vs = "cut.vert"
+fs = "cut.frag"
+blend = "off"
+backfaces = false
+colorwrite = false
+zwrite = true
+shadow = false
+samplers = {}
+
+# PBR
+[materials.Texture1]
+vs = "texture1.vert"
+fs = "texture1.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = true
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.Texture1.samplers]
+tex_diffuse="Texture1_Base_Color.ktx"
+tex_normal="Texture1_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="Texture1_MRAO.ktx"
+
+# PBR
+[materials.Texture_Alpha1]
+vs = "texture_alpha1.vert"
+fs = "texture_alpha1.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = true
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.Texture_Alpha1.samplers]
+tex_diffuse="Texture_Alpha1_Base_Color.ktx"
+tex_normal="Texture1_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="Texture_Alpha1_MRAO.ktx"
+
+# PBR
+[materials.glasses_bandana]
+vs = "glasses_bandana.vert"
+fs = "glasses_bandana.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = true
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.glasses_bandana.samplers]
+tex_diffuse="glasses_bandana_Base_Color.ktx"
+tex_normal="glasses_bandana_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="glasses_bandana_MRAO.ktx"
+
+# PBR
+[materials.bike_mat]
+vs = "vertex_no_rot.vert"
+fs = "bike_mat.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.bike_mat.samplers]
+tex_diffuse="glasses_bandana_Base_Color.ktx"
+tex_normal="glasses_bandana_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="glasses_bandana_MRAO.ktx"

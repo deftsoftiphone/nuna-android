@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="userImage"
+            type="String" />
+
+        <variable
+            name="userProfile"
+            type="com.demo.model.response.baseResponse.UserProfile" />
+
+        <variable
+            name="viewModel"
+            type="com.demo.edit_profile.EditProfileViewModel" />
+
+        <variable
+            name="clickHandler"
+            type="com.demo.edit_profile.EditProfileFragment.ClickHandler" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context="com.demo.edit_profile.EditProfileActivity">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            app:contentInsetStart="0dp"
+            app:layout_constraintEnd_toStartOf="@id/guideline7"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:onClick="@{() -> clickHandler.onBackPressed()}"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_back_custom" />
+
+                <TextView
+                    fontAccordingToLanguage="@{@string/key_bold_font}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/edit_profile"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_15sdp" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_85sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:onClick="@{() -> clickHandler.onClickChangePhoto()}"
+            app:civ_border_color="@color/status_bar_color"
+            app:civ_circle_background_color="@color/status_bar_color"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            bind:loadUserImage="@{userImage}" />
+
+        <TextView
+            android:id="@+id/tChangePhoto"
+            fontAccordingToLanguage="@{@string/key_bold_font}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:onClick="@{() -> clickHandler.onClickChangePhoto()}"
+            android:text="@string/change_photo"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="@+id/ivProfilePic"
+            app:layout_constraintStart_toStartOf="@+id/ivProfilePic"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfilePic">
+
+        </TextView>
+
+
+        <LinearLayout
+            android:id="@+id/lName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:onClick="@{() -> clickHandler.onClickAddName()}"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="10"
+            app:layout_constraintEnd_toEndOf="@id/guideline7"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/tChangePhoto">
+
+            <TextView
+                android:id="@+id/tName"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="3"
+                android:text="@string/name"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tAddName"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                android:paddingVertical="5dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:includeFontPadding="true"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:singleLine="true"
+                android:text="@{userProfile.fullName!=null ? userProfile.fullName : @string/place_holder_full_name }"
+                android:textColor="@color/edit_profile_hint"
+                android:textSize="@dimen/_12sdp"
+                app:drawableEndCompat="@drawable/ic_arrow_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lUsername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:onClick="@{() -> clickHandler.onClickAddUsername()}"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="@id/guideline7"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/lName">
+
+            <TextView
+                android:id="@+id/tUserName"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="3"
+                android:text="@string/user_name"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/tName" />
+
+            <TextView
+                android:id="@+id/tAddUserName"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:drawablePadding="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:singleLine="true"
+                android:text="@{userProfile.userName}"
+                android:textColor="@color/edit_profile_hint"
+                android:textSize="@dimen/_12sdp"
+                app:drawableEndCompat="@drawable/ic_arrow_text" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lBio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:onClick="@{() -> clickHandler.onClickAddBio()}"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="@id/guideline7"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/lUsername">
+
+            <TextView
+                android:id="@+id/tUserBio"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="3"
+                android:text="@string/bio"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tAddBio"
+                fontAccordingToLanguage="@{@string/key_bold_font}"
+                android:paddingVertical="5dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:includeFontPadding="true"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_weight="7"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="end|center_vertical"
+                android:text="@{userProfile.bioData!=null ?  userProfile.bioData : @string/bio_placeholder_own }"
+                android:textColor="@color/edit_profile_hint"
+                android:textSize="@dimen/_12sdp"
+                app:drawableEndCompat="@drawable/ic_arrow_text" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.055" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineMid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

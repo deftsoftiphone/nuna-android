@@ -2,7 +2,6 @@ package com.demo.viewPost.home.playermf
 
 import android.content.Context
 import android.net.Uri
-import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.Toast
@@ -25,7 +24,6 @@ import com.google.android.exoplayer2.upstream.cache.CacheDataSource
 import com.google.android.exoplayer2.upstream.cache.CacheDataSourceFactory
 import com.google.android.exoplayer2.upstream.cache.SimpleCache
 import com.google.android.exoplayer2.util.Util
-import okhttp3.internal.userAgent
 
 /**
  * Created by Maroof Ahmed Siddique
@@ -143,12 +141,12 @@ class PlayerViewAdapter {
                 this.resizeMode = AspectRatioFrameLayout.RESIZE_MODE_ZOOM
             }
 
-            val speed =  MainApplication.get().getNetworkSpeed()
-            println("mediaUrl = ${url.mediaUrlAccordingToInternetSpeed(speed)}")
+            val speed = MainApplication.get().getNetworkSpeed()
+            println("simpleCache = ${url.mediaUrlAccordingToInternetSpeed(speed)}")
             val mediaSource = if (url.endsWith("m3u8")) {
                 HlsMediaSource.Factory(cacheDataSourceFactory!!)
                     .createMediaSource(Uri.parse(url.mediaUrlAccordingToInternetSpeed(speed)))
-            }else ProgressiveMediaSource.Factory(cacheDataSourceFactory!!)
+            } else ProgressiveMediaSource.Factory(cacheDataSourceFactory!!)
                 .createMediaSource(Uri.parse(url))
 
             player.prepare(mediaSource)

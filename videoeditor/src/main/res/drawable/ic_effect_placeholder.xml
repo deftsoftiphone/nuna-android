@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingStart="4dp"
+    android:paddingTop="4dp"
+    android:paddingEnd="4dp"
+    android:paddingBottom="4dp">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp" />
+            <size
+                android:width="48dp"
+                android:height="48dp" />
+            <solid android:color="@color/dustyGray" />
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/ic_effects"
+        android:gravity="center" />
+</layer-list>

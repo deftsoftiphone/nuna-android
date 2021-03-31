@@ -1,0 +1,580 @@
+<resources>
+    <string name="app_name">நுனா</string>
+    <string name="title_setting">செட்டிங்ஸ்</string>
+    <string name="title_filter">வடிகட்டு</string>
+    <string name="title_message">செய்திகள்</string>
+
+    <!--Validation : Login-->
+    <string name="err_password_missing">தயவு செய்து கடவுச்சொல்லை உள்ளிடவும்</string>
+    <string name="err_password_length_invalid">கடவுச்சொல்லின் நீளம் 8 முதல் 20 எழுத்துகள் இருக்க வேண்டும்</string>
+    <string name="confirm_new_password">புதிய கடவு சொல்லை உறுதி செய்</string>
+    <string name="err_otp_missing">OTP-யை உள்ளிடவும்</string>
+
+    <!--Post Creation-->
+    <string name="err_title_missing">பதிவின் தலைப்பை உள்ளிடவும்</string>
+    <string name="err_discription_missing">பதிவின் விவரத்தை உள்ளிடவும்</string>
+
+    <!--Change Password-->
+    <string name="change_password">கடவுச்சொல்லை மாற்று</string>
+    <string name="err_old_password_missing">பழைய கடவுச்சொல்லை உள்ளிடவும்</string>
+    <string name="err_new_password_missing">புதிய கடவுச்சொல்லை உள்ளிடவும்</string>
+    <string name="err_new_password_min_length">Password must be 8 characters long</string>
+    <string name="err_new_password_max_length">Password length must not be greater than 16</string>
+    <string name="err_confirm_password_missing">கடவுச்சொல்லை உறுதிப்படுத்தவும்</string>
+    <string name="err_passwords_not_same">கடவுச்சொற்கள் பொருந்தவில்லை</string>
+    <string name="err_new_password_matches_new_password">புதிய கடவுச்சொல் பழைய கடவுச்சொல்லைப் போன்றது</string>
+    <string name="old_password">பழைய கடவுச்சொல்</string>
+    <string name="new_password">புதிய கடவுச்சொல்</string>
+
+    <!--Other-->
+    <string name="no_network_connected">எந்த நெட்வொர்க்குடனும் இணைக்கப்படவில்லை</string>
+    <string name="msg_app_close">Are you sure you want to close the app?</string>
+    <string name="yes">ஆம்</string>
+    <string name="no">இல்லை</string>
+    <string name="email_address">மின்னஞ்சல் முகவரி</string>
+    <string name="password">கடவுச்சொல்</string>
+    <string name="forgot_your_password_q"><u>உங்கள் கடவுச்சொல்லை மறந்துவிட்டீர்களா?</u></string>
+    <string name="hello">Hello</string>
+    <string name="sign_into_your_account">உங்கள் கணக்கில் சைன்-இன் செய்யவும்</string>
+    <string name="login">லாகின்</string>
+    <string name="remember_me">என்னை நினைவில் வையுங்கள்</string>
+    <string name="forgot_your_password">Forgot your password</string>
+    <string name="bad_response">Bad Response</string>
+    <string name="something_went_wrong">அச்சச்சோ! ஏதோ தவறு நடந்துவிட்டது</string>
+    <string name="logout">லாக் அவுட்</string>
+    <string name="msg_app_logout_confirmation">வெளியேற விரும்புகிறீர்களா?</string>
+    <string name="forgot_password">கடவுச்சொல்லை மறந்துவிட்டீர்களா</string>
+    <string name="submit">சமர்ப்பிக்கவும்</string>
+    <string name="forgot_password_subtitle">உங்கள் மின்னஞ்சலை உள்ளிடவும். கடவுச்சொல் மீட்கும் இணைப்பை  நாங்கள் உங்களுக்கு அனுப்புவோம்.</string>
+    <string name="home">முகப்பு</string>
+    <string name="notification">நோட்டிஃபிக்கேஷன்ஸ்</string>
+    <string name="change_your_password">Change Your Password</string>
+    <string name="client_workflow">Client workflow</string>
+    <string name="client_workflow_desc">Client Workflow description</string>
+    <string name="camera">கேமரா</string>
+    <string name="gallery">கேலரி</string>
+    <string name="pick_an_image">ஒரு படத்தைத் தேர்ந்தெடுங்கள்</string>
+    <string name="capture_image">படம் பிடிக்கவும்</string>
+    <string name="pick_a_file">ஒரு ஃபைலை தேர்ந்தெடுக்கவும்</string>
+    <string name="next">அடுத்தது</string>
+    <string name="delete">நீக்கு</string>
+    <string name="select_an_option">ஒரு விருப்பத்தைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="title">தலைப்பு</string>
+    <string name="value">Value</string>
+    <string name="details">விவரங்கள்</string>
+    <string name="confirm">உறுதிப்படுத்து</string>
+    <string name="continue_str">தொடர்க</string>
+    <string name="verification">சரிபார்ப்பு</string>
+    <string name="resend_the_code"><u>குறியீட்டை மீண்டும் அனுப்பவும்</u></string>
+    <string name="phone_number">தொலைபேசி எண்</string>
+    <string name="label_brush">ப்ரஷ்</string>
+    <string name="label_emoji">ஈமோஜி</string>
+    <string name="label_sticker">ஸ்டிக்கர்</string>
+    <string name="label_eraser">அழிப்பான்</string>
+    <string name="label_text">உரை</string>
+    <string name="label_filter">ஃபில்டர்</string>
+    <string name="label_adjust">சரிக்கட்டு</string>
+    <string name="label_more">மேலும்</string>
+    <string name="label_crop">க்ராப்</string>
+    <string name="label_free">வடிவற்ற</string>
+    <string name="label_original">மூலவடிவம்</string>
+    <string name="label_square">சதுரம்</string>
+    <string name="label_rotate">திருப்பு</string>
+    <string name="label_brightness">வெளிச்சம்</string>
+    <string name="label_saturation">செறிவு</string>
+    <string name="label_beauty">அழகூட்டல்</string>
+    <string name="label_smoothness">மென்மை</string>
+    <string name="label_skintone">தோல் நிறம்</string>
+    <string name="label_apply">செயல்படுத்தவும்</string>
+    <string name="label_done">முடிந்தது</string>
+    <string name="slide_to_cancel">ரத்து செய்ய ஸ்லைடு செய்யவும்</string>
+    <string name="one">ஒன்று</string>
+    <string name="two">இரண்டு</string>
+    <string name="three">மூன்று</string>
+    <string name="language">மொழி</string>
+    <string name="invalid_lat_long_used">Invalid lat long</string>
+    <string name="no_address_found">No address found</string>
+    <string name="address_found">Address found</string>
+    <string name="Cancel">ரத்து</string>
+    <string name="signup">சைன் அப்</string>
+    <string name="choose_areas_you_interested">ஆர்வமுள்ள பகுதிகளைத் தேர்வுசெய்க</string>
+    <string name="cat_saved_successfully">உங்கள் பிரிவுகள் வெற்றிகரமாக சேமிக்கப்பட்டன</string>
+    <string name="follow_popular_users">பிரபலமான பயனர்களைப் ஃபாலோ செய்யவும்</string>
+    <string name="unfollow">அன்ஃபாலோ</string>
+    <string name="follow">ஃபாலோ</string>
+    <string name="get_started">தொடங்கவும்</string>
+    <string name="search">தேடு</string>
+    <string name="report"><u>அறிக்கை</u></string>
+    <string name="dot_date"> &#032;&#032; \u2022 %1$s</string>
+    <string name="x_comments">%1$d கருத்துகள்</string>
+    <string name="choose_option">ஒரு விருப்பத்தைத் தேர்வுசெய்க</string>
+    <string name="related_posts">தொடர்புடைய போஸ்ட்கள்</string>
+    <string name="near_by">அருகிலுள்ள</string>
+    <string name="edit_profile">ப்ரொஃபைலை மாற்று</string>
+    <string name="account_settings">கணக்கு செட்டிங்ஸ்</string>
+    <string name="terms_amp_conditions"><![CDATA[விதிமுறைகளும் நிபந்தனைகளும்]]></string>
+    <string name="privacy_policy">தனியுரிமைக் கொள்கை</string>
+    <string name="security">பாதுகாப்பு</string>
+    <string name="about_app">ஆப்-ஐ பற்றி</string>
+    <string name="faq">அடிக்கடி கேட்கப்படும் கேள்விகள்</string>
+    <string name="profile_name">ப்ரொஃபைல் பெயர்</string>
+    <string name="date_of_birth">பிறந்த தேதி</string>
+    <string name="profile_tagline">சுயவிவர டேக்லைன்</string>
+    <string name="gender">பாலினம்</string>
+    <string name="interests">ஆர்வம்</string>
+    <string name="description">விளக்கம்</string>
+    <string name="tag">டேக்</string>
+    <string name="location">இருப்பிடம்</string>
+    <string name="post">போஸ்ட் செய்</string>
+    <string name="video">வீடியோ</string>
+    <string name="image">படம்</string>
+    <string name="video_editing">வீடியோவை மாறுபடுத்து</string>
+    <string name="save">சேவ்</string>
+    <string name="processing_video">வீடியோ செயலாக்குகிறது</string>
+    <string name="video_1">வீடியோ 1</string>
+    <string name="video_2">வீடியோ 2</string>
+    <string name="select_music">இசையைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="label">லேபிள்</string>
+    <string name="error_filter">Select the video which you want to add filter animation</string>
+    <string name="error_crop">Select the video which you want to add crop</string>
+    <string name="error_music">Select the video which you want to merge the audio</string>
+    <string name="error_speed">Select the video which you want to add speed animation</string>
+    <string name="error_text">Select the video which you want to add text inside video</string>
+    <string name="error_sticker">Select the video which you want to add sticker inside video</string>
+    <string name="error_merge">Select 2 videos which you want to merge</string>
+    <string name="error_transition">Select the video which you want to perform transition</string>
+    <string name="error_select_sticker">Select the sticker which you want to show inside the video</string>
+    <string name="error_select_sticker_pos">Select the position where you want to show the sticker</string>
+    <string name="error_add_text">Add the text which you want to show inside the video</string>
+    <string name="error_add_text_pos">Select the position where you want to show the text</string>
+    <string name="error_select_speed">Select the playback speed which you want to apply to the video</string>
+    <string name="error_select_filter">Select the filter which you want to apply to the video</string>
+    <string name="error_select_smaller_video">Select the video smaller than 4 minutes</string>
+    <string name="play_time">வீடியோவின் முழு நீளம்</string>
+    <string name="enter_text_here">உரையை இங்கே உள்ளிடவும்</string>
+    <string name="save_video">நீங்கள் தொகுத்த வீடியோவை சேமிக்க விரும்புகிறீர்களா?</string>
+    <string name="Continue">Continue</string>
+    <string name="successfully_saved">உங்கள் வீடியோ வெற்றிகரமாக சேமிக்கப்பட்டது</string>
+    <string name="not_supported_video">வீடியோ வடிவம் ஆதரிக்கப்படவில்லை. mp4  வடிவமாக மாற்ற விரும்புகிறீர்களா?</string>
+    <string name="short_seconds">விநாடிகள்</string>
+    <string name="megabyte">MB</string>
+    <string name="kilobyte">KB</string>
+    <string name="trimming_progress">உங்கள் வீடியோ ட்ரிம் செய்யப்படுகிறது…</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_a_video">வீடியோவைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="select_action">செயலைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="select_video_from_gallery">கேலரியிலிருந்து வீடியோவை தேர்ந்தெடுக்கவும்</string>
+    <string name="record_video_from_camera">கேமராவிலிருந்து வீடியோவைப் பதிவுசெய்க</string>
+    <string name="type_your_comment">உங்கள் கருத்தை தட்டச்சு செய்க…</string>
+    <string name="bio">டேக்லைன்</string>
+    <string name="name_placeholder" translatable="false">%1$s %2$s</string>
+
+    <string name="male">ஆண்</string>
+    <string name="female">பெண்</string>
+    <string name="first_name">முதல் பெயர்</string>
+    <string name="last_name">கடைசி பெயர்</string>
+    <string name="user_name">யூசர்நேம்</string>
+
+
+    <!-- TO DO: Remove or change this placeholder text -->
+
+    <string name="settings">செட்டிங்ஸ்</string>
+    <string name="no_boards_found">எந்த போர்டும் இல்லை</string>
+    <string name="no_item_found">எதுவும் இல்லை</string>
+    <string name="no_post_found">எந்த போஸ்ட்டும் இல்லை</string>
+    <string name="msg_pinboards_not_available">எந்த போர்டும் உருவாக்கப்படவில்லை</string>
+    <string name="pinboard_name">போர்ட் பெயர்</string>
+    <string name="err_board_name_missing">போர்டின் பெயரை உள்ளிடவும்</string>
+    <string name="img_upload_failed">படம் பதிவேற்றப்படவில்லை</string>
+    <string name="channel_name">Nuna</string>
+    <string name="err_mobile_missing">10 இலக்க மொபைல் எண்ணை உள்ளிடவும்</string>
+    <string name="msg_delete_board">\"%1$s\" போர்டை நிச்சயமாக நீக்கலாமா?</string>
+    <string name="msg_delete_post_from_board">போர்டிலிருந்து இப்பதிவை நிச்சயமாக நீக்கலாமா?</string>
+    <string name="reported_successfully">வெற்றிகரமாக புகார் செய்யப்பட்டது</string>
+    <string name="upr_one">சமீபத்திய போக்குகளைக் கண்டறியவும்</string>
+    <string name="upr_three">பணம் வெல்லவும்</string>
+    <string name="below_three">சிறந்த பதிவுகளை உருவாக்கி</string>
+    <string name="upr_four">சிறந்த பதிவுகளை உருவாக்கவும்</string>
+    <string name="below_four">எளிய தொகுப்பான் மூலமாக</string>
+    <string name="upr_five">நேரடி விற்பனை</string>
+    <string name="below_five">பொருட்களின் டெமோக்களை நிகழ்நேரத்தில் பாருங்கள்</string>
+    <string name="preferences">விருப்பங்கள்</string>
+    <string name="about">பயன்பாட்டைப் பற்றி</string>
+    <string name="like">லைக்ஸ்</string>
+    <string name="category">கேட்டகரி</string>
+
+    <!--Other2 : These are from translated files from December 2019. Use only If needed-->
+    <string name="location_map">இருப்பிடதின் வரைபடம்</string>
+    <string name="enter_email_ID">உங்கள் மின்னஞ்சல் ஐடியை உள்ளிடவும்</string>
+    <string name="enter_valid_email_ID">தயவு செய்து செல்லுபடியாகும் மின்னஞ்சல் ஐடியை உள்ளிடவும்</string>
+    <string name="business_details">வணிக விவரங்கள்</string>
+    <string name="sure_to_submit">நீங்கள் நிச்சயமாக ஆவணத்தை சமர்ப்பிக்க விரும்புகிறீர்களா?</string>
+    <string name="approved">அங்கீகரிக்கப்பட்டது</string>
+    <string name="rejected">நிராகரிக்கப்பட்டது</string>
+    <string name="location_settings">இருப்பிட அமைப்புகளைத் திறக்கவும்</string>
+    <string name="gps_not_enabled">ஜி.பி.எஸ் இருப்பிடம் இயக்கப்படவில்லை</string>
+    <string name="service_not_enabled">சேவை கிடைக்கவில்லை</string>
+    <string name="add_filter">வடிப்பானைச் சேர்க்கவும்</string>
+    <string name="add_audio_track">ஆடியோ டிராக்கைச் சேர்க்கவும்</string>
+    <string name="adjust_speed">வேகத்தை சரிசெய்யவும்</string>
+    <string name="add_text">உரையைச் சேர்க்கவும்</string>
+    <string name="add_sticker">ஸ்டிக்கரைச் சேர்க்கவும்</string>
+    <string name="two_videos_merge">எதாவது 2 வீடியோக்களையும் ஒன்றிணைக்க தேர்ந்தெடுக்கவும்</string>
+    <string name="perform_transition">மாற்றம் செய்யுங்கள்</string>
+    <string name="choose_sticker">ஸ்டிக்கரைத் தேர்வுசெய்க</string>
+    <string name="adjust_sticker">ஸ்டிக்கரின் நிலையைத் தேர்ந்தெடுத்து சரிசெய்யவும்</string>
+    <string name="adjust_text">உரையின் நிலையைத் தேர்ந்தெடுத்து சரிசெய்யவும்</string>
+    <string name="playback_speed">பின்னணி வேகத்தைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="select_filter">வடிப்பானைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="less_than_4_min">வீடியோவின் நீளம் 4 நிமிடங்களுக்கும் குறைவாக இருக்க வேண்டும்</string>
+    <string name="fashion">ஃபேஷன்</string>
+    <string name="makeup">ஒப்பனை</string>
+    <string name="food">உணவு</string>
+    <string name="fitness">உடற்பயிற்சி</string>
+    <string name="home_decor">வீட்டு அலங்காரம்</string>
+    <string name="travel">பயணம்</string>
+    <string name="architecture">கட்டிடக்கலை</string>
+    <string name="interiors">உள்துறை</string>
+    <string name="add">சேர்</string>
+    <string name="my_board">எனது வாரியம்</string>
+
+    //###########################################################################
+
+
+    <string name="board_empty">இந்த போர்ட் தற்போது காலி</string>
+    <string name="delete_post">இப்பதிவை நிச்சயமாக அழிக்கலாமா?</string>
+    <string name="no_boards_yet">தாங்கள் இதுவரை எந்த போர்டையும் உருவாக்கவில்லை</string>
+    <string name="no_posts_yet">தாங்கள் இதுவரை எதையும் பதிவிடவில்லை</string>
+    <string name="replies">கருத்துகள்</string>
+    <string name="all_notif">அனைத்து அறிவிப்புகள்</string>
+    <string name="otp_no_match">OTP பொருந்தவில்லை</string>
+    <string name="select_category">சில கேட்டகரிகளை தேர்ந்தெடுக்கவும்</string>
+    <string name="nothing_selected">ஒரு படத்தை தேர்ந்தெடுக்கவும்</string>
+    <string name="type">வகை</string>
+    <string name="brush">ப்ரஷ்</string>
+    <string name="opacity">ஒளிபுகாமை</string>
+    <string name="size">அளவு</string>
+    <string name="txt_add_images">படங்களை சேர்க்கவும்</string>
+    <string name="prefer_not_to_say">கூற விரும்பவில்லை</string>
+    <string name="hashtag">ஹேஷ்டேக்</string>
+    <string name="add_description">விளக்கம் சேர்க்கவும்</string>
+    <string name="all">எல்லாம்</string>
+    <string name="save_without_exit">இப்படத்தை சேமிக்காமல் நிச்சயமாக வெளியேறவேண்டுமா?</string>
+    <string name="first_last_name">முதல் &amp; கடைசி பெயர்</string>
+    <string name="no_comment">கமென்ட்ஸ் இல்லை</string>
+
+
+    <string name="discover">முகப்பு</string>
+    <string name="following">ஃபாலோவிங்</string>
+    <string name="updates">புதிய</string>
+    <string name="profile">பேஜ்</string>
+    <string name="my_profile">என் பேஜ்</string>
+    <string name="filter_by">பில்டர்</string>
+    <string name="likes_placeholder" translatable="false"><b>%1$d</b><![CDATA[<b><font color=#a6a6a6><br/>லைக்ஸ்</font></b>]]></string>
+    <string name="views_placeholder" translatable="false"><b>%1$d</b><![CDATA[<b><font color=#a6a6a6><br/>வ்யூ</font></b>]]></string>
+    <string name="views">வ்யூ</string>
+    <string name="followers_placeholder" translatable="false"><b>%1$d</b><![CDATA[<b><font color=#a6a6a6><br/>ஃபேன்</font></b>]]></string>
+    <string name="followers">ஃபேன்</string>
+    <string name="comments_placeholder" translatable="false"><b>%1$d</b><![CDATA[<b><font color=#a6a6a6><br/>கருத்து</font></b>]]></string>
+    <string name="comments">கருத்து</string>
+    <string name="my_boards">என் போர்ட்</string>
+    <string name="my_posts">என் போஸ்ட்</string>
+    <string name="select_image_for_edit">திருத்தவேண்டிய படம்</string>
+    <string name="see_more_comments">மேலும் கமென்ட்ஸ் (%1$d)</string>
+    <string name="see_less">குறைவாக</string>
+    <string name="add_to_board">எனக்கு</string>
+    <string name="message_elipses">என் கருத்து</string>
+    <string name="choose_language">உங்கள் மொழி</string>
+    <string name="edit">திருத்து</string>
+    <string name="liked_post">லைக் செய்தார்</string>
+    <string name="comment_on_post">கமென்ட் செய்தார்</string>
+    <string name="started_follwg">தொடர்கிறார்</string>
+    <string name="upr_two"><![CDATA[பொருட்களின் ரிவ்யூ & டிப்ஸ் கண்டறியவும்]]></string>
+    <string name="otp_sent_to">OTP அனுப்பப்பட்ட எண்</string>
+    <string name="cont_polcy">ஊடகக் கொள்கை</string>
+
+    //new//
+    <string name="redeem_likes">லைக்குக்கு துட்டு</string>
+    <string name="chngs_saved">மாற்றங்கள் சேமிக்கப்பட்டன</string>
+    <string name="create_usrname">யூசர்நேம் உருவாக்கவும்</string>
+    <string name="usrname_exists">இந்த யூசர்நேம் ஏற்கனவே உள்ளது. வேறு பயன்படுத்தவும்.</string>
+    <string name="select_board">போர்டை தேர்ந்தெடுக்கவும்</string>
+    <string name="added_to_board">போர்டில் சேர்க்கப்பட்டது</string>
+    <string name="cancelled">ரத்து</string>
+    <string name="second_ago">s முன்</string>
+    <string name="minute_ago">m முன்</string>
+    <string name="hour_ago">h முன்</string>
+    <string name="day_ago">d முன்</string>
+    <string name="week_ago">w முன்</string>
+    <string name="usrnam_updated">யூசர்நேம் அப்டேட்</string>
+
+
+    //In Process of new Design
+    <string name="verification_title">Verification</string>
+    <string name="value_your_privacy">உங்கள் தனியுரிமையை நாங்கள் மதிக்கிறோம். உங்கள் எண் வேறு யாருடனும் பகிரப்படாது.</string>
+    <string name="toolbarTitle">toolbarTitle</string>
+    <string name="fileURL">fileURL</string>
+    <string name="_00_00">00:00</string>
+    <string name="hashtags"># ஹேஷ்டேக்</string>
+    <string name="_1_5k_posts">1.5k Posts</string>
+    <string name="close">Close</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="language_type">" தமிழ்"</string>
+    <string name="hashtag_already_exist">Hashtag already exist in the description.</string>
+
+    //API RECEIVED API ERROR MESSAGE
+    <string name="emptyOTPMsg">Please pass countryCode, mobileNo,languageId and otpCode in the body</string>
+    <string name="invalidOTPMsg">wrong otp code entered or re-entering used otp</string>
+
+    //API ERROR Messages
+    <string name="connectErr">நெட்வர்க் கிடைக்கவில்லை. சரிபார்த்து மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="timeoutErr">இணைப்பு பிழை ஏற்பட்டது. சிறிது நேரம் கழித்து முயற்சிக்கவும்.</string>
+    <string name="emptyMobileNoErr">தொலைபேசி எண்ணை உள்ளிடவும்</string>
+    <string name="invalidOtpErr">இந்த OTP செல்லுபடியாகாது.\nதயவுசெய்து செல்லுபடியாகும் OTPஐ உள்ளிடவும்.</string>
+    <string name="userDeactivatedErr">மன்னிக்கவும், உங்கள் அக்கௌன்ட் முடக்கப்பட்டுள்ளது.</string>
+    <string name="no_categories_available">தற்போது எந்த வகைகளும் இல்லை</string>
+    <string name="no_hashtags_available">தற்போது எந்த ஹேஷ்டேக்குகளும் இல்லை</string>
+
+
+    //API SUCCESS MESSAGES
+    <string name="loginSuccess">You have been registered successfully.</string>
+    <string name="postCreatedSuccess">Post has been created successfully.</string>
+
+    <string name="t_n_c_and_privacy_policy">விதிமுறைகள் மற்றும் நிபந்தனைகள் மற்றும் தனியுரிமைக் கொள்கையை நீங்கள் ஒப்புக்கொண்டால், ‘தொடர்க’ பொத்தானைக் கிளிக் செய்யுங்கள்</string>
+    <string name="verify_phone_number">தொலைபேசி எண்ணைச் சரிபார்க்கவும்</string>
+    <string name="otp_sent"> OTP இந்த எண்ணிற்கு அனுப்பப்பட்டுள்ளது [number]</string>
+    <string name="hashtags_without_hash">ஹேஷ்டேக்</string>
+    <string name="all_categories">அனைத்தும்</string>
+    <string name="invalid_mobile">தயவுசெய்து செல்லுபடியாகும் தொலைபேசி எண்ணை உள்ளிடவும்</string>
+
+    <string name="otpResendSuccess">உங்கள் எண்ணுக்கு OTP குறியீடு அனுப்பப்பட்டுள்ளது</string>
+    <string name="post_created_successfully">இடுகை வெற்றிகரமாக உருவாக்கப்பட்டது</string>
+    <string name="empty_mobile_no">தயவுசெய்து தொலைபேசி எண்ணை உள்ளிடவும்</string>
+    <string name="invalid_otp">இந்த OTP செல்லுபடியாகாது.\nதயவுசெய்து செல்லுபடியாகும் OTPஐ உள்ளிடவும்.</string>
+    <string name="username_instructions">பயனர்பெயர்களில் எழுத்துக்கள், எண்கள், அடிக்கோடுகள், மற்றும் காலங்கள் மட்டுமே இருக்க முடியும்</string>
+    <string name="username_not_available">இந்த பயனர்பெயர் கிடைக்கவில்லை.\n தயவுசெய்து வேறு ஒன்றை முயற்சிக்கவும்.</string>
+    <string name="tap_to_see">பார்க்க தட்டவும்</string>
+    <string name="more">மேலும்</string>
+    <string name="no_more_hashtags">இனி ஹேஷ்டேக்குகள் இல்லை</string>
+    <string name="noActivityDescription">உங்கள் வீடியோக்களை வெளியிட்டு அனைவருடனும் தொடர்பு கொள்ளுங்கள்!</string>
+    <string name="alert">எச்சரிக்கை</string>
+    <string name="cancel_post">உங்கள் வீடியோ மற்றும் தரவு இழக்கப்படும். இருப்பினும் தொடரவா?</string>
+    <string name="max_character_reached">அதிகபட்சம் 200 எழுத்துக்கள்</string>
+    <string name="language_updated_success">மொழி மாற்றப்பட்டுள்ளது</string>
+    <string name="bio_placeholder">ஷாக்கீனில் என்னைப் பின்தொடரவும்</string>
+    <string name="share">பங்குகள்</string>
+    <string name="commented">கருத்து தெரிவித்தார்</string>
+    <string name="commentes">கருத்துரைகள்</string>
+    <string name="followed">தொடர்ந்து</string>
+    <string name="shared">பகிரப்பட்டது</string>
+    <string name="no_internet">இணையம் இல்லை. தயவுசெய்து உங்கள் இணைப்பைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="like_post">உங்கள் இடுகையை விரும்பினார்</string>
+    <string name="follow_you">உங்களைப் பின்தொடர்ந்தார்</string>
+    <string name="share_post">உங்கள் இடுகையைப் பகிர்ந்துள்ளார்</string>
+    <string name="posts">பதிவுகள்</string>
+    <string name="name">பெயர்</string>
+    <string name="full_name">முழு பெயர்</string>
+    <string name="add_your_bio">உங்கள் உயிர் சேர்க்கவும்</string>
+    <string name="enter_full_name">தயவுசெய்து உங்கள் முழு பெயரை உள்ளிடவும்</string>
+    <string name="enter_user_name">பயனர்பெயரை உள்ளிடவும்</string>
+    <string name="popular">பிரபலமானது</string>
+    <string name="user">பயனர்</string>
+    <string name="bio_placeholder_own">உங்கள் சுயவிவரத்தில் உங்கள் பயோவைச் சேர்க்கவும்</string>
+    <string name="success">வெற்றி</string>
+    <string name="post_text">இடுகை</string>
+    <string name="fail">தோல்வி</string>
+    <string name="suggested">பரிந்துரைகள்</string>
+    <string name="suggested_small">பரிந்துரைக்கப்படுகிறது</string>
+    <string name="users">பயனர்கள்</string>
+    <string name="videos">வீடியோ</string>
+    <string name="no_hashtag_found">ஹேஷ்டேக்குகள் எதுவும் கண்டறியப்படவில்லை</string>
+    <string name="no_results_found">முடிவுகள் எதுவும் கண்டறியப்படவில்லை</string>
+    <string name="no_activity_yet">இதுவரை எந்த நடவடிக்கையும் இல்லை</string>
+    <string name="no_data_found">வேறு தகவல்கள் எதுவும் கண்டறியப்படவில்லை</string>
+    <string name="add_a_comment">ஒரு கருத்தைச் சேர்க்கவும்</string>
+    <string name="comment">கருத்துரை கொடு</string>
+    <string name="download_notification_title">இடுகையைப் பதிவிறக்குகிறது...</string>
+    <string name="download_notification_message">நண்பர்களுடன் பகிர்வதற்கான இடுகையைப் பதிவிறக்குகிறது</string>
+    <string name="cant_report_own_post">உங்கள் சொந்த இடுகையை நீங்கள் புகாரளிக்க முடியாது</string>
+    <string name="you_reported_post">இந்த இடுகை அறிவிக்கப்பட்டுள்ளது</string>
+    <string name="close_app">வெளியேற மீண்டும் பின்னால் தட்டவும்</string>
+    <string name="suggested_for_you">உங்களுக்காக பரிந்துரைக்கப்படுகிறது</string>
+    _________________
+
+    NOTE: These are some extra strings that we found on the app have not been translated yet.
+
+    <string name="enter_phone_number">தொலைபேசி எண்ணை உள்ளிடவும்</string>
+    <string name="share_on">பகிர்</string>
+    <string name="whatsapp">வாட்ஸாப்ப்</string>
+    <string name="facebook">பேஸ்புக்</string>
+    <string name="instagram">இன்ஸ்டாகிராம்</string>
+    <string name="instagram_stories">கதைகள்</string>
+    <string name="message">செய்தி</string>
+    <string name="my_status">எனது நிலை</string>
+    <string name="all_activity">அனைத்து செயல்பாடுகளும்</string>
+    <string name="show_more">மேலும் காட்ட</string>
+    <string name="likes">விருப்பு</string>
+    <string name="choose">தேர்வு செய்யவும்</string>
+    <string name="edit_photo">புகைப்படத்தைத் திருத்து</string>
+    <string name="loading">ஏற்றுகிறது</string>
+    <string name="reset">மீட்டமை</string>
+    <string name="select_a_category">தேர்ந்தெடுங்கள்</string>
+
+    <!--NOTE: All these strings are related to the Mubert API “Sounds” screens.-->
+
+    <string name="sounds">ஒலிக்கிறது</string>
+    <string name="track_not_ready">பாடல் இன்னும் தயாராகவில்லை</string>
+    <string name="chillout">சில்அவுட்</string>
+    <string name="workout">ஒர்க்அவுட்</string>
+    <string name="cinematic"> சினிமாட்டிக்</string>
+    <string name="meditate">தியானம் செய்</string>
+    <string name="dance">நடனம்</string>
+    <string name="pop">பாப்</string>
+    <string name="house">வீடு</string>
+    <string name="classic">செந்தரம்</string>
+    <string name="downtempo">டவுன்டெம்போ</string>
+    <string name="chill">சில்</string>
+    <string name="psychill">சைசில்</string>
+    <string name="lofi">லோஃபி</string>
+    <string name="chill_hop">சில் ஹாப்</string>
+    <string name="atmosphere"> வளிமண்டலம்</string>
+    <string name="ambient">சுற்றுப்புறம்</string>
+    <string name="dark_ambient">இருண்ட சுற்றுப்புறம்</string>
+    <string name="chillgressive">சில்லகிரஸிவ்</string>
+    <string name="lounge">லவுஞ்ச்</string>
+    <string name="chillrave">சில்லரவே</string>
+    <string name="warm_up">தயார் ஆகு</string>
+    <string name="fitness_90">உடற்தகுதி 90</string>
+    <string name="energy_100">ஆற்றல் 100</string>
+    <string name="cardio_120">கார்டியோ 120</string>
+    <string name="cardio_130">கார்டியோ 130</string>
+    <string name="run_130">130 ரன்</string>
+    <string name="run_140">140 ரன்</string>
+    <string name="run_160">160 ரன்</string>
+    <string name="run_180">180 ரன்</string>
+    <string name="pumped">பம்ப்எட்</string>
+    <string name="happy">மகிழ்ச்சி</string>
+    <string name="optimistic">நம்பிக்கை</string>
+    <string name="sad">சோகம்</string>
+    <string name="serious">தீவிரமானது</string>
+    <string name="beautiful">அழகு</string>
+    <string name="romantic">காதல்</string>
+    <string name="peaceful">அமைதியான</string>
+    <string name="dreamy">கனவு</string>
+    <string name="epic">காவியம்</string>
+    <string name="nostalgic">பழமையான நினைவுகள்</string>
+    <string name="dramatic">நாடக பாணியான</string>
+    <string name="fun">வேடிக்கை</string>
+    <string name="groovy">க்ரூவி</string>
+    <string name="spooky">பயமுறுத்தும்</string>
+    <string name="upbeat">உற்சாகம்</string>
+    <string name="action">செயல்</string>
+    <string name="friends">நண்பர்கள்</string>
+    <string name="night">இரவு</string>
+    <string name="kids">குழந்தைகள்</string>
+    <string name="extreme">தீவிரம்</string>
+    <string name="calm">அமைதி</string>
+    <string name="gentle">மென்மையான</string>
+    <string name="sentimental">உணர்ச்சி வயப்படுகிற</string>
+    <string name="motivation">முயற்சி</string>
+    <string name="minimal_120">குறைந்தபட்சம் 120</string>
+    <string name="minimal_170">குறைந்தபட்சம் 170</string>
+    <string name="piano">பியானோ</string>
+    <string name="lullaby">தாலாட்டு</string>
+    <string name="meditation">தியானம்</string>
+    <string name="om">ஓம்</string>
+    <string name="zen">ஜென்</string>
+    <string name="ethnic_108">இன 108</string>
+    <string name="summer">கோடை</string>
+    <string name="edm">ஈடிஎம்</string>
+    <string name="electronica">எலக்ட்ரோனிகா</string>
+    <string name="idm">ஐடிஎம்</string>
+    <string name="braindance">புத்திசாலித்தனம்</string>
+    <string name="synthwave">சின்த்வேவ்</string>
+    <string name="trance">டிரான்ஸ்</string>
+    <string name="uplifting_trance">மேம்படுத்தும் டிரான்ஸ்</string>
+    <string name="psytrance">சைட்ரன்ஸ்</string>
+    <string name="techno">டெக்னோ</string>
+    <string name="dubtechno">டப்டெக்னோ</string>
+    <string name="hardtechno"> ஹார்டெக்னோ</string>
+    <string name="bassline">பாஸ்லைன்</string>
+    <string name="big_room">பெரிய அறை</string>
+    <string name="trap">பொறி</string>
+    <string name="asmr">ஏ.எஸ்.எம்.ஆர்</string>
+    <string name="drumnbass">ட்ரம்ப்பாஸ்</string>
+    <string name="liquidfunk">லிக்விட்ஃபங்க்</string>
+    <string name="neurofunk">நியூரோஃபங்க்</string>
+    <string name="microfunk">மைக்ரோஃபங்க்</string>
+    <string name="dub">டப்</string>
+    <string name="glitch_hop">கிளிட்ச் ஹாப்</string>
+    <string name="breakbeat">பிரேக் பீட்</string>
+    <string name="big_beat">பிக் பீட்</string>
+    <string name="acid_jazz">ஆசிட் ஜாஸ்</string>
+    <string name="electro_funk">எலக்ட்ரோ ஃபங்க்</string>
+    <string name="funk">ஃபங்க்</string>
+    <string name="nu_disco">நு டிஸ்கோ</string>
+    <string name="indie_dance">இண்டி டான்ஸ்</string>
+    <string name="noise">இரைச்சல்</string>
+    <string name="white_noise">வெள்ளை சத்தம்</string>
+    <string name="pink_noise">இளஞ்சிவப்பு சத்தம்</string>
+    <string name="brown_noise">பிரவுன் சத்தம்</string>
+    <string name="future_pop">எதிர்கால பாப்</string>
+    <string name="k_pop">கே-பாப்</string>
+    <string name="country_pop">நாட்டின் பாப்</string>
+    <string name="latin_pop">லத்தீன் பாப்</string>
+    <string name="indie_pop">இண்டி பாப்</string>
+    <string name="indie_rock">இண்டி ராக்</string>
+    <string name="post_rock">பிந்தைய-ராக்</string>
+    <string name="eight_bit">8-பிட்</string>
+    <string name="hiphop">ஹிப் ஹாப்</string>
+    <string name="tropical_house">வெப்பமண்டல வீடு</string>
+    <string name="deep_house">ஆழமான வீடு</string>
+    <string name="minimal_house">குறைந்தபட்ச வீடு</string>
+    <string name="bassline_house">பாஸ்லைன் வீடு</string>
+    <string name="disco_house">டிஸ்கோ வீடு</string>
+    <string name="melodic_house">மெலோடிக் வீடு</string>
+    <string name="electro_house">எலக்ட்ரோ வீடு</string>
+    <string name="classical">பாரம்பரிய</string>
+    <string name="neo_classic">நியோ கிளாசிக்</string>
+    <string name="world_music">உலக இசை</string>
+    <string name="folk">நாட்டுப்புறம்</string>
+    <string name="acoustic">ஒலி</string>
+    <string name="reggaeton">ரெக்கேட்டன்</string>
+    <string name="slow_ballad">மெதுவான பாலாட்</string>
+
+
+    <string name="no_name">பெயர் இல்லை</string>
+    <string name="no_username">பயனர் பெயர் இல்லை</string>
+    <string name="followersText">ஃபேன்</string>
+    <string name="followerText">ஃபேன்</string>
+    <string name="postsText">பதிவுகள்</string>
+    <string name="postText">அஞ்சல்</string>
+    <string name="place_holder_full_name">உங்கள் பெயரைச் சேர்க்கவும்</string>
+    <string name="place_holder_bio">உங்கள் சுயவிவரத்தில் ஒரு பயோவைச் சேர்க்கவும்</string>
+    <string name="change_language">மொழியை மாற்றவும்</string>
+    <string name="change_photo">புகைப்படத்தை மாற்று</string>
+    <string name="delete_post_msg">இதை நீக்க வேண்டும் என்பதில் உறுதியாக இருக்கிறீர்களா?</string>
+
+
+    <string name="txt_sounds">ஒலி</string>
+    <string name="error_track_not_ready_yet">பாடல் இன்னும் தயாராகவில்லை</string>
+    <string name="no_comments_yet">இதுவரை கருத்துகள் எதுவும் இல்லை</string>
+    <string name="be_the_first_to_say_something_nice">முதலில் நல்லதைச் சொல்லுங்கள்!</string>
+    <string name="account_blocked_by_admin">கணக்கு தற்காலிகமாக தடுக்கப்பட்டது. எங்கள் விதிமுறைகளை மீறியதற்காக உங்கள் கணக்கு முடக்கப்பட்டுள்ளது.</string>
+    <string name="account_logged_on_another_device">உங்கள் கணக்கு வேறு எந்த சாதனத்திலிருந்தும் உள்நுழைந்துள்ளது.</string>
+    <string name="account_blocked_other_user">இந்த பயனரின் கணக்கு தடுக்கப்பட்டது.</string>
+    <string name="user_name_admin">நிர்வாகம்</string>
+    <string name="no_suggestions_yet">இதுவரை பரிந்துரைகள் எதுவும் இல்லை</string>
+    <string name="permission_denied">அனுமதிகள் மறுக்கப்பட்டன</string>
+
+    <string name="need_permission">அனுமதி தேவை</string>
+    <string name="need_permission_msg">இந்த அம்சத்தைப் பயன்படுத்த இந்த பயன்பாட்டிற்கு அனுமதி தேவை. பயன்பாட்டு அமைப்புகளை நீங்கள் அவர்களுக்கு வழங்கலாம்.</string>
+    <string name="go_to_settings">அமைப்புகளுக்குச் செல்லவும்</string>
+
+    <string name="please_install_whatsapp">வாட்ஸ்அப்பை நிறுவவும்</string>
+    <string name="please_install_instagram">இன்ஸ்டாகிராம் நிறுவவும்</string>
+    <string name="please_install_fb">ஃபேஸ்புக்கை நிறுவவும்</string>
+
+    <string name="no_connection">தொடர்பு இல்லை</string>
+
+</resources>

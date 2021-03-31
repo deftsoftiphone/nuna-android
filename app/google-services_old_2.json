@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "363046830753",
+    "firebase_url": "https://nuna-112d0.firebaseio.com",
+    "project_id": "nuna-112d0",
+    "storage_bucket": "nuna-112d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363046830753:android:55bf5617ad816437b3a6e0",
+        "android_client_info": {
+          "package_name": "com.baek.shawkeen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363046830753-kl3ok54j8kmlutl4dml7niplu8n5pfmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJVXtDzX5cWSZwM3qUgkwyR48AHrJUM2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363046830753-kl3ok54j8kmlutl4dml7niplu8n5pfmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363046830753:android:f9a361764d543903b3a6e0",
+        "android_client_info": {
+          "package_name": "com.nuna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363046830753-kl3ok54j8kmlutl4dml7niplu8n5pfmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJVXtDzX5cWSZwM3qUgkwyR48AHrJUM2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363046830753-kl3ok54j8kmlutl4dml7niplu8n5pfmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363046830753:android:f7e2fed8c758a6c3b3a6e0",
+        "android_client_info": {
+          "package_name": "com.shawkeen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363046830753-kl3ok54j8kmlutl4dml7niplu8n5pfmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJVXtDzX5cWSZwM3qUgkwyR48AHrJUM2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363046830753-kl3ok54j8kmlutl4dml7niplu8n5pfmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

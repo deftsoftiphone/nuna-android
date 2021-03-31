@@ -1,0 +1,29 @@
+{
+  "name": "Devil",
+  "recordDuration": 15,
+
+  "sounds" : [
+                  { "trackName" : "music_demon.ogg",
+                    "volume" : 1.0 }
+                  ],
+
+  "voiceChanger": {
+    "audioFilters": [{
+      "pitch": {
+        "pitchShift": -300
+      }
+    }]
+  },
+  "frx": {
+    "type": "3d_anim",
+    "3d_anim": {
+      "type": "vfx"
+    },
+      "media": {
+      "type": "VIDEO",
+      "file": "Devil.mp4"
+    }
+  },
+
+  "recognizer": ["background"]
+}

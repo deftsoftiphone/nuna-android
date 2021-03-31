@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    tools:visibility="visible">
+
+    <com.banuba.sdk.veui.ui.widget.blur.BlurView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:layout_width="@dimen/wait_dialog_size"
+        android:layout_height="@dimen/wait_dialog_size"
+        android:layout_gravity="center"
+        tools:ignore="UselessParent">
+
+        <com.banuba.sdk.veui.ui.widget.ThrobberView
+            style="?attr/throbberViewStyle"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            style="@style/Font.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:text="Loading"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="35dp"
+    android:height="27dp"
+    android:viewportWidth="35"
+    android:viewportHeight="27">
+  <group>
+    <clip-path
+        android:pathData="M16.711,1.865L16.711,7.083C8.917,7.083 1.69,14.548 0.022,24.278c-0.014,0.082 -0.021,0.162 -0.022,0.24v0.033c0.014,1.184 1.478,1.879 2.417,1.025 3.116,-2.836 7.818,-5.653 14.294,-5.653v4.61c0,0.9 0.736,1.521 1.52,1.525h0.018c0.309,-0.002 0.624,-0.099 0.905,-0.313l14.919,-11.334c0.394,-0.3 0.595,-0.744 0.6,-1.19v-0.043c-0.005,-0.447 -0.206,-0.891 -0.6,-1.19L19.153,0.653c-0.283,-0.215 -0.602,-0.313 -0.913,-0.313 -0.789,0 -1.529,0.623 -1.529,1.525"/>
+    <path
+        android:pathData="M16.711,1.865L16.711,7.083C8.917,7.083 1.69,14.548 0.022,24.278c-0.014,0.082 -0.021,0.162 -0.022,0.24v0.033c0.014,1.184 1.478,1.879 2.417,1.025 3.116,-2.836 7.818,-5.653 14.294,-5.653v4.61c0,0.9 0.736,1.521 1.52,1.525h0.018c0.309,-0.002 0.624,-0.099 0.905,-0.313l14.919,-11.334c0.394,-0.3 0.595,-0.744 0.6,-1.19v-0.043c-0.005,-0.447 -0.206,-0.891 -0.6,-1.19L19.153,0.653c-0.283,-0.215 -0.602,-0.313 -0.913,-0.313 -0.789,0 -1.529,0.623 -1.529,1.525"
+        android:strokeAlpha="0.75"
+        android:fillType="evenOdd"
+        android:fillAlpha="0.75">
+      <aapt:attr name="android:fillColor">
+        <gradient 
+            android:startY="19.972464"
+            android:startX="23.500666"
+            android:endY="11.444687"
+            android:endX="8.220622"
+            android:type="linear">
+          <item android:offset="0" android:color="#FFF2F3F3"/>
+          <item android:offset="1" android:color="#81FEFEFE"/>
+        </gradient>
+      </aapt:attr>
+    </path>
+  </group>
+  <path
+      android:pathData="M17.292,18.591v3.786c0,1.033 1.274,1.62 2.16,0.995l13.196,-9.306c0.709,-0.5 0.709,-1.49 0,-1.99L19.452,2.77c-0.886,-0.625 -2.16,-0.039 -2.16,0.995v4.284c-6.894,0 -13.287,6.129 -14.76,14.118 -0.205,1.104 1.225,1.82 2.117,1.065 2.756,-2.328 6.916,-4.64 12.643,-4.64"
+      android:strokeAlpha="0.75"
+      android:fillColor="#81FEFEFE"
+      android:fillType="evenOdd"
+      android:fillAlpha="0.75"/>
+</vector>

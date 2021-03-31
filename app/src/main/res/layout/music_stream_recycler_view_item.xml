@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="mClickHandler"
+            type="com.demo.muebert.listener.OnTrackClickListener" />
+
+        <variable
+            name="isPlaying"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="index"
+            type="java.lang.Integer" />
+
+        <variable
+            name="data"
+            type="com.demo.muebert.modal.ChannelsItem" />
+
+        <variable
+            name="categoryName"
+            type="java.lang.String" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->mClickHandler.onTrackClick(data,index)}">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivStream"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            app:currentTrackIcon="@{categoryName}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/cbController"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/music_player_controller"
+            android:checked="@{isPlaying}"
+            android:onClick="@{()->mClickHandler.onClickPlayPauseTrack(data,index)}"
+            app:layout_constraintBottom_toBottomOf="@+id/ivStream"
+            app:layout_constraintEnd_toEndOf="@+id/ivStream"
+            app:layout_constraintStart_toStartOf="@+id/ivStream"
+            app:layout_constraintTop_toTopOf="@+id/ivStream" />
+
+        <TextView
+            android:id="@+id/tvStream"
+            fontAccordingToLanguage="@{@string/key_bold_font}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="2sp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/shadow_color"
+            android:textSize="14sp"
+            app:currentLanguageMuebertTrack="@{data.name}"
+            app:layout_constraintBottom_toTopOf="@+id/tvStreamCategory"
+            app:layout_constraintStart_toEndOf="@+id/ivStream"
+            app:layout_constraintTop_toTopOf="@+id/ivStream"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tvStreamCategory"
+            fontAccordingToLanguage="@{@string/key_normal_font}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="0sp"
+            android:textColor="#6b6b6b"
+            android:textSize="12sp"
+            app:currentLanguageMuebertCategory="@{categoryName}"
+            app:layout_constraintBottom_toBottomOf="@+id/ivStream"
+            app:layout_constraintStart_toEndOf="@+id/ivStream"
+            app:layout_constraintTop_toBottomOf="@+id/tvStream" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->mClickHandler.onClickSelectTrack(data,index)}"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:interpolator="@anim/linear_interpolator"
+                android:onClick="@{(view)->mClickHandler.onClickRefreshTrack(data,index,view)}"
+                android:src="@drawable/ic_refresh"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivAdd"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

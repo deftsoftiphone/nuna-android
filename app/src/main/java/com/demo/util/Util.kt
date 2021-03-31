@@ -66,7 +66,8 @@ import kotlin.math.roundToInt
 
 fun String.mediaUrlAccordingToInternetSpeed(speed: Double): String {
     try {
-        var url = this.subSequence(0, this.length - 8)
+        val newUrl= this.replace("vod-mediabucketnunomindcrew.s3.ap-south-1.amazonaws.com","d381n3b6c5ute4.cloudfront.net")
+        var url = newUrl.subSequence(0, newUrl.length - 8)
         val extension = ".m3u8"
         url = if (speed >= 1024)
             "${url}720"

@@ -1,0 +1,19 @@
+{
+    "name": "Devil",
+    "effectVersionInfo": {
+        "commit": "627fb10435dfe6a404b3f685ab7cc152ae3e8fe4",
+        "date": "2019-12-30",
+        "time": "12:05:35",
+        "author": "v.makarevich"
+    },
+    "buildToolsVersionInfo": {
+        "commit": "6c4f87b75f214de1559d54e5d957aef08adb08ac",
+        "date": "2020-03-12",
+        "time": "18:06:58",
+        "author": "Aleksey Cherkes"
+    },
+    "capabilities": {
+        "effectPlayerMajorVersion": 5,
+        "effectPlayerMinorVersion": 1
+    }
+}

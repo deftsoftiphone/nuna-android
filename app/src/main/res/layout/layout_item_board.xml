@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+<!--        <import type="com.demo.util.Constant" />-->
+        <variable
+                name="item"
+                type="com.demo.model.response.Document" />
+        <variable
+                name="clickHandler"
+                type="com.demo.following.FollowingAdapter.ViewHolder.ClickHandler" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/view_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:textSize="18sp"
+                    android:text="15" />
+    </LinearLayout>
+
+</layout>

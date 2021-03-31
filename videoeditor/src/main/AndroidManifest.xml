@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.banuba.videoeditor">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- Allows to open video editor module -->
+    <application
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false"
+        tools:targetApi="q">
+        
+        <activity
+            android:name="com.banuba.sdk.ve.flow.VideoCreationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NunaVideoCreationTheme"
+            android:windowSoftInputMode="adjustResize"
+            tools:replace="android:theme" />
+
+    </application>
+</manifest>

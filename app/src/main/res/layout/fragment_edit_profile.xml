@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.demo.edit_profile.EditProfileViewModel" />
+
+        <variable
+            name="clickHandler"
+            type="com.demo.edit_profile.EditProfileFragment.ClickHandler" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+
+<!--
+        <include
+            android:id="@+id/toolbarLayout"
+            layout="@layout/layout_toolbar" />
+-->
+
+<!--
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@drawable/bg_top_left_corner"
+            app:layout_constraintTop_toBottomOf="@id/toolbarLayout">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_40sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.05" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.95" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgProfile"
+                        imageUrl="@{viewModel.requestSaveUserProfile.profileImage}"
+                        android:layout_width="@dimen/_89sdp"
+                        android:layout_height="@dimen/_89sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        app:civ_border_color="#F7F7F7"
+                        app:civ_border_width="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@drawable/cate_bitmap" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_overlay"
+                        android:layout_width="@dimen/_89sdp"
+                        android:layout_height="@dimen/_89sdp"
+                        android:background="@drawable/overlay_image_blue_gradient"
+                        android:onClick="@{() -> clickHandler.onClickImage()}"
+                        android:visibility="@{viewModel.editAllowed ? View.VISIBLE : View.GONE}"
+
+                        app:layout_constraintBottom_toBottomOf="@id/imgProfile"
+                        app:layout_constraintEnd_toEndOf="@id/imgProfile"
+                        app:layout_constraintStart_toStartOf="@id/imgProfile"
+                        app:layout_constraintTop_toTopOf="@id/imgProfile" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/edit_photo"
+                        android:visibility="@{viewModel.editAllowed ? View.VISIBLE : View.GONE}"
+                        app:layout_constraintBottom_toBottomOf="@id/imgProfile"
+                        app:layout_constraintEnd_toEndOf="@id/imgProfile"
+                        app:layout_constraintStart_toStartOf="@id/imgProfile"
+                        app:layout_constraintTop_toTopOf="@id/imgProfile" />
+
+                    <EditText
+                        android:id="@+id/edt_fname"
+                        style="@style/EditProfileEdt"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/bg_search_edittext"
+                        android:drawableStart="@drawable/login"
+                        android:enabled="@{viewModel.editAllowed}"
+                        android:hint="@string/first_last_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                        android:maxLines="1"
+                        android:maxLength="35"
+                        android:singleLine="true"
+                        android:text="@={viewModel.requestSaveUserProfile.firstName}"
+                        android:theme="@style/pro"
+                        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@id/imgProfile" />
+
+                    <EditText
+                        android:id="@+id/edt_lname"
+                        style="@style/EditProfileEdt"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/bg_search_edittext"
+                        android:drawableStart="@drawable/login"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:hint="@string/user_name"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:inputType="textPersonName"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                        android:singleLine="true"
+                        android:text="@={viewModel.requestSaveUserProfile.userName}"
+                        android:theme="@style/pro"
+                        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@id/edt_fname" />
+
+                    <EditText
+                        android:id="@+id/edt_dob"
+                        style="@style/EditProfileEdt"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/bg_search_edittext"
+                        android:drawableStart="@drawable/date"
+                        android:focusable="false"
+                        android:hint="@string/date_of_birth"
+                        android:maxLines="1"
+                        android:onClick="@{() -> clickHandler.onClickDOB()}"
+                        android:text="@={viewModel.requestSaveUserProfile.dob}"
+                        android:theme="@style/pro"
+                        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@id/edt_lname" />
+
+                    <EditText
+                        android:id="@+id/edt_bio"
+                        style="@style/EditProfileEdt"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/bg_search_edittext"
+                        android:drawableStart="@drawable/profile_tags"
+                        android:enabled="@{viewModel.editAllowed}"
+                        android:hint="@string/tagline"
+                        android:maxLength="90"
+                        android:imeOptions="actionDone"
+                        android:maxLines="5"
+                        android:singleLine="true"
+                        android:text="@={viewModel.requestSaveUserProfile.bio}"
+                        android:theme="@style/pro"
+                        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@id/edt_dob" />
+
+                    <EditText
+                        android:id="@+id/edt_gender"
+                        style="@style/EditProfileEdt"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/bg_search_edittext"
+                        android:drawableStart="@drawable/gender"
+                        android:focusable="false"
+                        android:hint="@string/gender"
+                        android:inputType="textCapSentences|textCapCharacters"
+                        android:maxLines="1"
+                        android:onClick="@{() -> clickHandler.onClickGender()}"
+                        android:theme="@style/pro"
+                        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@id/edt_bio" />
+
+                    <EditText
+                        android:id="@+id/edt_interest"
+                        style="@style/EditProfileEdt"
+                        android:background="@drawable/bg_search_edittext"
+                        android:drawableStart="@drawable/interests"
+                        android:focusable="false"
+                        android:hint="@string/interests"
+                        android:theme="@style/pro"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@id/edt_gender" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:onClick="@{() -> clickHandler.onClickAddInterest()}"
+                        android:padding="5dp"
+                        android:src="@drawable/add_board"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/edt_interest"
+                        app:layout_constraintEnd_toEndOf="@id/edt_interest"
+                        app:layout_constraintTop_toTopOf="@id/edt_interest" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chip_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@id/edt_interest" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_bottum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_40sdp"
+                        android:layout_marginBottom="@dimen/_200sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@id/chip_group">
+
+                        <TextView
+                            android:id="@+id/post"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_16sdp"
+                            android:background="@drawable/round_corner_bg"
+                            android:gravity="center"
+                            android:onClick="@{() -> clickHandler.onClickSave()}"
+                            android:padding="16sp"
+                            android:text="@string/save"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:theme="@style/medium" />
+
+                    </FrameLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

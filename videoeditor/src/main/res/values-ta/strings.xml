@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="editor_alert_reset_all_positive">@string/others_reset</string>
+    <string name="editor_alert_reset_all_negative">@string/others_cancel</string>
+    <string name="editor_alert_reset_effects_positive">@string/others_reset</string>
+    <string name="editor_alert_reset_effects_negative">@string/others_cancel</string>
+    <string name="editor_alert_delete_voice_record_positive">@string/others_delete</string>
+    <string name="editor_alert_delete_voice_record_negative">@string/others_cancel</string>
+    <string name="alert_delete_video_positive">@string/others_delete</string>
+    <string name="alert_delete_video_negative">@string/others_cancel</string>
+    <string name="alert_save_video_positive">@string/others_save</string>
+    <string name="alert_save_video_negative">@string/others_discard</string>
+    <string name="alert_return_to_editor_positive">@string/camera_alert_positive</string>
+    <string name="alert_return_to_editor_negative">@string/camera_alert_negative</string>
+    <string name="alert_return_to_trimmer_positive">@string/camera_alert_positive</string>
+    <string name="alert_return_to_trimmer_negative">@string/others_cancel</string>
+    <string name="alert_reset_all_positive">@string/others_reset</string>
+    <string name="alert_reset_all_negative">@string/others_cancel</string>
+
+
+    <string name="camera_next">அடுத்து</string>
+    <string name="camera_back">பின்</string>
+    <string name="camera_done">சரி</string>
+
+    <string name="message_record_first_video">குறைந்தது %1$s நொடிக்கு பதிக்கவும்</string>
+    <string name="message_record_video_duration">{0,தேர்வு,0#{0} நொடி|1#{0} நொடி|2#{0} நொடி|3#{0} நொடி|4#{0} நொடி|4&lt;{0} நொடி}</string>
+
+    <string name="notification_beautifier_on">முகம் டச் அப்</string>
+    <string name="notification_flash_on">ஃப்ளாஷ் ஆன்</string>
+
+    <string name="notification_timer_on">3 நொடி டைமர் ஆன்</string>
+    <string name="notification_timer_off">டைமர் ஆஃப்</string>
+
+    <string name="alert_delete_video_message">நிச்சயமாக முந்தைய க்ளிப்பை அழிக்கவா?</string>
+    <string name="alert_save_video_chunk_message">வீடியோ க்ளிப்பை சேமிக்கவா?</string>
+    <string name="alert_return_to_addition_effects">முந்தைய வீடியோவில் மாற்றம் செய்யலாமா?</string>
+    <string name="alert_return_to_making_video">நிச்சயமாக வீடியோ உருவாக்கத்துக்கு செல்லவா?</string>
+    <string name="alert_reset_all_message">உங்கள் வீடியோ அழிக்கப்படும். தொடரவா?</string>
+    <string name="alert_return_to_editor">எடிட்டிங் விளைவுகளுக்குத் திரும்பவா?</string>
+
+    <string name="camera_alert_positive">ஆம்</string>
+    <string name="camera_alert_negative">இல்லை</string>
+
+    <string name="err_no_space_left_recording">பதிவிடம் குறைவு. சேமிப்பு ரத்து செய்யப்படுகிறது.</string>
+
+    <string name="permission_screen_message">தயவுசெய்து அனுமதி அளிக்கவும்</string>
+    <string name="permission_denied_message">%1$s க்கான அனுமதி இல்லை</string>
+
+    <string name="video_recording_mode_normal">பதியவும்</string>
+    <string name="video_recording_mode_slideshow">ஸ்லைடுஷோ</string>
+
+    <string name="editor_next">அடுத்து</string>
+    <string name="editor_back">பின்</string>
+    <string name="editor_done">சரி</string>
+    <string name="editor_close">மூடவும்</string>
+    <string name="editor_cancel">ரத்து</string>
+
+    <!-- Music Mixer -->
+    <string name="music_muxer_add">சேர்</string>
+    <string name="music_muxer_delete">அழி</string>
+    <string name="music_muxer_sound">ஒலி</string>
+    <string name="music_muxer_voice">குரல்</string>
+    <string name="music_muxer_music">இசை</string>
+
+    <!-- Gallery -->
+    <string name="gallery">கேலரி</string>
+    <string name="gallery_album_untitled">பெயரற்றது</string>
+    <string name="gallery_album_all_media">அனைத்து ஊடகங்கள்</string>
+    <string name="gallery_album_all_photos">அனைத்து படங்கள்</string>
+    <string name="gallery_album_all_video">அனைத்து வீடியோக்கள்</string>
+    <string name="gallery_select_media">ஊடகத்தை தேர்க</string>
+    <string name="gallery_select_photo">படத்தை தேர்க</string>
+    <string name="gallery_select_video">வீடியோவை தேர்க</string>
+    <string name="gallery_empty_image_list">பட‌ கேலரி காலி</string>
+    <string name="gallery_empty_video_list">வீடியோ கேலரி காலி</string>
+    <string name="gallery_empty_media_list">கேலரி காலி</string>
+    <plurals name="gallery_choose_at_least">
+        <item quantity="zero">குறைந்தது %1$d கோப்புகளை தேர்க</item>
+        <item quantity="one">குறைந்தது %1$d கோப்புகளை தேர்க</item>
+        <item quantity="two">குறைந்தது %1$d கோப்புகளை தேர்க</item>
+        <item quantity="few">குறைந்தது %1$d கோப்புகளை தேர்க</item>
+        <item quantity="many">குறைந்தது %1$d கோப்புகளை தேர்க</item>
+        <item quantity="other">குறைந்தது %1$d கோப்புகளை தேர்க</item>
+    </plurals>
+
+
+    <!-- Trimmer -->
+    <string name="trimmer_hint">300 நொடிகள் தேர்க</string>
+    <string name="trimmer_drag_hint">அழிக்க இழுக்கவும்</string>
+    <string name="trimmer_duration_format">%1$s நொடி</string>
+
+    <!-- Effects -->
+    <string name="editor_effect_hint">அழுத்திப் பிடிக்கவும்</string>
+    <string name="editor_effect_undo">ரீசெட்</string>
+    <string name="stickers_empty_list">ஸ்டிக்கர் ஏதும் இல்லை</string>
+    <string name="stickers_search_hint">giphy.com-ல் தேடவும்</string>
+    <string name="stickers_search_cancel">ரத்து</string>
+
+    <!-- Cover image -->
+    <string name="cover_image_text">கவரைத் தேர்க</string>
+
+    <!-- Alerts -->
+    <string name="editor_alert_reset_all">நிச்சயமாக அனைத்து மாறுதல்களையும் ரத்து செய்யவா?</string>
+    <string name="editor_alert_reset_effects">நிச்சயமாக அனைத்து எஃபக்டுகளையும் ரத்து செய்யவா?</string>
+    <string name="alert_positive">ஆம்</string>
+    <string name="alert_negative">இல்லை</string>
+    <string name="alert_delete_voice_record_message">நிச்சயமாக ஒலிப்பதிவை அழிக்கவா?</string>
+    <string name="alert_video_creation">லோடிங்க்</string>
+
+    <!-- Errors -->
+    <string name="err_file_not_supported">கோப்பு சப்போர்ட் செய்யப்படவில்லை</string>
+    <string name="err_network_connection_failure">இணைப்பு துண்டிப்பு</string>
+    <string name="err_no_space_left">போதிய இடம் இலலை</string>
+    <string name="err_media_validation">கோப்பு வகை வித்தியாசமாக உள்ளது.</string>
+    <string name="err_player_initializer">ஏதோ பிழை காரணமாக கோப்பை திறக்க முடியவில்லை.</string>
+
+    <string name="err_trimmer_invalid_duration">வீடியோ நீளம் %1$d முதல் %2$d நொடிகளுக்குள் இருக்க வேண்டும்</string>
+    <string name="err_trimmer_internal">வீடியோ உருவாவதில் பிழை</string>
+
+    <string name="connection_view_title">தொடர்பு இழப்பு</string>
+    <string name="connection_view_message">தொடர்பை சரிபார்த்து மீண்டும் முயற்சிக்கவும்</string>
+    <string name="connection_view_retry">மீண்டும் முயற்சிக்கவும்</string>
+
+    <string name="font_regular_title">ரெகுலர்</string>
+    <string name="font_bold_title">போல்டு</string>
+    <string name="font_italic_title">இட்டாலிக்</string>
+
+    <!-- Music -->
+    <string name="action_add_music_track">பாடல்கள்</string>
+    <string name="action_add_music_effect">எஃபெக்ட்ஸ்</string>
+    <string name="action_add_voice_recording">ஒலிப்பதிவு</string>
+    <string name="edit_track_volume_title">ஒலி அளவு</string>
+    <string name="edit_track_volume_percent">%1$d%%</string>
+    <string name="edit_track_audio_duration">ஆடியோ நேரம்</string>
+    <string name="edit_track_audio_duration_init_value">0:00.0</string>
+    <string name="edit_track_duration_error">ஆடியோ %1$.1f நொடிகளுக்கு மேல் இருக்கவேண்டும்</string>
+
+    <!-- Effects -->
+    <string name="action_add_text_effect">டெக்ஸ்ட்</string>
+    <string name="action_add_sticker_effect">ஸ்டிக்கர்</string>
+
+    <!-- Common -->
+    <string name="action_edit">மாற்று</string>
+    <string name="action_delete">அழி</string>
+
+    <!-- Errors-->
+    <string name="error_voice_recording_start">ஒலிப்பதிவு தொடங்குவதில் பிழை</string>
+    <string name="error_voice_recording_stop">ஒலிப்பதிவு நிறுத்துவதில் பிழை</string>
+    <string name="error_invalid_duration_voice_recording">குறைந்தபட்ச ஒலிப்பதிவு நேரம் %1$.1f நொடிகள்</string>
+    <string name="error_invalid_duration_music_track">குறைந்தபட்ச இசைக்கோப்பு நேரம் %1$.1f நொடிகள்</string>
+    <string name="error_voice_recording_delete_file">ஒலிப்பதிவை அழிப்பதில் பிழை</string>
+    <string name="error_track_limit">அதிகபட்ச இசைக்கோப்புகள் %1$d</string>
+    <string name="error_no_space">உங்கள் ஃபோனில் இடம் இல்லை. தயவுசெய்து சிறிது இடம் உண்டாக்கவும்.</string>
+
+
+    <!-- Others-->
+    <string name="others_cancel">ரத்து</string>
+    <string name="others_discard">நிராகரி</string>
+    <string name="others_delete">அழி</string>
+    <string name="others_save">சேமி</string>
+    <string name="others_yes">ஆம்</string>
+    <string name="others_no">இல்லை</string>
+    <string name="others_reset">ரீசெட்</string>
+    <string name="others_continue">தொடர்</string>
+</resources>

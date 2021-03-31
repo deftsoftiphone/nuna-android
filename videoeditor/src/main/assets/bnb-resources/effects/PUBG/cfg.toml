@@ -1,0 +1,131 @@
+warp_mesh = "face.bsm2"
+msaa = 1
+shadowmap_size = 512
+adjust_znear = 150
+adjust_zfar = 300
+draw_order = ['retouch', 'faceMorph', 'cut_head', 'helmet', 'cut_01', 'glass', '!glfx_UPDATE_BG', 'TRASH_MAT', 'AK', 'cut_blur']
+
+# Retouch
+[materials.retouch]
+vs = "retouch.vert"
+fs = "retouch.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+onface = true
+mouth = true
+[materials.retouch.samplers]
+selection_tex="REDMASK_v3_256.png"
+lookupTexTeeth="TEETH_medium.png"
+lookupTexEyes="lut_80_percent.png"
+tex_softLight="soft_princess_256.png"
+tex_normalMakeup="faceShadow_BaseColor.png"
+
+# PBR
+[materials.faceMorph]
+vs = "facemorph.vert"
+fs = "facemorph.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = false
+zwrite = true
+shadow = true
+[materials.faceMorph.samplers]
+
+# Cut
+[materials.cut_head]
+vs = "cut_head.vert"
+fs = "cut_head.frag"
+blend = "off"
+backfaces = false
+colorwrite = false
+zwrite = true
+shadow = false
+samplers = {}
+
+[materials.TRASH_MAT]
+vs = "cut_head.vert"
+fs = "cut_head.frag"
+blend = "off"
+backfaces = false
+colorwrite = false
+zwrite = true
+shadow = false
+samplers = {}
+
+# PBR
+[materials.helmet]
+vs = "helmet.vert"
+fs = "helmet.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = true
+[materials.helmet.samplers]
+tex_diffuse="helmet_Base_Color.ktx"
+tex_normal="helmet_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="helmet_MRAO.ktx"
+
+# Cut
+[materials.cut_01]
+vs = "cut_01.vert"
+fs = "cut_01.frag"
+blend = "off"
+backfaces = false
+colorwrite = false
+zwrite = true
+shadow = false
+samplers = {}
+
+# PBR
+[materials.glass]
+vs = "glass.vert"
+fs = "glass.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = true
+[materials.glass.samplers]
+tex_diffuse="helmet_Base_Color.ktx"
+tex_normal="helmet_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="helmet_MRAO.ktx"
+
+# Cut
+[materials.cut_blur]
+vs = "vertex_no_rot.vert"
+fs = "sprite.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = true
+[materials.cut_blur.samplers]
+tex="cut_blur_BaseColor.png"
+
+# PBR
+[materials.AK]
+vs = "vertex_bg_sep.vert"
+fs = "ak.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = true
+[materials.AK.samplers]
+tex_diffuse="AK_Base_Color.ktx"
+tex_normal="AK_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="AK_MRAO.ktx"
+tex_emptyBG="EmptyBGMask.png"

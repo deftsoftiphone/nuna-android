@@ -1,0 +1,37 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml:2:1-4:12
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml:2:1-4:12
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml:2:1-4:12
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml:2:1-4:12
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml:2:1-4:12
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml:2:1-4:12
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml:2:1-4:12
+	package
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml:2:11-52
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml:2:1-4:12
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml:2:1-4:12
+	android:versionCode
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml:2:1-4:12
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+uses-sdk
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+		ADDED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml
+		INJECTED from /mnt/DAAA6F7FAA6F56D3/Ashutosh_Sagar/git /nuna_android/photoview/src/main/AndroidManifest.xml

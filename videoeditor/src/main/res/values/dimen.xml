@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="record_button_size">85dp</dimen>
+    <dimen name="record_button_inner_part_size">62dp</dimen>
+    <dimen name="record_button_progress_size">42dp</dimen>
+    <dimen name="record_button_circle_idle_width">4dp</dimen>
+    <dimen name="record_button_circle_progress_width">4dp</dimen>
+
+    <dimen name="camera_action_icon_start_margin">12dp</dimen>
+    <dimen name="editor_action_icon_start_margin">12dp</dimen>
+
+    <dimen name="timeline_editor_view_height">38dp</dimen>
+    <dimen name="timeline_overlay_height">32dp</dimen>
+    <dimen name="timeline_editor_thumb_height">38dp</dimen>
+    <dimen name="timeline_editor_thumb_width">4dp</dimen>
+    <dimen name="timeline_editor_thumb_touchable_width">32dp</dimen>
+
+    <dimen name="music_editor_left_icon_size">54dp</dimen>
+    <dimen name="music_editor_center_icon_size">54dp</dimen>
+    <dimen name="music_editor_center_icon_margin">0dp</dimen>
+    <dimen name="music_editor_right_icon_size">54dp</dimen>
+    <dimen name="music_editor_playback_icon_size">54dp</dimen>
+    <dimen name="music_editor_icon_padding">14dp</dimen>
+    <dimen name="music_editor_action_icon_size">22dp</dimen>
+</resources>

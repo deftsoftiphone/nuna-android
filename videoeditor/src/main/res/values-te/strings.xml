@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="editor_alert_reset_all_positive">@string/others_reset</string>
+    <string name="editor_alert_reset_all_negative">@string/others_cancel</string>
+    <string name="editor_alert_reset_effects_positive">@string/others_reset</string>
+    <string name="editor_alert_reset_effects_negative">@string/others_cancel</string>
+    <string name="editor_alert_delete_voice_record_positive">@string/others_delete</string>
+    <string name="editor_alert_delete_voice_record_negative">@string/others_cancel</string>
+    <string name="alert_delete_video_positive">@string/others_delete</string>
+    <string name="alert_delete_video_negative">@string/others_cancel</string>
+    <string name="alert_save_video_positive">@string/others_save</string>
+    <string name="alert_save_video_negative">@string/others_discard</string>
+    <string name="alert_return_to_editor_positive">@string/camera_alert_positive</string>
+    <string name="alert_return_to_editor_negative">@string/camera_alert_negative</string>
+    <string name="alert_return_to_trimmer_positive">@string/camera_alert_positive</string>
+    <string name="alert_return_to_trimmer_negative">@string/others_cancel</string>
+    <string name="alert_reset_all_positive">@string/others_reset</string>
+    <string name="alert_reset_all_negative">@string/others_cancel</string>
+
+    <string name="camera_next">తర్వాత</string>
+    <string name="camera_back">వెనుక</string>
+    <string name="camera_done">పూర్తయింది</string>
+
+    <string name="message_record_first_video">కనీసం 3 సెకన్లు రికార్డు చేయండి</string>
+    <string name="message_record_video_duration">{0,ఎంపిక,0#{0} సెకను|1#{0} సెకన్లు|2#{0} సెకన్లు|3#{0} సెకన్లు|4#{0} సెకన్లు|4&lt;{0} సెకన్లు}</string>
+
+    <string name="notification_beautifier_on">ఫేస్ టచ్ అప్</string>
+    <string name="notification_flash_on">ఫ్లాష్ ఆన్ అయింది</string>
+
+    <string name="notification_timer_on">3 సెకన్ల టైమర్ ఆన్ అయింది</string>
+    <string name="notification_timer_off"> టైమర్ ఆఫ్ అయింది</string>
+
+    <string name="alert_delete_video_message">మీరు ఖచ్చితంగా మునుపటి క్లిప్‌ను తొలగించాలనుకుంటున్నారా?</string>
+    <string name="alert_save_video_chunk_message">మీరు వీడియో క్లిప్‌ను సేవ్ చేయాలనుకుంటున్నారా?</string>
+    <string name="alert_return_to_addition_effects">మునుపటి వీడియోను సవరించడానికి తిరిగి వెళ్ళాలా?</string>
+    <string name="alert_return_to_making_video">మీరు ఖచ్చితంగా వీడియో సృష్టికి తిరిగి వెళ్ళాలనుకుంటున్నారా?</string>
+    <string name="alert_reset_all_message">మీ వీడియో విస్మరించబడుతుంది. అయినా కొనసాగించాలా?</string>
+    <string name="alert_return_to_editor">సవరణ ప్రభావాలకు తిరిగి వెళ్లాలా?</string>
+
+    <string name="camera_alert_positive">అవును</string>
+    <string name="camera_alert_negative">కాదు</string>
+
+    <string name="err_no_space_left_recording">డిస్క్ స్పేస్ అయిపోతోంది. రికార్డింగ్ రద్దు చేయబడింది.</string>
+
+    <string name="permission_screen_message">దయచేసి అనుమతులు ఇవ్వండి</string>
+    <string name="permission_denied_message">%1$s అనుమతి మంజూరు కాలేదు</string>
+
+    <string name="video_recording_mode_normal">షూట్</string>
+    <string name="video_recording_mode_slideshow">స్లయిడ్ షో</string>
+
+    <string name="editor_next">తర్వాత</string>
+    <string name="editor_back">వెనుక</string>
+    <string name="editor_done">పూర్తయింది</string>
+    <string name="editor_close">మూసేయండి</string>
+    <string name="editor_cancel">రద్దు చేయండి</string>
+
+    <!-- Music Mixer -->
+    <string name="music_muxer_add">జోడించండి</string>
+    <string name="music_muxer_delete">తొలగించండి</string>
+    <string name="music_muxer_sound">సౌండ్</string>
+    <string name="music_muxer_voice">వాయిస్</string>
+    <string name="music_muxer_music">మ్యూజిక్</string>
+
+    <!-- Gallery -->
+    <string name="gallery">గ్యాలరీ</string>
+    <string name="gallery_album_untitled">అన్ టైటిల్డ్</string>
+    <string name="gallery_album_all_media">మొత్తం మీడియా</string>
+    <string name="gallery_album_all_photos">అన్ని ఫోటోలు</string>
+    <string name="gallery_album_all_video">అన్ని వీడియోలు</string>
+    <string name="gallery_select_media">మీడియాను ఎంచుకోండి</string>
+    <string name="gallery_select_photo">ఫోటోను ఎంచుకోండి</string>
+    <string name="gallery_select_video">వీడియోను ఎంచుకోండి</string>
+    <string name="gallery_empty_image_list">ఇమేజ్ గ్యాలరీ ఖాళీగా ఉంది</string>
+    <string name="gallery_empty_video_list">వీడియో గ్యాలరీ ఖాళీగా ఉంది </string>
+    <string name="gallery_empty_media_list">గ్యాలరీ ఖాళీగా ఉంది</string>
+    <plurals name="gallery_choose_at_least">
+        <item quantity="zero">కనీసం %1$d ఫైల్స్ ఎంచుకోండి</item>
+        <item quantity="one">కనీసం %1$d ఫైల్ ఎంచుకోండి</item>
+        <item quantity="two">కనీసం %1$d ఫైల్స్ ఎంచుకోండి</item>
+        <item quantity="few">కనీసం %1$d ఫైల్స్ ఎంచుకోండి</item>
+        <item quantity="many">కనీసం %1$d ఫైల్స్ ఎంచుకోండి</item>
+        <item quantity="other">కనీసం %1$d ఫైల్స్ ఎంచుకోండి</item>
+    </plurals>
+
+
+    <!-- Trimmer -->
+    <string name="trimmer_hint">300 సెకన్లు ఎంచుకోండి </string>
+    <string name="trimmer_drag_hint">తొలగించడానికి లాగండి</string>
+    <string name="trimmer_duration_format">%1$s సెకను</string>
+
+    <!-- Effects -->
+    <string name="editor_effect_hint">నొక్కి పట్టుకోండి</string>
+    <string name="editor_effect_undo">రీసెట్ చేయండి</string>
+    <string name="stickers_empty_list">ఏ స్టికర్లు కనబడలేదు</string>
+    <string name="stickers_search_hint">giphy.comలో వెతకండి</string>
+    <string name="stickers_search_cancel">రద్దు చేయండి</string>
+
+    <!-- Cover image -->
+    <string name="cover_image_text">కవర్ ఎంచుకోండి</string>
+
+    <!-- Alerts -->
+    <string name="editor_alert_reset_all">మీరు ఖచ్చితంగా అన్ని మార్పులను రీసెట్ చేయాలనుకుంటున్నారా?</string>
+    <string name="editor_alert_reset_effects">మీరు ఖచ్చితంగా అన్ని ఎఫెక్ట్ లను రీసెట్ చేయాలనుకుంటున్నారా?</string>
+    <string name="alert_positive">అవును</string>
+    <string name="alert_negative">కాదు</string>
+    <string name="alert_delete_voice_record_message">మీరు ఖచ్చితంగా వాయిస్ రికార్డింగ్‌ను తొలగించాలనుకుంటున్నారా?</string>
+    <string name="alert_video_creation">లోడ్ అవుతోంది</string>
+
+    <!-- Errors -->
+    <string name="err_file_not_supported">ఫైల్‌కు మద్దతు లేదు</string>
+    <string name="err_network_connection_failure">కనెక్షన్ విఫలమైంది</string>
+    <string name="err_no_space_left">తగినంత డిస్క్ స్పేస్ లేదు</string>
+    <string name="err_media_validation">ఫైల్ రకం గుర్తించడం సాధ్యం కాలేదు.</string>
+    <string name="err_player_initializer">ఏదో దోషం జరిగింది. వీడియో ఎడిటర్ ప్రారంభించడం సాధ్యపడలేదు.</string>
+
+    <string name="err_trimmer_invalid_duration">వీడియో వ్యవధి %1$d మరియు %2$d సెకన్ల మధ్య ఉండాలి</string>
+    <string name="err_trimmer_internal">వీడియో చేసేటప్పుడు దోషం జరిగింది</string>
+
+    <string name="connection_view_title">కనెక్షన్ విఫలమైంది</string>
+    <string name="connection_view_message">దయచేసి కనెక్షన్‌ను తనిఖీ చేసి, మళ్లీ ప్రయత్నించండి</string>
+    <string name="connection_view_retry">మళ్లీ ప్రయత్నించండి</string>
+
+    <string name="font_regular_title">రెగ్యులర్</string>
+    <string name="font_bold_title">బోల్డ్</string>
+    <string name="font_italic_title">ఇటాలిక్</string>
+
+    <!-- Music -->
+    <string name="action_add_music_track">ట్రాక్స్</string>
+    <string name="action_add_music_effect">ఎఫెక్ట్స్</string>
+    <string name="action_add_voice_recording">రికార్డింగ్</string>
+    <string name="edit_track_volume_title">వాల్యూం</string>
+    <string name="edit_track_volume_percent">%1$d%%</string>
+    <string name="edit_track_audio_duration">ఆడియో వ్యవధి</string>
+    <string name="edit_track_audio_duration_init_value">0:00.0</string>
+    <string name="edit_track_duration_error">ఆడియో %1$.1f సెకన్ల కంటే ఎక్కువసేపు ఉండాలి </string>
+
+    <!-- Effects -->
+    <string name="action_add_text_effect">టెక్స్ట్</string>
+    <string name="action_add_sticker_effect">స్టికర్</string>
+
+    <!-- Common -->
+    <string name="action_edit">సవరించండి</string>
+    <string name="action_delete">తొలగించండి</string>
+
+    <!-- Errors-->
+    <string name="error_voice_recording_start">వాయిస్ రికార్డింగ్ ప్రారంభించడంలో దోషం జరిగింది</string>
+    <string name="error_voice_recording_stop">వాయిస్ రికార్డింగ్‌ను ముగించడంలో దోషం జరిగింది</string>
+    <string name="error_invalid_duration_voice_recording">కనీస వాయిస్ రికార్డింగ్ వ్యవధి %1$.1f సెకన్లు</string>
+    <string name="error_invalid_duration_music_track"> కనీస మ్యూజిక్ ట్రాక్ వ్యవధి %1$.1f సెకన్లు</string>
+    <string name="error_voice_recording_delete_file"> వాయిస్ రికార్డింగ్‌ను తొలగించడంలో దోషం జరిగింది</string>
+    <string name="error_track_limit">అనుమతించబడే గరిష్ట ట్రాక్‌ల సంఖ్య %1$d</string>
+    <string name="error_no_space">మీ ఫోన్‌లో స్పేస్ లేదు. దయచేసి కొంత స్పేస్ ఖాళీ చేయండి.</string>
+
+
+    <!-- Others-->
+    <string name="others_cancel">రద్దు చేయండి</string>
+    <string name="others_discard">విస్మరించండి</string>
+    <string name="others_delete">తొలగించండి</string>
+    <string name="others_save">సేవ్ చేయండి</string>
+    <string name="others_yes">అవును</string>
+    <string name="others_no">కాదు</string>
+    <string name="others_reset">రీసెట్ చేయండి</string>
+    <string name="others_continue">కొనసాగించండి</string>
+</resources>

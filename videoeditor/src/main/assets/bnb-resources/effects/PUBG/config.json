@@ -1,0 +1,29 @@
+{
+  "name": "PUBG",
+  "frx": {
+    "type": "3d_anim",
+    "3d_anim": {
+      "type": "vfx"
+    }
+  },
+  "final": {
+    "type": "FILTER",
+
+    "filter": {
+      "fragmentCode": "finalColorFilter.fsh",
+      "textures": [{
+        "file": "pirate.png",
+        "sampler": "lookupTexture",
+        "magFilter": "LINEAR",
+        "minFilter": "LINEAR"
+      }]
+    }
+  },
+  "sounds": [{
+    "trackName": "music_pubg_L_Ch.ogg"
+  }],
+  "recognizer": [
+    "background"
+  ],
+  "recordDuration": 15
+}

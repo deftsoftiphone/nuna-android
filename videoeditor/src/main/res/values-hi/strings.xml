@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="editor_alert_reset_all_positive">@string/others_reset</string>
+    <string name="editor_alert_reset_all_negative">@string/others_cancel</string>
+    <string name="editor_alert_reset_effects_positive">@string/others_reset</string>
+    <string name="editor_alert_reset_effects_negative">@string/others_cancel</string>
+    <string name="editor_alert_delete_voice_record_positive">@string/others_delete</string>
+    <string name="editor_alert_delete_voice_record_negative">@string/others_cancel</string>
+    <string name="alert_delete_video_positive">@string/others_delete</string>
+    <string name="alert_delete_video_negative">@string/others_cancel</string>
+    <string name="alert_save_video_positive">@string/others_save</string>
+    <string name="alert_save_video_negative">@string/others_discard</string>
+    <string name="alert_return_to_editor_positive">@string/camera_alert_positive</string>
+    <string name="alert_return_to_editor_negative">@string/camera_alert_negative</string>
+    <string name="alert_return_to_trimmer_positive">@string/camera_alert_positive</string>
+    <string name="alert_return_to_trimmer_negative">@string/others_cancel</string>
+    <string name="alert_reset_all_positive">@string/others_reset</string>
+    <string name="alert_reset_all_negative">@string/others_cancel</string>
+
+    <string name="camera_next">अगला</string>
+    <string name="camera_back">वापस जाएँ</string>
+    <string name="camera_done">हो गया</string>
+
+    <string name="message_record_first_video">कम से कम %1$s सेकंड रिकॉर्ड करें</string>
+    <string name="message_record_video_duration">{0,विकल्प,0#{0} सेकंड|1#{0} सेकंड |2#{0} सेकंड|3#{0} सेकंड|4#{0} सेकंड|4&lt;{0} सेकंड}</string>
+
+    <string name="notification_beautifier_on">चेहरे का टच-अप</string>
+    <string name="notification_flash_on">फ़्लैश चालू</string>
+
+    <string name="notification_timer_on">3 सेकंड का टाइमर चालू है</string>
+    <string name="notification_timer_off">टाइमर बंद है</string>
+
+    <string name="alert_delete_video_message">क्या आप सच में पिछली क्लिप को मिटाना चाहते हैं?</string>
+    <string name="alert_save_video_chunk_message">क्या आप विडियो क्लिप को सेव करना चाहेंगे?</string>
+    <string name="alert_return_to_addition_effects">पिछले विडियो की एडिटिंग पर लौटें?</string>
+    <string name="alert_return_to_making_video">क्या आप सच में विडियो बनाने पर लौटना चाहते हैं?</string>
+    <string name="alert_reset_all_message">आपका विडियो निरस्त कर दिया जायेगा. फिर भी, जारी रखें?</string>
+    <string name="alert_return_to_editor">संपादन प्रभाव पर लौटें?</string>
+
+    <string name="camera_alert_positive">हाँ</string>
+    <string name="camera_alert_negative">नहीं</string>
+
+    <string name="err_no_space_left_recording">डिस्क स्पेस समाप्त होने को है. रिकॉर्डिंग रद्द कर दी गयी है.</string>
+
+    <string name="permission_screen_message">कृपया अनुमतियां प्रदान करें</string>
+    <string name="permission_denied_message">%1$s अनुमति नहीं दी गयी थी</string>
+
+    <string name="video_recording_mode_normal">शूट करें</string>
+    <string name="video_recording_mode_slideshow">स्लाइडशो</string>
+
+    <string name="editor_next">अगला</string>
+    <string name="editor_back">वापस जाएँ</string>
+    <string name="editor_done">हो गया</string>
+    <string name="editor_close">बंद करें</string>
+    <string name="editor_cancel">रद्द करें</string>
+
+    <!-- Music Mixer -->
+    <string name="music_muxer_add">जोड़ें</string>
+    <string name="music_muxer_delete">मिटायें</string>
+    <string name="music_muxer_sound">ध्वनि</string>
+    <string name="music_muxer_voice">आवाज</string>
+    <string name="music_muxer_music">संगीत</string>
+
+    <!-- Gallery -->
+    <string name="gallery">Gallery</string>
+    <string name="gallery_album_untitled">बिना शीर्षक</string>
+    <string name="gallery_album_all_media">समस्त मीडिया</string>
+    <string name="gallery_album_all_photos">सारे फोटो</string>
+    <string name="gallery_album_all_video">सारे विडियो</string>
+    <string name="gallery_select_media">मीडिया चुनें</string>
+    <string name="gallery_select_photo">फोटो चुनें</string>
+    <string name="gallery_select_video">विडियो चुनें</string>
+    <string name="gallery_empty_image_list">तस्वीर गैलरी खाली है</string>
+    <string name="gallery_empty_video_list">विडियो गैलरी खाली है</string>
+    <string name="gallery_empty_media_list">गैलरी खाली है</string>
+    <plurals name="gallery_choose_at_least">
+        <item quantity="zero">कम से कम %1$d फाइलें चुनें</item>
+        <item quantity="one">कम से कम %1$d फाइल चुनें </item>
+        <item quantity="two">कम से कम %1$d फाइलें चुनें</item>
+        <item quantity="few">कम से कम %1$d फाइलें चुनें</item>
+        <item quantity="many">कम से कम %1$d फाइलें चुनें</item>
+        <item quantity="other">कम से कम %1$d फाइलें चुनें</item>
+    </plurals>
+
+
+    <!-- Trimmer -->
+    <string name="trimmer_hint">300 सेकंड चुनें</string>
+    <string name="trimmer_drag_hint">मिटाने के लिए खिसकाएँ</string>
+    <string name="trimmer_duration_format">%1$s सेकंड</string>
+
+    <!-- Effects -->
+    <string name="editor_effect_hint">कुछ देर दबाये रखें</string>
+    <string name="editor_effect_undo">रिसेट करें</string>
+    <string name="stickers_empty_list">कोई स्टीकर नहीं मिले</string>
+    <string name="stickers_search_hint">giphy.com खोजें</string>
+    <string name="stickers_search_cancel">रद्द करें</string>
+
+    <!-- Cover image -->
+    <string name="cover_image_text">कवर चुनें</string>
+
+    <!-- Alerts -->
+    <string name="editor_alert_reset_all">क्या आप सच में सभी बदलावों को रिसेट करना चाहते हैं?</string>
+    <string name="editor_alert_reset_effects">क्या आप सच में सभी प्रभावों (इफ़ेक्ट) को रिसेट करना चाहते हैं?</string>
+    <string name="alert_positive">हाँ</string>
+    <string name="alert_negative">नहीं</string>
+    <string name="alert_delete_voice_record_message">क्या आप सच में वोइस रिकॉर्डिंग को मिटाना चाहते हैं?</string>
+    <string name="alert_video_creation">लोड हो रहा है</string>
+
+    <!-- Errors -->
+    <string name="err_file_not_supported">फाइल सपोर्टेड नहीं है</string>
+    <string name="err_network_connection_failure">कनेक्शन असफल</string>
+    <string name="err_no_space_left">पर्याप्त डिस्क स्पेस नहीं है</string>
+    <string name="err_media_validation">फाइल प्रकार पहचाना नहीं जा सका</string>
+    <string name="err_player_initializer">कोई त्रुटि आ गयी थी. विडियो एडिटर चालू नहीं हो पाया.</string>
+
+    <string name="err_trimmer_invalid_duration">विडियो की अवधि %1$d से %2$d सेकंड के बीच होनी चाहिए</string>
+    <string name="err_trimmer_internal">विडियो बनाते समय त्रुटि</string>
+
+    <string name="connection_view_title">कनेक्शन असफल</string>
+    <string name="connection_view_message">कृपया कनेक्शन जाँचें और फिर से प्रयास करें</string>
+    <string name="connection_view_retry">फिर से प्रयास करें</string>
+
+    <string name="font_regular_title">सामान्य</string>
+    <string name="font_bold_title">बोल्ड</string>
+    <string name="font_italic_title">इटैलिक</string>
+
+
+    <!-- Music -->
+    <string name="action_add_music_track">ट्रैक</string>
+    <string name="action_add_music_effect">प्रभाव</string>
+    <string name="action_add_voice_recording">रिकॉर्डिंग</string>
+    <string name="edit_track_volume_title">आवाज</string>
+    <string name="edit_track_volume_percent">%1$d%%</string>
+    <string name="edit_track_audio_duration">ऑडियो अवधि</string>
+    <string name="edit_track_audio_duration_init_value">0:00.0</string>
+    <string name="edit_track_duration_error">ऑडियो %1$.1f सेकंड से ज्यादा का नहीं होना चाहिए</string>
+
+    <!-- Effects -->
+    <string name="action_add_text_effect">टेक्स्ट</string>
+    <string name="action_add_sticker_effect">स्टीकर</string>
+
+    <!-- Common -->
+    <string name="action_edit">बदलाव करें</string>
+    <string name="action_delete">मिटायें</string>
+
+    <!-- Errors-->
+    <string name="error_voice_recording_start">वोइस रिकॉर्डिंग चालू करने में कोई त्रुटि आ गयी थी</string>
+    <string name="error_voice_recording_stop">वोइस रिकॉर्डिंग समाप्त करने में कोई त्रुटि आ गयी थी </string>
+    <string name="error_invalid_duration_voice_recording">न्यूनतम वोइस रिकॉर्डिंग अवधि %1$.1f सेकंड है</string>
+    <string name="error_invalid_duration_music_track">न्यूनतम संगीत ट्रैक अवधि %1$.1f सेकंड है</string>
+    <string name="error_voice_recording_delete_file">वोइस रिकॉर्डिंग मिटाने करने में कोई त्रुटि आ गयी थी</string>
+    <string name="error_track_limit">अधिकतम अनुमत ट्रैक संख्या है %1$d</string>
+    <string name="error_no_space">आपके फोन में स्पेस नहीं बची है. कृपया कुछ जगह खाली करें.</string>
+
+
+    <!-- Others-->
+    <string name="others_cancel">रद्द करें</string>
+    <string name="others_discard">अस्वीकार करें</string>
+    <string name="others_delete">मिटायें</string>
+    <string name="others_save">सेव करें</string>
+    <string name="others_yes">हाँ</string>
+    <string name="others_no">नहीं</string>
+    <string name="others_reset">रिसेट करें</string>
+    <string name="others_continue">जारी रखें</string>
+
+</resources>

@@ -1,0 +1,13 @@
+//include ':hxaudio'
+include ':app'
+//include ':photoview', ':photoeditor', ':mediaplayer'
+//include ':videocompressor'
+//include ':ananas'
+//include ':motiontoast'
+include ':likebutton'
+include ':videoeditor'
+
+
+//':ananas'
+
+//':record-view'

@@ -1,0 +1,35 @@
+{
+    "name": "fx_Snake_b1", 
+    "frx": {
+        "type": "3d_anim", 
+        "3d_anim": {
+            "type": "vfx"
+        }
+    }, 
+    "sounds": [
+        {
+            "trackName": "Snake_BGM.ogg"
+        }, 
+        {
+            "trackName": "Snake_idle_SFX.ogg"
+        },
+        {
+            "trackName": "Snake_bite_SFX.ogg"
+        }
+    ], 
+    "final": {
+        "type": "FILTER", 
+        "filter": {
+            "fragmentCode": "finalColorFilter.fsh", 
+            "textures": [
+                {
+                    "file": "alice.png", 
+                    "sampler": "lookupTexture", 
+                    "magFilter": "LINEAR", 
+                    "minFilter": "LINEAR"
+                }
+            ]
+        }
+    }, 
+    "recordDuration": 30
+}

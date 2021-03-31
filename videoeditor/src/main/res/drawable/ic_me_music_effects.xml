@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_me_music_effect_dis" android:state_activated="false" />
+    <item android:drawable="@drawable/ic_me_music_effect_en" />
+</selector>

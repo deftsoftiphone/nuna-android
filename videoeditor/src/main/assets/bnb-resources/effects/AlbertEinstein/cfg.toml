@@ -1,0 +1,85 @@
+msaa = 1
+shadowmap_size = 512
+adjust_znear = 150
+draw_order = ['retouch', 'face', 'hair_base', 'hair', 'mustache']
+
+# Retouch
+[materials.retouch]
+vs = "retouch.vert"
+fs = "retouch.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+onface = true
+mouth = true
+[materials.retouch.samplers]
+selection_tex="REDMASK_v3_256.png"
+lookupTexTeeth="TEETH_medium.png"
+lookupTexEyes="EYES_medium.png"
+tex_softLight="SOFT_princess_256.png"
+tex_normalMakeup="face_BaseColor.png"
+tex_highlight="FLARE_38_512.png"
+
+# PBR
+[materials.face]
+vs = "face.vert"
+fs = "face.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = false
+zwrite = true
+shadow = true
+samplers = {}
+
+# PBR
+[materials.hair_base]
+vs = "hair_base.vert"
+fs = "hair_base.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.hair_base.samplers]
+tex_diffuse="hair_Base_Color.ktx"
+tex_normal="hair_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hair_MRAO.ktx"
+
+# PBR
+[materials.hair]
+vs = "hair.vert"
+fs = "hair.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.hair.samplers]
+tex_diffuse="hair_Base_Color.ktx"
+tex_normal="hair_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hair_MRAO.ktx"
+
+# PBR
+[materials.mustache]
+vs = "mustache.vert"
+fs = "mustache.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.mustache.samplers]
+tex_diffuse="hair_Base_Color.ktx"
+tex_normal="hair_Normal.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+tex_mrao="hair_MRAO.ktx"

@@ -1,0 +1,66 @@
+warp_mesh = "BeautyFaceSP_Optimased.bsm2"
+msaa = 1
+shadowmap_size = 512
+adjust_znear = 500
+adjust_zfar = 0
+draw_order = ['TriMa2', '!glfx_UPDATE_BG', 'retouch', '!glfx_UPDATE_BG', 'facemat', '!glfx_WARP_IMAGE', 'fire', 'glow']
+
+# Retouch
+[materials.retouch]
+vs = "retouch.vert"
+fs = "retouch.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+onface = true
+mouth = true
+[materials.retouch.samplers]
+lookupTexTeeth="lut3d_TEETH_medium.png"
+lookupTexEyes="lut3d_EYES_medium.png"
+tex_softLight="soft_princess_256.png"
+tex_normalMakeup="makeup.png"
+tex_highlight="sup_eyes.png"
+
+# PBR
+[materials.facemat]
+vs = "facemat.vert"
+fs = "tex.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+samplers = {tex="red_mask_Base_Color.png"}
+
+# PBR
+[materials.glow]
+vs = "glow.vert"
+fs = "glow.frag"
+blend = "screen" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = true
+colorwrite = true
+zwrite = false
+shadow = false
+[materials.glow.samplers]
+
+[materials.TriMa2]
+vs = "fstri.vert"
+fs = "tex2.frag"
+blend = "alpha"
+backfaces = true
+shadow = false
+zwrite = false
+samplers = {tex="BG.png"}
+
+# PBR
+[materials.fire]
+vs = "billboard.vert"
+fs = "video.frag"
+blend = "screen" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = true
+colorwrite = true
+zwrite = false
+shadow = false
+samplers = {}

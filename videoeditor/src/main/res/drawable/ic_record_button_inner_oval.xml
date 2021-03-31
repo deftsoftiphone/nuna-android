@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <size
+        android:width="@dimen/record_button_inner_part_size"
+        android:height="@dimen/record_button_inner_part_size" />
+
+    <gradient
+        android:angle="180"
+        android:endColor="@color/torch_red"
+        android:startColor="@color/torch_red_light" />
+
+</shape>

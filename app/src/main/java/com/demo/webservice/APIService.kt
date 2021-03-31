@@ -1,4 +1,3 @@
-
 package com.demo.webservice
 
 import android.content.Intent
@@ -31,7 +30,6 @@ import java.io.IOException
 import java.net.ConnectException
 import java.net.SocketTimeoutException
 import java.util.concurrent.TimeUnit
-
 
 interface APIService {
 
@@ -282,18 +280,21 @@ interface APIService {
 //        const val BASE_URL = "http://192.168.3.152:4004/"        //Local Test
 //        const val BASE_URL = "http://192.168.3.141:4000/"        //Local Test
 //         const val BASE_URL = "http://192.168.3.173:4000/"        //Local Test
-//        const val BASE_URL = "http://192.168.3.173:5001/"        //Local Test
+//        const val BASE_URL = "http://192.168.3.173:5002/"        //Local Test
 //        const val BASE_URL = "http://1.6.98.142:3000/"        //Local Test
 //        const val BASE_URL = "http://65.0.108.28:3000/"         //Live - 2
 //        const val BASE_URL = "http://13.127.69.151:4000/"       //Live -3
 //        const val BASE_URL = "http://52.66.228.155:4000/"       //Live - 4
-         const val BASE_URL = "http://13.232.18.204:3000/"           //Staging Dev Environment
+//        const val BASE_URL = "http://13.232.18.204:3000/"           //Staging Dev Environment
+
 //        const val BASE_URL = "http://1.6.98.142:3000/"           //Dev Environment
-//        const val BASE_URL = "http://nuna.app:4000/"       //Live - 4
+        const val BASE_URL = "http://nuna.app:4000/"       //Live - 4
 
         //        const val API_VERSION = "v2/"
 //        const val API_VERSION = "v3/"
         const val API_VERSION = "v3.1/"
+//        const val BASE_URL = "http://192.168.3.173:5009/"        //Local Test
+//        const val API_VERSION = "v4/"
 
         fun getErrorMessageFromGenericResponse(
             exception: Exception,

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <string name="effect_player_token" translatable="false">U267Qg7l7dfOzetNb4IUyTRKfEC8pkAjGbiOTzWJ9FaEpx2Bt0Y3PW//ELGeD6Inua8HL1/zBL4LRzD4CV2uCeJ7z8zYbeipF9EjY6zG2mhQka8vYUC1iC3pygTQjq33F0HiNKFUuI5RjQycCjENQEG11T9ARfsY2ZqggY+E8gtIfGEkFiKoagKLblDNH7IvS+94ab5r88eBKpOGgiuAMERoc0nkAuy/FQ/CjS2M7BPRW9842YT9Kc1H+sQ6r2L6w2cpjcFqw/Deouhw5tv0s61q4ztIkERs372y4+BCkhoVZnPg86VPRY8Nv3yMzqE0JR7TXbXxz2wZwKPZMz2SZdRupsSJhHRiT0NoulTR7l1NVmsh6FOAyhUPqoMLOXQSMf8vgyaeul/Ml5vaMS8UK7cq/KO5L8m/ABFttbJ6fN8/o3sAiUa+3aLabBtDA8jJPkyj/71BOdH2KJ8QmV5jgJXg8Rcg1s2r0mACW6NjtQrBtkdpUWLGPWd0u7dX4xVBERhZGoJt2kS0B7nO2H3EJsTNZxdnWw0Kc9JRHHn7SVb9GsPIuB3oqiDWrw+17FZNFLNGonGT5A7Ea9v6b3YI02hEKPZqddilfTVGTJ8sh5rsU2V4j4JeftYVo2ClI0wbFD/G6rAcWmGUvvIQ4GYv87ye1NE/w29GfZ0Rj/QJqdMwLXwqYmsFcUYLLHLpMFnbVvPIWOTy5uJZNq0fMuFsA7FrHqixDNwptShEV748dE0r6+TuQNjQewJChnF1wVFHctMoHbows33BR2PIg/CfegoAsZEM8DSCpbS5GKYf6adL1Y6KiyqPg9CfLwax3/sP</string>-->
+<!--    <string name="effect_player_token" translatable="false">kQIzy9j/sW+8j6AdoBwWDTRKfEC8pkAjGbiOTzWJ9FaEpx2Bt0Y3PW//ELGeD6Inua8HL1/zBL4LRzD4CV2uCeJ7z8zYbeipF9EjY6zG2mBNn+kqeWaIjy/nzUjIjLPnQgb6I59DiY8d0xyWCjETUwD41g9LdPpUh4mrnoHC9xNuRmouUDqgbkraYAbZE7I3HKdpaOk0hMeuKoiygziMIFkuCBOsUuWzEDznqmrT7GvrGvY+yIDvNcZx+9IejEqqgCwPq/JUhq6Tled3yfLI/vQmxRlEiUZT/OrwpfZlvVNeNlns+LJIZ65c9jqdxa0gARfODPy33UwoheieB03mGMJuu7b36XF1RE9nvUejkDBIQWAt51STuGtir5QANXsZVoNfgAS1jWHyvNKydhcQJqco75K9GcmGKVA1+I1YYMYp3HRS0Ebfnp7BekdNHMifejqe5r9IEcyhcNUWil53gpTQoVR19/iwyGIBfKMu7lvGrEdoQmLQXTk5n6xq9whDEj9ZV9k83Vu0DLv/2DaPY/LSLFcgbhwXfdpaGzW+H0S8QojGpAPvtwvX6ETl6FdVErU7/DaS9wjSR9DtOT9JwWZVEsdgUcKkbC5AWocSvPmuFXF2hYNGSuZD6iG3LV0hJTXg8acaY0LEzb4Ywmo4yZW3gph+0WFXR6wbvsYg6It9OVE8U1ImSQUFIjb9On7pQ/XAFbqP7v5gB7kfNOd6G49Qfer3GME4jh9ma/NiCUU30NTsV/zzK3EOjkBi7ER4V552YLIsn2T9FyaFnc6fcDMnj9h/tj2XrrOgFqYr2K1656fLojg=</string>-->
+    <string name="effect_player_token" translatable="false">i1jkZsUGUdx2tROS9klMpDRKfEC8pkAjGbiOTzWJ9FaEpx2Bt0Y3PW//ELGeD6Inua8HL1/zBL4LRzD4CV2uCeJ6z8zYbeipF9EjY6zG2mJQka8vYUC1iC3pygTQh7H5TF3mJ4xus4QXlQSeCDMQTg631A56TvFewZGpgY+E8gtIfGEkFiKoaQKLbkLaF6c2G7B/OfFV/aeNKIC+liWWO1MLJxm6T+O+Myvi3WTdjEjpEvor1Zr0P+Fd5sU2jSSkjkwsqfpYk7OJju1Xw/Kk8PpG5htMhVNO5vH6leRv011QUWXw7oJnZLJK9wq73qMgAwCeAvLTyUZSi+b6E0fhF8B5rrTq5XdjRENtvjOtnlRcS2ci5UOGunZuqYIAOX1iWI0xrQu/hG3hpf2TZwYWMbw13r6gDuGHR147l6FKeN5orUdXh0jR86HUcWRvBsmDRhyF6L9KBpyvfqUlgkRhg7LgvExx0N6rxmIDa/Mg4Cr9rUh6U2P2bSQhm4tM7AZDECgJWddN41+xBYrZwziPYeWCIlljbAsKe9tBADKjGBWyTMvVvQHynCbA6lHy/ldJD+U18nKV9Q7ofNH8KDle2nt4I8dPfsiycShNeZAXy/egUXZ0g7l9S/dS7DasMHAQJRjM7LAyYizKw/ofwGwC8pSmk55pynx6dqwhrMxO5oU5LVsbYVo3XEYLLHLpMFnGQe7GCJe+7tFPDa8CMupZDIonc+SzDMsfoR19be5POEUa/Mn7f/2dJX9KmkpFw0ZjUYNbUbIWjW6TGSjLkMGVeT80luxEtyyGqKS7C4sa2Jdo7cm0gg==</string>
+    <string name="video_editor_token" translatable="false">XYMBzMxDqOr+6XRRJjwSTyxK7fK+1u0DuoAruXXhLZ9+RJh+yj5jtppaOlOWK1TlmlGWZgS7py1wlekpe6+ux2ZzX+x/jaK9mVhPsS4jGGWEADXG5llNt8FyddLK8ay5EjFsNolBZn/zd8DyIT6MX6lgKYRzMEDi</string>
+
+    <!-- Effects -->
+    <!-- Time Effects -->
+    <string name="time_effect_slow_mo" translatable="false">Slow motion</string>
+    <string name="time_effect_rapid" translatable="false">Rapid</string>
+
+    <!-- Visual Effects -->
+    <string name="visual_effect_vhs" translatable="false">VHS</string>
+    <string name="visual_effect_soul" translatable="false">Soul</string>
+    <string name="visual_effect_tv_foam" translatable="false">TV Foam</string>
+    <string name="visual_effect_flash" translatable="false">Flash</string>
+    <string name="visual_effect_rave" translatable="false">Rave</string>
+    <string name="visual_effect_cathode" translatable="false">Cathode</string>
+    <string name="visual_effect_zoom" translatable="false">Zoom</string>
+    <string name="visual_effect_polaroid" translatable="false">Polaroid</string>
+    <string name="visual_effect_glitch" translatable="false">Glitch</string>
+    <string name="visual_effect_acid" translatable="false">Acid</string>
+
+    <!-- Mask Effect -->
+    <string name="mask_effect_angel" translatable="false">Angel</string>
+    <string name="mask_effect_rabbit" translatable="false">Rabbit</string>
+    <string name="mask_effect_spring_cat" translatable="false">Spring Cat</string>
+    <string name="mask_effect_fashion" translatable="false">Fashion</string>
+    <string name="mask_effect_afro_curly" translatable="false">Afro Curly</string>
+    <string name="mask_effect_albert_einstein" translatable="false">Albert Einstein</string>
+    <string name="mask_effect_autumn_leaf_band" translatable="false">Autumn Leaf Band</string>
+    <string name="mask_effect_baby_cat_hat" translatable="false">Baby Cat Hat</string>
+    <string name="mask_effect_baker_boy_cap" translatable="false">Baker Boy Cap</string>
+    <string name="mask_effect_beauty" translatable="false">Beauty</string>
+    <string name="mask_effect_retrowave" translatable="false">Retrowave</string>
+    <string name="mask_effect_beauty_bokeh" translatable="false">Beauty Bokeh</string>
+    <string name="mask_effect_biker_bandana_male" translatable="false">Biker</string>
+    <string name="mask_effect_brilliant_flowers_crown" translatable="false">Brilliant Flowers Crown</string>
+    <string name="mask_effect_burning_man" translatable="false">Burning Man</string>
+    <string name="mask_effect_butterfly" translatable="false">Butterfly</string>
+    <string name="mask_effect_devil" translatable="false">Devil</string>
+    <string name="mask_effect_doggy" translatable="false">Doggy</string>
+    <string name="mask_effect_eyes_on_fire" translatable="false">Eyes On Fire</string>
+    <string name="mask_effect_face_night_club" translatable="false">Face Night Club</string>
+    <string name="mask_effect_snake" translatable="false">Snake</string>
+    <string name="mask_effect_hearts_billboard" translatable="false">Hearts Billboard</string>
+    <string name="mask_effect_peach_hairstyle" translatable="false">Peach Hairstyle</string>
+    <string name="mask_effect_pubg" translatable="false">PUBG</string>
+    <string name="mask_effect_spider_frozen" translatable="false">Spider Frozen</string>
+    <string name="mask_effect_vampire" translatable="false">Vampire</string>
+
+    <string name="editor_alert_reset_all_positive">@string/others_reset</string>
+    <string name="editor_alert_reset_all_negative">@string/others_cancel</string>
+    <string name="editor_alert_reset_effects_positive">@string/others_reset</string>
+    <string name="editor_alert_reset_effects_negative">@string/others_cancel</string>
+    <string name="editor_alert_delete_voice_record_positive">@string/others_delete</string>
+    <string name="editor_alert_delete_voice_record_negative">@string/others_cancel</string>
+    <string name="alert_delete_video_positive">@string/others_delete</string>
+    <string name="alert_delete_video_negative">@string/others_cancel</string>
+    <string name="alert_save_video_positive">@string/others_save</string>
+    <string name="alert_save_video_negative">@string/others_discard</string>
+    <string name="alert_return_to_editor_positive">@string/camera_alert_positive</string>
+    <string name="alert_return_to_editor_negative">@string/camera_alert_negative</string>
+    <string name="alert_return_to_trimmer_positive">@string/camera_alert_positive</string>
+    <string name="alert_return_to_trimmer_negative">@string/others_cancel</string>
+    <string name="alert_reset_all_positive">@string/others_reset</string>
+    <string name="alert_reset_all_negative">@string/others_cancel</string>
+
+    <string name="camera_next">Next</string>
+    <string name="camera_back">Back</string>
+    <string name="camera_done">Done</string>
+
+    <string name="message_record_first_video">Record at least %1$s</string>
+    <string name="message_record_video_duration">{0,choice,0#{0} second|1#{0} seconds|2#{0} seconds|3#{0} seconds|4#{0} seconds|4&lt;{0} seconds}</string>
+
+    <string name="notification_beautifier_on">Face Touch Up</string>
+    <string name="notification_flash_on">Flash On</string>
+
+    <string name="notification_timer_on">3 second timer is on</string>
+    <string name="notification_timer_off">Timer is off</string>
+
+    <string name="alert_delete_video_message">Are you sure you want to delete the previous clip?</string>
+    <string name="alert_save_video_chunk_message">Would you like to save the video clip?</string>
+    <string name="alert_return_to_addition_effects">Return to editing the previous video?</string>
+    <string name="alert_return_to_making_video">Are you sure you want to return to video creation?</string>
+    <string name="alert_reset_all_message">Your video will be discarded. Continue anyway?</string>
+    <string name="alert_return_to_editor">Return to editing effects?</string>
+
+    <string name="camera_alert_positive">Yes</string>
+    <string name="camera_alert_negative">No</string>
+
+    <string name="err_no_space_left_recording">Running out of disk space. Recording is canceled.</string>
+
+    <string name="permission_screen_message">Please grant permissions</string>
+    <string name="permission_denied_message">%1$s permission was not granted</string>
+
+    <string name="video_recording_mode_normal">Shoot</string>
+    <string name="video_recording_mode_slideshow">Slideshow</string>
+
+    <string name="editor_next">Next</string>
+    <string name="editor_back">Back</string>
+    <string name="editor_done">Done</string>
+    <string name="editor_close">Close</string>
+    <string name="editor_cancel">Cancel</string>
+
+    <!-- Music Mixer -->
+    <string name="music_muxer_add">Add</string>
+    <string name="music_muxer_delete">Delete</string>
+    <string name="music_muxer_sound">Sound</string>
+    <string name="music_muxer_voice">Voice</string>
+    <string name="music_muxer_music">Music</string>
+
+    <!-- Gallery -->
+    <string name="gallery">Gallery</string>
+    <string name="gallery_album_untitled">Untitled</string>
+    <string name="gallery_album_all_media">All media</string>
+    <string name="gallery_album_all_photos">All photos</string>
+    <string name="gallery_album_all_video">All videos</string>
+    <string name="gallery_select_media">Choose media</string>
+    <string name="gallery_select_photo">Choose photo</string>
+    <string name="gallery_select_video">Choose video</string>
+    <string name="gallery_empty_image_list">Image gallery is empty</string>
+    <string name="gallery_empty_video_list">Video gallery is empty</string>
+    <string name="gallery_empty_media_list">Gallery is empty</string>
+    <plurals name="gallery_choose_at_least">
+        <item quantity="zero">Select at least %1$d files</item>
+        <item quantity="one">Select at least %1$d file</item>
+        <item quantity="two">Select at least %1$d files</item>
+        <item quantity="few">Select at least %1$d files</item>
+        <item quantity="many">Select at least %1$d files</item>
+        <item quantity="other">Select at least %1$d files</item>
+    </plurals>
+
+
+    <!-- Trimmer -->
+    <string name="trimmer_hint">Choose 300 seconds</string>
+    <string name="trimmer_drag_hint">Drag here to delete</string>
+    <string name="trimmer_duration_format">%1$s sec</string>
+
+    <!-- Effects -->
+    <string name="editor_effect_hint">Press and hold</string>
+    <string name="editor_effect_undo">Reset</string>
+    <string name="stickers_empty_list">No stickers found</string>
+    <string name="stickers_search_hint">Search giphy.com</string>
+    <string name="stickers_search_cancel">Cancel</string>
+
+    <!-- Cover image -->
+    <string name="cover_image_text">Choose cover</string>
+
+    <!-- Alerts -->
+    <string name="editor_alert_reset_all">Are you sure you want to reset all changes?</string>
+    <string name="editor_alert_reset_effects">Are you sure you want to reset all effects?</string>
+    <string name="alert_positive">Yes</string>
+    <string name="alert_negative">No</string>
+    <string name="alert_delete_voice_record_message">Are you sure you want to delete the voice recording?</string>
+    <string name="alert_video_creation">Loading</string>
+
+    <!-- Errors -->
+    <string name="err_file_not_supported">File is not supported</string>
+    <string name="err_network_connection_failure">Connection failed</string>
+    <string name="err_no_space_left">Not enough disk space</string>
+    <string name="err_media_validation">File type could not be identified</string>
+    <string name="err_player_initializer">There was an error. The video editor could not be launched.</string>
+
+    <string name="err_trimmer_invalid_duration">Video duration should be between %1$d and %2$d seconds</string>
+    <string name="err_trimmer_internal">Error while making video</string>
+
+    <string name="connection_view_title">Connection failed</string>
+    <string name="connection_view_message">Please check connection and retry</string>
+    <string name="connection_view_retry">Retry</string>
+
+    <string name="font_regular_title">Regular</string>
+    <string name="font_bold_title">Bold</string>
+    <string name="font_italic_title">Italic</string>
+
+
+    <!-- Music -->
+    <string name="action_add_music_track">Tracks</string>
+    <string name="action_add_music_effect">Effects</string>
+    <string name="action_add_voice_recording">Record</string>
+    <string name="edit_track_volume_title">Volume</string>
+    <string name="edit_track_volume_percent">%1$d%%</string>
+    <string name="edit_track_audio_duration">Duration</string>
+    <string name="edit_track_audio_duration_init_value">0:00.0</string>
+    <string name="edit_track_duration_error">Audio should be longer than %1$.1f seconds</string>
+
+    <!-- Effects -->
+    <string name="action_add_text_effect">Text</string>
+    <string name="action_add_sticker_effect">Sticker</string>
+
+    <!-- Common -->
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+
+    <!-- Errors-->
+    <string name="error_voice_recording_start">There was an error in starting the voice recording</string>
+    <string name="error_voice_recording_stop">There was an error in ending the voice recording</string>
+    <string name="error_invalid_duration_voice_recording">Minimum voice recording duration is %1$.1f seconds</string>
+    <string name="error_invalid_duration_music_track">Minimum music track duration is %1$.1f seconds</string>
+    <string name="error_voice_recording_delete_file">There was an error in deleting voice recording</string>
+    <string name="error_track_limit">Maximum number of tracks allowed is %1$d</string>
+    <string name="error_no_space">There is no space left on your phone. Please free up some space.</string>
+
+
+    <!-- Others-->
+    <string name="others_cancel">Cancel</string>
+    <string name="others_discard">Discard</string>
+    <string name="others_delete">Delete</string>
+    <string name="others_save">Save</string>
+    <string name="others_yes">Yes</string>
+    <string name="others_no">No</string>
+    <string name="others_reset">Reset</string>
+    <string name="others_continue">Continue</string>
+
+</resources>

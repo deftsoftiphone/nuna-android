@@ -1,0 +1,67 @@
+warp_mesh = "FaceMorph.bsm2"
+msaa = 1
+shadowmap_size = 512
+adjust_znear = 150
+draw_order = ['retouch', '!glfx_WARP_IMAGE', 'FaceMorph', 'Spider', 'Fur', '!glfx_FACE_SHADOW']
+
+# Retouch
+[materials.retouch]
+vs = "retouch.vert"
+fs = "retouch.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+onface = true
+mouth = true
+[materials.retouch.samplers]
+lookupTexTeeth="lut3d_TEETH_medium.png"
+lookupTexEyes="lut3d_EYES_medium.png"
+
+# Cut
+[materials.FaceMorph]
+vs = "facemorph.vert"
+fs = "facemorph.frag"
+blend = "off"
+backfaces = false
+colorwrite = false
+zwrite = true
+shadow = false
+samplers = {}
+
+# PBR
+[materials.Spider]
+vs = "spider.vert"
+fs = "spider.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = true
+[materials.Spider.samplers]
+tex_diffuse="NABlackWidow_BaseColor.png"
+tex_normal="NABlackWidow_Normal.png"
+tex_metallic="NABlackWidow_Metallness.png"
+tex_roughness="NABlackWidow_Roughness.png"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+
+# PBR
+[materials.Fur]
+vs = "fur.vert"
+fs = "fur.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = true
+colorwrite = true
+zwrite = false
+shadow = true
+[materials.Fur.samplers]
+tex_diffuse="Fur.png"
+tex_normal="Fur_Normal.png"
+tex_metallic="NABlackWidow_Metallness.png"
+tex_roughness="Fur_Roughness.png"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"

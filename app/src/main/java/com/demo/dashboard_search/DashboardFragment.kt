@@ -162,7 +162,6 @@ class DashboardFragment : BaseFragment(), KodeinAware, CommonPostsAdapter.OnItem
         }
     }
 
-
     private fun onTabSelectionListener() {
         mBinding.tabs.addOnTabSelectedListener(object :
             TabLayout.BaseOnTabSelectedListener<TabLayout.Tab> {
@@ -345,14 +344,13 @@ class DashboardFragment : BaseFragment(), KodeinAware, CommonPostsAdapter.OnItem
                         mViewModel.popularPosts.addAll(it.data?.popularPosts!!)
                         popularPostsAdapter.addNewItems(it.data?.popularPosts!!)
                         requireContext().startPreLoadingService(mViewModel.popularPosts.mutableToArrayList())
-                        if (posts.size < 10)
+                        if (posts.size < 1)
                             initiateFetchFromDB()
                     } else
                         initiateFetchFromDB()
                 } else {
                     if (it.error?.status != null && (it.error?.status!! != 404 && it.error?.status!! != 400))
                         it.error?.message?.let { it1 -> handleAPIError(it1) }
-
                     if (mViewModel.popularPosts.size == 0) {
                         initiateFetchFromDB()
                     }

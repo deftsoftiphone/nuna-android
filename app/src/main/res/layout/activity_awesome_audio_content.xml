@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.demo.muebert.viewmodel.AwesomeAudioContentViewModel" />
+
+        <variable
+            name="data"
+            type="com.demo.muebert.modal.ChannelsItem" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            tools:context="com.demo.awosomeaudio_muebert.AwesomeAudioContentActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:gravity="center"
+                android:paddingTop="@dimen/_8sdp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_back_custom"
+                        android:visibility="visible" />
+
+                    <TextView
+                        fontAccordingToLanguage="@{@string/key_bold_font}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="@string/sounds"
+                        android:textColor="#222222"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineStartOuter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.05" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineEndOuter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.95" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCategories"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEndOuter"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStartOuter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:itemCount="8"
+                    tools:layoutManager="GridLayoutManager"
+                    tools:listitem="@layout/music_categories_recycler_view_item"
+                    tools:spanCount="4" />
+
+                <ImageView
+                    android:id="@+id/ivDivider"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:src="@drawable/ic_music_line"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEndOuter"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStartOuter"
+                    app:layout_constraintTop_toBottomOf="@+id/rvCategories" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvStream"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:clipToPadding="false"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEndOuter"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStartOuter"
+                    app:layout_constraintTop_toBottomOf="@id/ivDivider"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    tools:listitem="@layout/music_stream_recycler_view_item" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/clMusicTile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:elevation="10dp"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    app:cardElevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/bottomGuidelineStartOuter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.05" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/bottomGuidelineEndOuter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.95" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:paddingVertical="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/bottomGuidelineEndOuter"
+                            app:layout_constraintStart_toStartOf="@id/bottomGuidelineStartOuter"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clMusicTileData"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/ivStream"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:civ_border_color="@color/status_bar_color"
+                                    app:currentTrackIcon="@{data.categoryName}"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <TextView
+                                    android:id="@+id/tvStream"
+                                    fontAccordingToLanguage="@{@string/key_bold_font}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:lineSpacingExtra="2sp"
+                                    android:textColor="@color/shadow_color"
+                                    android:textSize="14sp"
+                                    app:currentLanguageMuebertTrack="@{data.name}"
+                                    app:layout_constraintBottom_toTopOf="@+id/tvStreamCategory"
+                                    app:layout_constraintStart_toEndOf="@+id/ivStream"
+                                    app:layout_constraintTop_toTopOf="@+id/ivStream"
+                                    app:layout_constraintVertical_chainStyle="packed" />
+
+                                <TextView
+                                    android:id="@+id/tvStreamCategory"
+                                    fontAccordingToLanguage="@{@string/key_normal_font}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="1dp"
+                                    android:lineSpacingExtra="0sp"
+                                    android:textColor="#6b6b6b"
+                                    android:textSize="12sp"
+                                    app:currentLanguageMuebertCategory="@{data.categoryName}"
+                                    app:layout_constraintBottom_toBottomOf="@+id/ivStream"
+                                    app:layout_constraintStart_toEndOf="@+id/ivStream"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvStream" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <ProgressBar
+                                android:id="@+id/pbProgress"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/clMusicTileData"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/ivDelete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:onClick="@{()->viewModel.MClickHandler.onClickDeleteTrack(data)}"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:src="@drawable/ic_trash"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--</androidx.core.widget.NestedScrollView>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

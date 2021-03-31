@@ -1,0 +1,87 @@
+warp_mesh = "Beauty06.bsm2"
+
+draw_order = ["face","neck","teeth","accessories","accessories1","bat"]
+
+[materials.face]
+vs = "face.vert"
+fs = "face.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+samplers = { tex="vampire.png", selection_tex="redmasksuperpuperbest.png", lookupTexTeeth="teeth_highlighter5.png", lookupTexEyes="lut_80_percent.png" }
+
+[materials.neck]
+vs = "vertex.vert"
+fs = "nop.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply"
+backfaces = false
+colorwrite = false
+zwrite = true
+shadow = false
+samplers = {}
+
+[materials.teeth]
+vs = "vertex.vert"
+fs = "pbr.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.teeth.samplers]
+tex_diffuse="teeth_Base_Color.ktx"
+tex_normal="teeth_Normal.ktx"
+tex_mrao="teeth_MRAO.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+
+[materials.accessories]
+vs = "vertex.vert"
+fs = "pbr.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.accessories.samplers]
+tex_diffuse="accessories_Base_Color.ktx"
+tex_normal="accessories_Normal.ktx"
+tex_mrao="accessories_MRAO.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+
+[materials.accessories1]
+vs = "vertex_dyn.vert"
+fs = "pbr.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.accessories1.samplers]
+tex_diffuse="accessories_Base_Color.ktx"
+tex_normal="accessories_Normal.ktx"
+tex_mrao="accessories_MRAO.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"
+
+[materials.bat]
+vs = "vertex.vert"
+fs = "pbr.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.bat.samplers]
+tex_diffuse="bat_Base_Color.ktx"
+tex_normal="bat_Normal.ktx"
+tex_mrao="bat_MRAO.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"

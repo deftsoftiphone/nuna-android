@@ -1,0 +1,19 @@
+{
+    "name": "3d_2d_fashion_high",
+    "effectVersionInfo": {
+        "commit": "ee43e0e8f7c3c1c6c2133f944e005617cf4f3909",
+        "date": "2019-08-21",
+        "time": "16:00:35",
+        "author": "v.makarevich"
+    },
+    "buildToolsVersionInfo": {
+        "commit": "6c4f87b75f214de1559d54e5d957aef08adb08ac",
+        "date": "2020-03-12",
+        "time": "18:06:58",
+        "author": "Aleksey Cherkes"
+    },
+    "capabilities": {
+        "effectPlayerMajorVersion": 5,
+        "effectPlayerMinorVersion": 1
+    }
+}

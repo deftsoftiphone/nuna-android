@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickHandler"
+            type="com.demo.activity.DashboardActivity.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dashBoardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        tools:context=".MainActivity">
+
+        <ProgressBar
+            android:id="@+id/pbProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_5sdp"
+            android:indeterminate="true"
+            android:indeterminateBehavior="repeat"
+            android:progressTint="@color/themePink1"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <fragment
+            android:id="@+id/main_dash_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/nav_dashboard" />
+
+
+        <RelativeLayout
+            android:id="@+id/parentLayoutBotom"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/gradientLayoutBottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/footer_gradient_black"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vBottomShadow"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_above="@id/bottomNav"
+                android:background="@drawable/bottom_nav_shadow"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/bottomNav"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:focusable="false">
+                <!--                android:paddingHorizontal="25dp"-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/bDashboard"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_home_white"
+                        app:layout_constraintEnd_toStartOf="@id/bHashtag"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/bHashtag"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:scaleType="center"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:src="@drawable/ic_hashtag"
+                        app:layout_constraintEnd_toStartOf="@id/ivAdd"
+                        app:layout_constraintStart_toEndOf="@id/bDashboard">
+
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/ivAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:src="@drawable/menu_add_button_bg"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toStartOf="@id/bNotifications"
+                        app:layout_constraintStart_toEndOf="@id/bHashtag">
+
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/bNotifications"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:scaleType="center"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:src="@drawable/ic_bell"
+                        app:layout_constraintEnd_toStartOf="@id/bProfile"
+                        app:layout_constraintStart_toEndOf="@id/ivAdd" />
+
+                    <include
+                        android:id="@+id/iBadge"
+                        layout="@layout/layout_badge_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.32"
+                        app:layout_constraintStart_toStartOf="@+id/bNotifications"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.18" />
+
+                    <ImageView
+                        android:id="@+id/bProfile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_user"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/bNotifications">
+
+                    </ImageView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            style="@style/TransparentBottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/footer_gradient_black"
+            android:clipChildren="false"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:visibility="gone"
+            app:itemBackground="@color/transparent"
+            app:itemIconSize="@dimen/_16sdp"
+            app:itemIconTint="@drawable/tab_color"
+            app:labelVisibilityMode="unlabeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
+
+        <RelativeLayout
+            android:id="@+id/rel_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/nav_view"
+            app:layout_constraintEnd_toEndOf="@+id/nav_view"
+            app:layout_constraintStart_toStartOf="@+id/nav_view" />
+
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_7sdp"
+            android:onClick="@{() -> clickHandler.onClickAdd()}"
+            android:scaleType="center"
+            android:src="@drawable/menu_add_button_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/nav_view"
+            app:layout_constraintEnd_toEndOf="@+id/nav_view"
+            app:layout_constraintStart_toStartOf="@+id/nav_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.990">
+
+        </ImageView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

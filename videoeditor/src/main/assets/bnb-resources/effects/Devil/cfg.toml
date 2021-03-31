@@ -1,0 +1,73 @@
+warp_mesh = "morph.bsm2"
+msaa = 1
+shadowmap_size = 512
+adjust_znear = 500
+adjust_zfar = 1500
+
+draw_order = [ "TriMat", '!glfx_UPDATE_BG','screen_DevBG','!glfx_UPDATE_BG', 'Horn_mat','mat_horn_shadow','mat_eyes','screen_DevFG']
+
+# PBR
+[materials.mat_horn_shadow]
+vs = "mat_horn_shadow.vert"
+fs = "mat_horn_shadow.frag"
+blend = "alpha" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.mat_horn_shadow.samplers]
+tex_diffuse="Horn_shadow_Base_Color.ktx"
+tex_normal="Horn_shadow_Normal.ktx"
+tex_mrao="Horn_shadow_MRAO.ktx"
+
+# PBR
+[materials.Horn_mat]
+vs = "horn_mat.vert"
+fs = "horn_mat.frag"
+blend = "off" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.Horn_mat.samplers]
+tex_diffuse="Horn_mat_Base_Color.ktx"
+tex_normal="Horn_mat_Normal.ktx"
+tex_mrao="Horn_mat_MRAO.ktx"
+
+# PBR
+[materials.mat_eyes]
+vs = "mat_eyes.vert"
+fs = "video.frag"
+blend = "add" # "alpha", "premul_alpha", "screen", "add", "multiply", "coverage", "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+samplers = {}
+
+[materials.TriMat]
+vs = "fstri.vert"
+fs = "lut.frag"
+blend = "off"
+backfaces = true
+shadow = false
+zwrite = false
+samplers = {luttex=0}
+
+[materials.screen_DevBG]
+vs = "fire_bg.vert"
+fs = "bg.frag"
+blend = "off"
+backfaces = true
+shadow = false
+zwrite = false
+samplers = {}
+
+[materials.screen_DevFG]
+vs = "fstri2.vert"
+fs = "fg.frag"
+blend = "add"
+backfaces = true
+shadow = false
+zwrite = false
+samplers = {}

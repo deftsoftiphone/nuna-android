@@ -1,0 +1,53 @@
+<resources>
+    <color name="colorOrange">#ef8f90</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blacktext">#222222</color>
+    <color name="main_backgroud">#333333</color>
+    <color name="materialcolorpicker__red">#f44336</color>
+    <color name="materialcolorpicker__green">#4caf50</color>
+    <color name="materialcolorpicker__blue">#2196f3</color>
+    <color name="materialcolorpicker__grey">#b3b3b3</color>
+    <color name="hint_foreground_material_light">#00000000</color>
+    <color name="text_color">#FFF</color>
+    <color name="text_color_gray_3">#FFFF</color>
+
+    <!--Kelly's 22 contrast colors-->
+    <color name="kelly_1">#F2F3F4</color>
+    <color name="kelly_2">#1d1d1d</color>
+    <color name="kelly_3">#ebce2b</color>
+    <color name="kelly_4">#702c8c</color>
+    <color name="kelly_5">#db6917</color>
+    <color name="kelly_6">#96cde6</color>
+    <color name="kelly_7">#ba1c30</color>
+    <color name="kelly_8">#c0bd7f</color>
+    <color name="kelly_9">#7f7e80</color>
+    <color name="kelly_10">#5fa641</color>
+    <color name="kelly_11">#d485b2</color>
+    <color name="kelly_12">#4277b6</color>
+    <color name="kelly_13">#df8461</color>
+    <color name="kelly_14">#463397</color>
+    <color name="kelly_15">#e1a11a</color>
+    <color name="kelly_16">#91218c</color>
+    <color name="kelly_17">#e8e948</color>
+    <color name="kelly_18">#7e1510</color>
+    <color name="kelly_19">#92ae31</color>
+    <color name="kelly_20">#6f340d</color>
+    <color name="kelly_21">#d32b1e</color>
+    <color name="kelly_22">#2b3514</color>
+
+
+    <color name="black_overlay">#B5000000</color>
+    <color name="black_overlay_new">#AD050505</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="graycolor">#D3D3D3</color>
+    <color name="blue">#3D5AFE</color>
+    <color name="pink">#FFFF0186</color>
+    <color name="heart">#FF0186</color>
+    <color name="grey">#DADADA</color>
+    <color name="india_red">#FFBBC3</color>
+    <color name="Sanddtorm">#FFE595</color>
+    <color name="black_shadow">#222222</color>
+</resources>

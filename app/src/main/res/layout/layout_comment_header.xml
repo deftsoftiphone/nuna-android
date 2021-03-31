@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickHandler"
+            type="com.demo.post_details.UserCommentAdapter.AudioCommentHolder.ClickHandler" />
+
+        <variable
+            name="comment"
+            type="com.demo.model.response.UserComment" />
+    </data>
+
+    <merge xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user"
+            android:tag="@{comment.user.userId}"
+            imageUrlUpdate="@{comment.user.profileImage}"
+            android:layout_width="@dimen/_31sdp"
+            android:layout_height="@dimen/_31sdp"
+            android:padding="5dp"
+            android:paddingEnd="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_commenter_name"
+            fontPath="fonts/GothamPro-Medium.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:text="@{comment.user.userName}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            android:fontFamily="@font/gothampro_medium"
+            app:layout_constraintBottom_toBottomOf="@id/iv_user"
+            app:layout_constraintStart_toEndOf="@id/iv_user"
+            app:layout_constraintTop_toTopOf="@id/iv_user"
+            tools:text="Vishal Sharma" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/gotham_pro"
+            app:layout_constraintBottom_toBottomOf="@id/iv_user"
+            app:layout_constraintEnd_toStartOf="@id/tv_like_count"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/tv_commenter_name"
+            app:layout_constraintTop_toTopOf="@id/iv_user" />
+
+        <TextView
+            android:id="@+id/tv_like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@{comment.commentLiked ? @drawable/like_cmnt_new : @drawable/unlike_cmnt_new}"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text='@{comment.likeCount + " "}'
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/gothampro_medium"
+            app:layout_constraintBottom_toBottomOf="@id/iv_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_user"
+            tools:text="11" />
+    </merge>
+</layout>

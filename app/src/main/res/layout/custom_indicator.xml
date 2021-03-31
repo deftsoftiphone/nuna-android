@@ -1,0 +1,17 @@
+<com.opensooq.pluto.PlutoIndicator
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    custom:selected_color="#555555"
+    custom:unselected_color="#55555555"
+    custom:shape="oval"
+    custom:selected_padding_left="3dp"
+    custom:selected_padding_right="3dp"
+    custom:unselected_padding_left="3dp"
+    custom:unselected_padding_right="3dp"
+    custom:selected_width="8dp"
+    custom:selected_height="8dp"
+    custom:unselected_width="4dp"
+    custom:unselected_height="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto" />

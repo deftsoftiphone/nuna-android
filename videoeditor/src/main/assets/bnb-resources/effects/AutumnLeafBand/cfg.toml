@@ -1,0 +1,36 @@
+msaa = 4
+warp_mesh = "Beauty06.bsm2"
+
+draw_order = ["retouch","Thanksgiving_mat"]
+
+[materials.retouch]
+vs = "retouch.vert"
+fs = "retouch.frag"
+blend = "off"
+backfaces = false
+colorwrite = true
+zwrite = true
+shadow = false
+onface = true
+mouth = true
+[materials.retouch.samplers]
+selection_tex="redmask_new_2.png"
+lookupTexTeeth="teeth_highlighter5.png"
+lookupTexEyes="lut_80_percent.png"
+tex_shadow="Face_mat_Opacity.ktx"
+
+[materials.Thanksgiving_mat]
+vs = "vertex.vert"
+fs = "pbr.frag"
+blend = "coverage" # "alpha", "premul_alpha", "screen", "add", "multiply"
+backfaces = true
+colorwrite = true
+zwrite = true
+shadow = false
+[materials.Thanksgiving_mat.samplers]
+tex_diffuse="Thanksgiving_mat_Base_Color.ktx"
+tex_normal="Thanksgiving_mat_Normal.ktx"
+tex_mrao="Thanksgiving_mat_MRAO.ktx"
+tex_brdf="brdf.ktx"
+tex_ibl_diff="ibl_diff.ktx"
+tex_ibl_spec="ibl_spec.ktx"

@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "kotlin-kapt"
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    def banubaSdkVersion = '1.0.14'
+
+    api "com.banuba.sdk:camera-sdk:${banubaSdkVersion}"
+    api "com.banuba.sdk:camera-ui-sdk:${banubaSdkVersion}"
+    api "com.banuba.sdk:core-sdk:${banubaSdkVersion}"
+    api "com.banuba.sdk:core-ui-sdk:${banubaSdkVersion}"
+    api "com.banuba.sdk:effect-player-adapter:${banubaSdkVersion}"
+    api "com.banuba.sdk:ve-flow-sdk:${banubaSdkVersion}"
+    api "com.banuba.sdk:ve-timeline-sdk:${banubaSdkVersion}"
+    api "com.banuba.sdk:ve-sdk:${banubaSdkVersion}"
+    api "com.banuba.sdk:ve-ui-sdk:${banubaSdkVersion}"
+    api "com.banuba.sdk:ve-effects-sdk:${banubaSdkVersion}"
+
+
+}

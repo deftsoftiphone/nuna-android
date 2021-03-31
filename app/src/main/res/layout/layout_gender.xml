@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="clickHandler"
+            type="com.demo.edit_profile.EditProfileFragment.ClickHandler" />
+        <variable
+            name="dialog"
+            type="com.google.android.material.bottomsheet.BottomSheetDialog" />
+        <import type="com.demo.util.Gender"/>
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tvMale"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="@string/male"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="@string/female"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="@string/prefer_not_to_say"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</layout>

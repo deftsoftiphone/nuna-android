@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+<!--        <import type="com.demo.util.Constant" />-->
+
+        <variable
+            name="item"
+            type="com.demo.model.UserPostWrapper" />
+
+        <variable
+            name="clickHandler"
+            type="com.demo.followPopularUsers.FollowPopularUsersFragment.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/card_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_wt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@{item.user.followStatus.parentBg}"
+                android:padding="13dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_user"
+                    app:civ_circle_background_color="@color/status_bar_color"
+                    android:layout_width="@dimen/_39sdp"
+                    android:layout_height="@dimen/_39sdp"
+                    app:civ_border_color="@color/status_bar_color"
+                    app:civ_border_width="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_placeholder_user_small"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+
+                    android:maxLines="2"
+                    android:textColor="@{item.user.followStatus.tvTitleColor}"
+                    android:textSize="@dimen/_12sdp"
+                    android:theme="@style/medium"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_subtitle"
+
+                    app:layout_constraintEnd_toStartOf="@id/tv_follow_unfollow"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@id/iv_user"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed"
+
+                    tools:text="Work Flow sample " />
+
+                <TextView
+                    android:id="@+id/tv_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="1dp"
+                    android:maxLines="2"
+                    android:text='@{item.user.followerCount + " "+@string/followers}'
+                    android:textColor="@{item.user.followStatus.tvSubTitleColor}"
+                    android:textSize="@dimen/_10sdp"
+                    android:theme="@style/pro"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_follow_unfollow"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@id/iv_user"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                    tools:text="Work Flow sample name" />
+
+
+                <TextView
+                    android:id="@+id/tv_follow_unfollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_margin="0dp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@{item.user.followStatus.btnBg}"
+                    android:elevation="0dp"
+                    android:gravity="center"
+                    android:maxHeight="@dimen/_40sdp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="7dp"
+                    android:text="@{item.user.followStatus.btnTxt}"
+                    android:textColor="@{item.user.followStatus.btnTxtColor}"
+                    android:textSize="12sp"
+                    android:theme="@style/medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Follow" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandable_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_duration="300"
+            app:el_expanded="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_user">
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/recycler_posts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+
+                tools:listitem="@layout/layout_dashboard_post_item" />
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
