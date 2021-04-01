@@ -38,6 +38,8 @@ dependencies {
 
     def banubaSdkVersion = '1.0.15'
 
+    api "com.banuba.sdk:banuba-token-storage-sdk:${banubaSdkVersion}"
+    api "com.banuba.sdk:ar-cloud:${banubaSdkVersion}"
     api "com.banuba.sdk:camera-sdk:${banubaSdkVersion}"
     api "com.banuba.sdk:camera-ui-sdk:${banubaSdkVersion}"
     api "com.banuba.sdk:core-sdk:${banubaSdkVersion}"

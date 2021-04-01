@@ -296,10 +296,11 @@ class MainApplication : Application(), KodeinAware {
             androidContext(this@MainApplication)
             modules(
                 listOf(
-                    BanubaEffectPlayerKoinModule ().module,
-                    TokenStorageKoinModule().module,
                     NunaVideoEditorModule().module,
-                    ArCloudKoinModule().module, musicProviderModule
+                    ArCloudKoinModule().module,
+                    musicProviderModule,
+                    BanubaEffectPlayerKoinModule().module,
+                    TokenStorageKoinModule().module,
                 )
 
             )

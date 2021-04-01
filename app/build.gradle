@@ -185,11 +185,6 @@ dependencies {
     implementation 'com.github.quickpermissions:quickpermissions-kotlin:0.4.0'
     implementation 'com.matthew-tamlin:sound-sword:1.0.1'
 
-    //banuba need
-    implementation "com.banuba.sdk:ar-cloud:1.0.15"
-    implementation 'androidx.exifinterface:exifinterface:1.3.1'
-    implementation "com.banuba.sdk:banuba-token-storage-sdk:1.0.15"
-
     // AWS
     implementation 'com.amazonaws:aws-android-sdk-s3:2.19.3'
     implementation 'com.amazonaws:aws-android-sdk-cognito:2.2.0'
