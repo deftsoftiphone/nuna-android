@@ -6,6 +6,7 @@ include ':app'
 //include ':motiontoast'
 include ':likebutton'
 include ':videoeditor'
+include ':ucrop'
 
 
 //':ananas'

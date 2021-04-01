@@ -20,14 +20,14 @@ class NunaCameraRecordingAnimationProvider(context: Context) : CameraRecordingAn
     private var onEndRecordingAnimationCallback: () -> Unit = {}
 
     override fun provideView() = animationView
+    override fun setOnEndRecordingAnimationCallback(callback: (Boolean) -> Unit) {
+        TODO("Not yet implemented")
+    }
 
     override fun setOnStartRecordingAnimationCallback(callback: () -> Unit) {
         onStartRecordingAnimationCallback = callback
     }
 
-    override fun setOnEndRecordingAnimationCallback(callback: () -> Unit) {
-        onEndRecordingAnimationCallback = callback
-    }
 
     override fun setOnEndTakenPictureAnimationCallback(callback: () -> Unit) {
         onEndTakenPictureAnimationCallback = callback
@@ -48,6 +48,10 @@ class NunaCameraRecordingAnimationProvider(context: Context) : CameraRecordingAn
                 onEndTakenPictureAnimationCallback()
             }
         }
+    }
+
+    override fun setRecordingProgress(progressMs: Long) {
+        TODO("Not yet implemented")
     }
 
     override fun setRecordingVideoState(state: CameraRecordingAnimationProvider.VideoState) {

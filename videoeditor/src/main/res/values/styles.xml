@@ -7,9 +7,10 @@
         <item name="android:windowBackground">@color/backgroundGlobalPrimary</item>
 
         <!-- Video Timeline -->
-        <item name="videoTimelineCheckedStyle">@style/NunaVideoTimelineCheckedStyle</item>
-        <item name="videoTimelineUncheckedStyle">@style/NunaVideoTimelineUnheckedStyle</item>
-        <item name="videoTimelineCheckedIconStyle">@drawable/ic_timeline_mode_active_icon</item>
+<!--        <item name="videoTimelineCheckedStyle">@style/NunaVideoTimelineCheckedStyle</item>-->
+<!--        <item name="videoTimelineUncheckedStyle">@style/NunaVideoTimelineUnheckedStyle</item>-->
+<!--        -->
+        <item name="videoTimelineCheckedIconStyle">@drawable/bg_music_trimmer_right_pointer</item>
 
         <!--Camera-->
         <item name="cameraOverlayStyle">@style/NunaCameraOverlayStyle</item>
@@ -29,8 +30,6 @@
         <item name="editorNextButtonStyle">@style/NunaEditorNextButtonStyle</item>
         <item name="editorTextActionsStyle">@style/NunaEditorTextActionsStyle</item>
         <item name="editorTextDoneStyle">@style/NunaEditorTextDoneStyle</item>
-        <item name="editorCancelStyle">@style/NunaEditorTextActionsTextStyle</item>
-        <item name="editorDoneStyle">@style/NunaEditorTextActionsTextStyle</item>
         <item name="editorBoardStyle">@style/NunaEditorBoardStyle</item>
         <item name="editorEffectVisualStyle">@style/NunaEditorEffectVisualStyle</item>
         <item name="editorEffectTimeStyle">@style/NunaEditorEffectVisualStyle</item>
@@ -51,11 +50,8 @@
         <item name="galleryChoiceButtonStyle">@style/NunaGalleryChoiceButtonStyle</item>
         <item name="galleryBackButtonStyle">@style/NunaGalleryBackButtonStyle</item>
         <item name="galleryNextButtonStyle">@style/NunaGalleryNextButtonStyle</item>
-
-        <item name="gallery_light_status_bar">false</item>
         <item name="gallery_bg_color">@color/black</item>
         <item name="gallery_item_corner_radius">0dp</item>
-        <item name="gallery_icon_back">@drawable/ic_back_white</item>
         <item name="gallery_icon_cross">@drawable/ic_gallery_close</item>
         <item name="gallery_album_divider_color">@color/dustyGray</item>
 
@@ -73,10 +69,10 @@
         <item name="trimmer_bg_color_add_video">@color/transparent</item>
         <item name="trimmer_time_visible">true</item>
         <item name="trimmer_play_control_visible">false</item>
-        <item name="trimmer_hint_visible">false</item>
+        <!--        <item name="trimmer_hint_visible">false</item>-->
 
         <!--Music Editor-->
-        <item name="musicEditorStyle">@style/NunaMusicEditorStyle</item>
+<!--                <item name="musicEditorStyle">@style/NunaMusicEditorStyle</item>-->
         <item name="musicEditorTimelineStyle">@style/NunaMusicEditorTimelineStyle</item>
         <item name="musicEditorTimelineSoundWaveStyle">
             @style/NunaMusicEditorTimelineSoundWaveStyle
@@ -90,7 +86,7 @@
         </item>
         <item name="musicEditorRecordingButtonStyle">@style/NunaMusicEditorRecordingButtonStyle
         </item>
-        <item name="musicEditorVideoVolumeStyle">@style/NunaMusicEditorVolumeStyle</item>
+        <!--        <item name="musicEditorVideoVolumeStyle">@style/NunaMusicEditorVolumeStyle</item>-->
         <item name="musicEditorTimelineTimeTextStyle">@style/NunaMusicEditorTimelineTimeTextStyle
         </item>
 
@@ -124,7 +120,7 @@
         <item name="waitDialogTextStyle">@style/NunaWaitDialogTextStyle</item>
 
         <item name="wait_dialog_bg">@color/black_a20</item>
-        <item name="wait_dialog_throbber_bg">@drawable/bg_wait_dialog_throbber</item>
+<!--        <item name="wait_dialog_throbber_bg">@drawable/bg_wait_dialog_throbber</item>-->
 
         <!-- Alerts -->
         <item name="alert_camera_delete_video">@drawable/ic_alert_reset_video</item>
@@ -211,7 +207,7 @@
     <!--Editor Styles-->
     <style name="NunaEditorOverlayStyle" parent="EditorOverlayStyle">
         <item name="editor_icon_back">@drawable/ic_back_white</item>
-        <item name="editor_icon_playback_visible">false</item>
+
     </style>
 
     <style name="NunaEditorActionsStyle" parent="EditorActionsStyle">
@@ -269,7 +265,7 @@
         <item name="text_align_end">@drawable/ic_alignment_right</item>
     </style>
 
-    <style name="NunaEditorTextDoneStyle" parent="EditorDoneStyle">
+    <style name="NunaEditorTextDoneStyle" parent="EditorTextDoneStyle">
         <item name="android:fontFamily">@font/gotham_pro_medium</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/rose</item>
@@ -290,7 +286,7 @@
         <item name="editor_board_delete_visible">true</item>
     </style>
 
-    <style name="NunaEditorEffectVisualStyle" parent="EditorEffectVisualStyle"/>
+    <style name="NunaEditorEffectVisualStyle" parent="EditorEffectVisualStyle" />
 
     <style name="NunaEditorEffectMaskStyle" parent="EditorEffectVisualStyle">
         <item name="actionable_effect_title_visible">false</item>
@@ -385,7 +381,7 @@
 
         <item name="trimmer_pointer_center_line_color">@color/white</item>
         <item name="android:layout_marginBottom">28dp</item>
-<!--        <item name="trimmer_border_line">@drawable/trimmer_border_line</item>-->
+        <!--        <item name="trimmer_border_line">@drawable/trimmer_border_line</item>-->
         <item name="trimmer_thumb_height">48dp</item>
     </style>
 
@@ -422,15 +418,15 @@
     </style>
 
     <!--MusicEditor Styles-->
-    <style name="NunaMusicEditorStyle" parent="MusicEditorStyle">
-        <item name="playback_icon_rewind">@drawable/ic_rewind</item>
-        <item name="playback_icon_play">@drawable/ic_play</item>
-        <item name="playback_icon_pause">@drawable/ic_pause</item>
-        <item name="playback_icon_done">@drawable/ic_me_done</item>
-        <item name="voice_recording_icon_cancel">@drawable/ic_cancel_voice_recording</item>
-        <item name="voice_recording_icon_refresh">@drawable/ic_me_refresh</item>
-        <item name="voice_recording_icon_done">@drawable/ic_me_done</item>
-    </style>
+<!--    <style name="NunaMusicEditorStyle" parent="MusicEditorStyle">-->
+<!--        <item name="playback_icon_rewind">@drawable/ic_rewind</item>-->
+<!--        <item name="playback_icon_play">@drawable/ic_play</item>-->
+<!--        <item name="playback_icon_pause">@drawable/ic_pause</item>-->
+<!--        <item name="playback_icon_done">@drawable/ic_me_done</item>-->
+<!--        <item name="voice_recording_icon_cancel">@drawable/ic_cancel_voice_recording</item>-->
+<!--        <item name="voice_recording_icon_refresh">@drawable/ic_me_refresh</item>-->
+<!--        <item name="voice_recording_icon_done">@drawable/ic_me_done</item>-->
+<!--    </style>-->
 
     <style name="NunaMusicEditorTimelineStyle" parent="MusicEditorTimelineStyle">
         <item name="applying_effect_color">@color/rose</item>
@@ -471,7 +467,7 @@
         <item name="trimmer_player_pointer_color">@color/white</item>
         <item name="trimmer_pointer_width">12dp</item>
         <item name="trimmer_shadow_color">@color/black_a50</item>
-<!--        <item name="music_trimmer_border_line">@drawable/music_trimmer_border_line</item>-->
+        <!--        <item name="music_trimmer_border_line">@drawable/music_trimmer_border_line</item>-->
     </style>
 
     <style name="NunaMusicEditorTrimmerSoundWaveStyle" parent="MusicEditorTrimmerSoundWaveStyle">
@@ -494,18 +490,18 @@
         <item name="android:layout_height">54dp</item>
     </style>
 
-    <style name="NunaMusicEditorVolumeStyle" parent="MusicEditorVideoVolumeStyle">
-        <item name="video_volume_icon_done">@drawable/ic_me_done</item>
-        <item name="video_volume_title_color">@color/white</item>
-        <item name="video_volume_title_text_size">12sp</item>
-        <item name="video_volume_title_text_font">@font/gotham_pro_medium</item>
-        <item name="video_volume_value_text_size">14sp</item>
-        <item name="video_volume_value_text_font">@font/gotham_pro_medium</item>
-        <item name="video_volume_value_color">@color/white</item>
-        <item name="video_volume_progress_tint">@color/rose</item>
-        <item name="video_volume_volume_thumb_tint">@color/white</item>
-        <item name="android:background">@color/codeGray</item>
-    </style>
+<!--    <style name="NunaMusicEditorVolumeStyle" parent="MusicEditorVideoVolumeStyle">-->
+<!--        <item name="video_volume_icon_done">@drawable/ic_me_done</item>-->
+<!--        <item name="video_volume_title_color">@color/white</item>-->
+<!--        <item name="video_volume_title_text_size">12sp</item>-->
+<!--        <item name="video_volume_title_text_font">@font/gotham_pro_medium</item>-->
+<!--        <item name="video_volume_value_text_size">14sp</item>-->
+<!--        <item name="video_volume_value_text_font">@font/gotham_pro_medium</item>-->
+<!--        <item name="video_volume_value_color">@color/white</item>-->
+<!--        <item name="video_volume_progress_tint">@color/rose</item>-->
+<!--        <item name="video_volume_volume_thumb_tint">@color/white</item>-->
+<!--        <item name="android:background">@color/codeGray</item>-->
+<!--    </style>-->
 
     <style name="NunaMusicEditorTimelineTimeTextStyle" parent="MusicEditorTimelineTimeTextStyle">
         <item name="android:fontFamily">@font/gotham_pro_medium</item>
@@ -538,13 +534,13 @@
     </style>
 
     <style name="NunaStickersSearchStyle" parent="StickersSearchStyle">
-<!--        <item name="stickers_search_icon">@drawable/ic_sticker_search</item>-->
-<!--        <item name="stickers_search_hint">@string/stickers_search_hint</item>-->
-<!--        <item name="stickers_search_background">@drawable/bg_search</item>-->
-<!--        <item name="stickers_search_background_tint">@color/dove_gray</item>-->
-<!--        <item name="stickers_search_hint_color">@color/white</item>-->
-<!--        <item name="stickers_search_cursor">@drawable/bg_default</item>-->
-<!--        <item name="stickers_search_cancel_text">@string/stickers_search_cancel</item>-->
+        <!--        <item name="stickers_search_icon">@drawable/ic_sticker_search</item>-->
+        <!--        <item name="stickers_search_hint">@string/stickers_search_hint</item>-->
+        <!--        <item name="stickers_search_background">@drawable/bg_search</item>-->
+        <!--        <item name="stickers_search_background_tint">@color/dove_gray</item>-->
+        <!--        <item name="stickers_search_hint_color">@color/white</item>-->
+        <!--        <item name="stickers_search_cursor">@drawable/bg_default</item>-->
+        <!--        <item name="stickers_search_cancel_text">@string/stickers_search_cancel</item>-->
     </style>
 
 
@@ -575,7 +571,7 @@
 
     <style name="EditorDialogNormalButton" parent="AlertDialogActionButton" />
 
-    <style name="TextEffectItemActive" parent="TextEffectItemNormal"/>
+    <style name="TextEffectItemActive" parent="TextEffectItemNormal" />
 
     <style name="TrimmerHintStyle" parent="TextEffectItemNormal">
         <item name="android:text">@string/trimmer_hint</item>
@@ -596,17 +592,17 @@
         <item name="android:fontFamily">@font/gotham_pro_medium</item>
     </style>
 
-    <style name="NunaVideoTimelineCheckedStyle" parent="VideoTimelineCheckedStyle">
-        <item name="android:fontFamily">@font/gotham_pro_medium</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
+<!--    <style name="NunaVideoTimelineCheckedStyle" parent="VideoTimelineCheckedStyle">-->
+<!--        <item name="android:fontFamily">@font/gotham_pro_medium</item>-->
+<!--        <item name="android:textSize">12sp</item>-->
+<!--        <item name="android:textAllCaps">false</item>-->
+<!--    </style>-->
 
-    <style name="NunaVideoTimelineUnheckedStyle" parent="VideoTimelineUncheckedStyle">
-        <item name="android:fontFamily">@font/gotham_pro_medium</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
+<!--    <style name="NunaVideoTimelineUnheckedStyle" parent="VideoTimelineUncheckedStyle">-->
+<!--        <item name="android:fontFamily">@font/gotham_pro_medium</item>-->
+<!--        <item name="android:textSize">12sp</item>-->
+<!--        <item name="android:textAllCaps">false</item>-->
+<!--    </style>-->
 
     <!-- Cover -->
     <style name="NunaCoverSeekBarStyle" parent="CoverSeekBarStyle">
@@ -671,6 +667,111 @@
         <item name="android:paddingTop">9dp</item>
         <item name="android:paddingBottom">9dp</item>
         <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="GalleryTabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="tabIndicatorColor">@color/supernova</item>
+        <item name="tabTextColor">@color/white_a50</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabBackground">@color/black</item>
+        <item name="tabTextAppearance">@style/GalleryTabTextAppearance</item>
+    </style>
+
+    <!-- <selector xmlns:android="http://schemas.android.com/apk/res/android">
+         <item android:color="@color/silverChalice" android:state_enabled="true" android:state_selected="false" />
+         <item android:color="@color/emperor" android:state_enabled="false" android:state_selected="false" />
+         <item android:color="@color/white" android:state_selected="true" />
+     </selector>-->
+
+    <style name="CustomEditorPlaybackControllerParentStyle" parent="EditorPlaybackControllerParentStyle" />
+
+    <style name="CustomEditorPlaybackControllerCancelStyle" parent="EditorPlaybackControllerCancelStyle">
+        <item name="android:src">@drawable/ic_navigation_exit</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="CustomEditorPlaybackControllerPlayStyle" parent="EditorPlaybackControllerPlayStyle">
+        <item name="android:src">@drawable/ic_playback_controller_play</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="CustomEditorPlaybackControllerDoneStyle" parent="EditorPlaybackControllerDoneStyle">
+        <item name="android:src">@drawable/ic_check</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+<!--
+    <style name="CustomMusicEditorVideoVolumeContainerStyle" parent="MusicEditorVideoVolumeContainerStyle">
+        <item name="android:background">@drawable/bg_bottom_sheet_with_top_line</item>
+    </style>-->
+
+    <style name="CustomMusicEditorVideoVolumeTitleStyle" parent="MusicEditorVideoVolumeTitleStyle" />
+
+<!--    <style name="CustomMusicEditorVideoVolumeValueStyle" parent="MusicEditorVideoVolumeValueStyle">-->
+<!--        <item name="android:textColor">@color/cerulean</item>-->
+<!--        <item name="android:textSize">16sp</item>-->
+<!--    </style>-->
+
+<!--    <style name="CustomMusicEditorVideoVolumeProgressBarStyle" parent="MusicEditorVideoVolumeProgressBarStyle">-->
+<!--        <item name="android:maxHeight">3dp</item>-->
+<!--        <item name="android:progressDrawable">@drawable/bg_rounded_progress_bar</item>-->
+<!--        <item name="android:progressTint">@color/cerulean</item>-->
+<!--        <item name="android:thumbTint">@color/white</item>-->
+<!--    </style>-->
+
+    <style name="CustomVoiceRecordingControllerParentStyle" parent="VoiceRecordingControllerParentStyle" />
+
+    <style name="CustomVoiceRecordingControllerCancelStyle" parent="VoiceRecordingControllerCancelStyle">
+        <item name="android:padding">12dp</item>
+        <item name="android:src">@drawable/ic_navigation_exit</item>
+    </style>
+<!--
+
+    <style name="CustomVoiceRecordingControllerResetStyle" parent="VoiceRecordingControllerResetStyle">
+        <item name="android:background">@drawable/bg_undo_btn</item>
+        <item name="android:drawableLeft">@null</item>
+        <item name="android:drawablePadding">0dp</item>
+    </style>
+-->
+
+    <style name="CustomVoiceRecordingControllerDoneStyle" parent="VoiceRecordingControllerDoneStyle">
+        <item name="android:padding">12dp</item>
+        <item name="android:src">@drawable/ic_check</item>
+    </style>
+
+
+    <style name="CustomTrimmerContentHintStyle" parent="TrimmerContentHintStyle">
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="CustomTrimmerThumbHintIconStyle" parent="TrimmerThumbHintIconStyle" />
+
+    <style name="PermissionsDialogContainer">
+        <item name="android:padding">24dp</item>
+        <item name="android:background">@drawable/bg_alert_dialog</item>
+    </style>
+
+    <style name="PermissionsDialogDescription">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="PermissionsDialogActionButton">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_permission_dialog_allow_btn</item>
+        <item name="android:foreground">?android:selectableItemBackgroundBorderless</item>
     </style>
 
 </resources>

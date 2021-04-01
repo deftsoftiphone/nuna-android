@@ -61,6 +61,15 @@ allprojects {
                 password = rootProject.ext.githubProperties['gpr.key']
             }
         }
+
+        maven {
+            name = "ARCloudPackages"
+            url = uri("https://github.com/Banuba/banuba-ar")
+            credentials {
+                username = rootProject.ext.githubProperties['gpr.usr']
+                password = rootProject.ext.githubProperties['gpr.key']
+            }
+        }
     }
 }
 

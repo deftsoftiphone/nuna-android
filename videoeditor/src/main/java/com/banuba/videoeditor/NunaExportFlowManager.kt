@@ -84,10 +84,10 @@ class NunaExportFlowManager(
         _resultData.postValue(ExportResult.Inactive)
     }
 
-    override fun releaseRawSessionData() {
+  /*  override fun releaseRawSessionData() {
         editorSessionHelper.clearAll()
     }
-
+*/
     private fun transformExport(
         videoResult: List<Result<ExportedVideo>>,
         previewResult: Result<ExportedPreview>

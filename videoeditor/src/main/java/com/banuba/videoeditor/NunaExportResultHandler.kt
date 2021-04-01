@@ -9,13 +9,17 @@ import com.banuba.sdk.veui.ui.ExportResult
 
 class NunaExportResultHandler : ExportResultHandler {
 
+
     override fun doAction(activity: AppCompatActivity, result: ExportResult.Success?) {
-        val intent = Intent().apply {
-            result?.let { putExtra(EXTRA_EXPORTED_SUCCESS, it) }
+        if (result == null) {
+            activity.finish()
+            return
         }
-        activity.apply {
-            setResult(Activity.RESULT_OK, intent)
-            finish()
+        val resultCode = Activity.RESULT_OK
+        val data = Intent().apply {
+            putExtra(EXTRA_EXPORTED_SUCCESS, result)
         }
+        activity.setResult(resultCode, data)
+        activity.finish()
     }
 }

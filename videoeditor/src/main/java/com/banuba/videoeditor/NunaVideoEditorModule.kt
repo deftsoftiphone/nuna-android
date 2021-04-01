@@ -46,7 +46,8 @@ class NunaVideoEditorModule : FlowEditorModule() {
         val context = get<Application>().applicationContext
 
         val utilityManager: IUtilityManager = BanubaClassFactory.createUtilityManager(
-            context = get()
+            context = get(),
+            context.getString(R.string.effect_player_token)
         )
 
         val effectPlayerProvider: AREffectPlayerProvider = get()

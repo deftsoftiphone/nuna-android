@@ -10,6 +10,8 @@ import com.androidnetworking.AndroidNetworking
 import com.banuba.sdk.arcloud.di.ArCloudKoinModule
 import com.banuba.sdk.core.domain.TrackData
 import com.banuba.sdk.core.ui.ContentFeatureProvider
+import com.banuba.sdk.effectplayer.adapter.BanubaEffectPlayerKoinModule
+import com.banuba.sdk.token.storage.TokenStorageKoinModule
 import com.banuba.videoeditor.NunaVideoEditorModule
 import com.demo.R
 import com.demo.activity.DashboardActivityViewModalFactory
@@ -241,14 +243,14 @@ class MainApplication : Application(), KodeinAware {
     }
 
     fun getNetworkSpeed(): Double {
-        if(Util.checkIfHasNetwork()){
+        if (Util.checkIfHasNetwork()) {
             val cm =
                 applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
             // Network Capabilities of Active Network
             val nc = cm.getNetworkCapabilities(cm.activeNetwork)
             // DownSpeed in MBPS
             return (nc?.linkDownstreamBandwidthKbps)!! / 1024.0
-        }else{
+        } else {
             return 0.0
         }
     }
@@ -294,9 +296,12 @@ class MainApplication : Application(), KodeinAware {
             androidContext(this@MainApplication)
             modules(
                 listOf(
+                    BanubaEffectPlayerKoinModule ().module,
+                    TokenStorageKoinModule().module,
                     NunaVideoEditorModule().module,
                     ArCloudKoinModule().module, musicProviderModule
                 )
+
             )
         }
     }
